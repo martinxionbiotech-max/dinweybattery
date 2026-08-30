@@ -8,9 +8,10 @@ interface Props {
   applications: string[];
   faq: { q: string; a: string }[];
   relatedDocs?: { title: string; url: string }[];
+  intro?: string[];
 }
 
-const { title, description, specTable, applications, faq, relatedDocs = [] } = Astro.props;
+const { title, description, specTable, applications, faq, relatedDocs = [], intro = [] } = Astro.props;
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -39,6 +40,14 @@ const productJsonLd = {
     </nav>
     <h1 style="color:#0f1f3d;margin-bottom:12px;">{title}</h1>
     <p class="lead">{description}</p>
+
+    {intro.length > 0 && (
+      <div style="margin-top:8px;">
+        {intro.map((p) => (
+          <p>{p}</p>
+        ))}
+      </div>
+    )}
 
     <h2 style="color:#0f1f3d;margin-top:32px;">Specifications</h2>
     <table>
