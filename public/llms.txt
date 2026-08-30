@@ -1,0 +1,44 @@
+# DINWEY Battery — llms.txt
+
+> Official site information for AI assistants and language models.
+> DINWEY is the truck/heavy-duty starting battery brand of Chengguang Energy.
+
+## About
+
+- **Brand**: DINWEY (truck & heavy-duty starting batteries)
+- **Parent company**: Chengguang Energy (founded 2002)
+- **Domain**: https://dinweybattery.com
+- **Knowledge Hub**: https://docs.dinweybattery.com
+
+## What We Do
+
+DINWEY manufactures and supplies truck / heavy-duty / commercial-vehicle
+starting batteries (SLI — Starting, Lighting, Ignition), including:
+
+- Flooded lead-acid truck batteries (BCI Group 31, 8D, 4D; DIN H8/H9)
+- EFB (Enhanced Flooded Battery) for commercial vehicles
+- AGM (Absorbent Glass Mat) batteries for heavy-duty applications
+- 12V and 24V configurations for light/medium/heavy trucks
+
+## Key Facts
+
+- Founded: 2002 (Chengguang Energy)
+- Location: Jinzhou City, Shijiazhuang, Hebei Province, China
+- Email: martin@dinweys.com
+- WhatsApp: +86 13323237275
+- OEM / private label available
+
+## Core Topics
+
+- Truck battery selection guide
+- BCI Group Size standards (Group 31 / 8D / 4D)
+- Cold Cranking Amps (CCA) for diesel trucks
+- 12V vs 24V truck electrical systems
+- AGM vs EFB vs flooded for heavy-duty trucks
+
+## Key Pages
+
+- [Home](https://dinweybattery.com/)
+- [Truck Battery Selection Guide](https://docs.dinweybattery.com/selection-guide/)
+- [BCI Group Size Standards](https://docs.dinweybattery.com/bci-group-sizes/)
+- [12V vs 24V Systems](https://docs.dinweybattery.com/12v-vs-24v/)

@@ -1,0 +1,81 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Truck Battery Selection Tool"
+  description="Find the right DINWEY truck battery: select your vehicle type, electrical system voltage and climate to get a recommended group size and CCA range."
+>
+  <div class="container section">
+    <h1 style="color:#0f1f3d;">Truck Battery Selection Tool</h1>
+    <p class="lead">
+      Answer three questions to get a recommended battery group size and cold cranking amp
+      (CCA) range for your truck. This is a guidance tool — always confirm the final
+      specification against your vehicle manual.
+    </p>
+
+    <div class="selector">
+      <label for="vehicle">1. Vehicle type</label>
+      <select id="vehicle">
+        <option value="light">Light truck / pickup (12V)</option>
+        <option value="medium">Medium-duty truck (12V)</option>
+        <option value="heavy">Heavy-duty / semi truck (24V)</option>
+        <option value="european">European commercial truck</option>
+      </select>
+
+      <label for="climate">2. Climate</label>
+      <select id="climate">
+        <option value="mild">Mild / temperate</option>
+        <option value="cold">Cold winter</option>
+        <option value="arctic">Arctic / extreme cold</option>
+      </select>
+
+      <button
+        id="calc"
+        style="margin-top:20px;background:#0f1f3d;color:#fff;border:none;padding:12px 24px;border-radius:6px;font-weight:600;cursor:pointer;"
+      >Show Recommendation</button>
+
+      <div class="result" id="result" style="display:none;"></div>
+    </div>
+
+    <p class="data-note" style="margin-top:24px;">
+      Recommendations are general guidance based on standard BCI/DIN group sizes and typical
+      diesel CCA requirements. Exact CCA, capacity and dimensions vary by vehicle — always
+      confirm against your vehicle manual or contact us for a datasheet.
+    </p>
+  </div>
+
+  <script>
+    const vehicle = document.getElementById("vehicle");
+    const climate = document.getElementById("climate");
+    const calc = document.getElementById("calc");
+    const result = document.getElementById("result");
+
+    const rec = {
+      "light-mild": { group: "BCI Group 34 / 65", cca: "600–800 CCA" },
+      "light-cold": { group: "BCI Group 65 / 31", cca: "800–950 CCA" },
+      "light-arctic": { group: "BCI Group 31 (AGM)", cca: "950–1100 CCA" },
+      "medium-mild": { group: "BCI Group 31", cca: "800–950 CCA" },
+      "medium-cold": { group: "BCI Group 31", cca: "950–1100 CCA" },
+      "medium-arctic": { group: "BCI Group 31 (AGM)", cca: "1100+ CCA" },
+      "heavy-mild": { group: "2× Group 31 (24V)", cca: "850–1000 CCA each" },
+      "heavy-cold": { group: "2× Group 31 (24V)", cca: "1000–1100 CCA each" },
+      "heavy-arctic": { group: "2× Group 31 AGM (24V)", cca: "1100+ CCA each" },
+      "european-mild": { group: "DIN H8 / H9", cca: "850–950 A EN" },
+      "european-cold": { group: "DIN H9 (AGM/EFB)", cca: "950–1000 A EN" },
+      "european-arctic": { group: "DIN H9 AGM", cca: "1000+ A EN" },
+    };
+
+    calc.addEventListener("click", () => {
+      const key = vehicle.value + "-" + climate.value;
+      const r = rec[key];
+      if (r) {
+        result.innerHTML =
+          "<strong>Recommended:</strong> " + r.group +
+          "<br/>Cold cranking amps: " + r.cca +
+          "<br/><br/><em>Confirm final spec against your vehicle manual.</em>";
+        result.style.display = "block";
+      }
+    });
+  </script>
+</BaseLayout>

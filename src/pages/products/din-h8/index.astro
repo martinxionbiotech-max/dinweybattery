@@ -1,0 +1,26 @@
+---
+import ProductLayout from "../../../layouts/ProductLayout.astro";
+---
+
+<ProductLayout
+  title="DIN H8 / H9 Truck Batteries"
+  description="DINWEY European-standard DIN H8 and H9 truck batteries for MAN, Scania, Volvo, Mercedes, DAF and other European commercial vehicles."
+  specTable={[
+    { spec: "Standard", value: "DIN / EN (European)" },
+    { spec: "Sizes", value: "H8 (L5) / H9 (L6)" },
+    { spec: "Voltage", value: "12V (pairs to 24V)" },
+    { spec: "Typical EN CCA", value: "850–1000 A EN (varies by model)" },
+    { spec: "Capacity", value: "~95–110 Ah (varies by model)" },
+    { spec: "Technology", value: "Flooded / EFB / AGM" },
+    { spec: "Terminals", value: "European (DIN) terminal layout" }
+  ]}
+  applications={[
+    "European commercial trucks (MAN, Scania, Volvo, Mercedes, DAF)",
+    "European buses and coaches",
+    "Cold-climate starting"
+  ]}
+  faq={[
+    { q: "What is the difference between DIN H8 and H9?", a: "H8 and H9 are European battery size codes (also called L5 and L6). H9 is slightly larger with higher capacity than H8. Confirm your vehicle's required size." },
+    { q: "Does DIN use a different CCA test than BCI?", a: "Yes. DIN/EN cold-cranking ratings (EN amperes) differ from North American CCA (SAE). The values are not directly interchangeable — always compare within the same standard." }
+  ]}
+/>

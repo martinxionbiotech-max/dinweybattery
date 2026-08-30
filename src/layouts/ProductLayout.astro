@@ -1,0 +1,77 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  specTable: { spec: string; value: string }[];
+  applications: string[];
+  faq: { q: string; a: string }[];
+}
+
+const { title, description, specTable, applications, faq } = Astro.props;
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faq.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": title,
+  "description": description,
+  "brand": { "@type": "Brand", "name": "DINWEY" },
+  "manufacturer": { "@id": "https://dinweybattery.com/#organization" }
+};
+---
+
+<BaseLayout title={title} description={description} jsonLd={[productJsonLd, faqJsonLd]}>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#55606e;margin-bottom:16px;">
+      <a href="/" style="color:#1e5aa8;">Home</a> &rsaquo; Products &rsaquo; {title}
+    </nav>
+    <h1 style="color:#0f1f3d;margin-bottom:12px;">{title}</h1>
+    <p class="lead">{description}</p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Specifications</h2>
+    <table>
+      <thead>
+        <tr><th>Specification</th><th>Value</th></tr>
+      </thead>
+      <tbody>
+        {specTable.map((row) => (
+          <tr><td>{row.spec}</td><td>{row.value}</td></tr>
+        ))}
+      </tbody>
+    </table>
+    <p class="data-note">
+      Specifications are representative ranges for this product family. Exact CCA, capacity
+      and dimensions vary by model — contact us for a full datasheet matched to your vehicle.
+    </p>
+
+    <h2 style="color:#0f1f3d;">Typical Applications</h2>
+    <ul>
+      {applications.map((a) => (
+        <li>{a}</li>
+      ))}
+    </ul>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Frequently Asked Questions</h2>
+    {faq.map((f) => (
+      <div class="faq-item">
+        <h3>{f.q}</h3>
+        <p>{f.a}</p>
+      </div>
+    ))}
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/contact/" style="display:inline-block;background:#f5a623;color:#000;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;">Request Datasheet &amp; Quote</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,189 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What battery group size does my truck need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Heavy-duty North American trucks most commonly use BCI Group 31 batteries, while larger commercial vehicles may use Group 8D or 4D. European trucks typically use DIN H8 or H9 sizes. Always confirm the group size printed on your existing battery or in the vehicle manual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do heavy-duty trucks use 12V or 24V systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most semi trucks and heavy commercial vehicles use 24V electrical systems (two 12V batteries wired in series), while light trucks and pickups use 12V systems. Check your vehicle specification before ordering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much CCA does a diesel truck battery need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Diesel engines need high cold cranking amps (CCA). Heavy-duty trucks commonly require 800–1100+ CCA depending on engine displacement and climate. Colder climates need higher CCA. Confirm the exact requirement in your vehicle manual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer OEM and private label truck batteries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. As the DINWEY brand of Chengguang Energy (founded 2002), we manufacture truck starting batteries for OEM and private label programs, including custom branding, packaging and specification."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="DINWEY Truck & Heavy-Duty Starting Batteries"
+  description="DINWEY manufactures truck and heavy-duty starting batteries — BCI Group 31, 8D, DIN H8/H9, EFB and AGM. Diesel-grade CCA, 12V & 24V systems. OEM and private label available from a factory founded in 2002."
+  jsonLd={faqJsonLd}
+>
+  <section class="hero">
+    <div class="container">
+      <h1>Truck Starting Batteries,<br />Built for the Long Haul.</h1>
+      <p>
+        DINWEY manufactures heavy-duty starting batteries for trucks and commercial
+        vehicles — BCI Group 31, 8D, DIN H8/H9, EFB and AGM. Diesel-grade cold cranking
+        amps, 12V &amp; 24V systems, and OEM / private label programs from a factory
+        founded in 2002.
+      </p>
+      <a class="cta" href="/selection-tool/">Find Your Battery</a>
+      <a class="cta" style="background:transparent;border:2px solid #f5a623;color:#fff;margin-left:12px;" href="/contact/">Get a Quote</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Why a Truck Needs a Different Battery</h2>
+      <p class="lead">
+        Truck starting batteries are not bigger car batteries. Diesel engines demand far
+        higher cold cranking amps, vibration resistance, and — in heavy commercial vehicles —
+        24V series configurations. Choosing the wrong group size or CCA rating is the #1 cause
+        of fleet breakdowns.
+      </p>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Diesel-Grade CCA</h3>
+          <p>High cold cranking amps to turn over large diesel engines in cold weather.</p>
+        </div>
+        <div class="card">
+          <h3>Right Group Size</h3>
+          <p>Group 31, 8D, 4D or DIN H8/H9 — matched to your vehicle's battery tray.</p>
+        </div>
+        <div class="card">
+          <h3>12V &amp; 24V Systems</h3>
+          <p>Light trucks and heavy commercial vehicles have different electrical systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Our Product Range</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>BCI Group 31</h3>
+          <p>The North American heavy-duty standard for trucks and off-highway equipment.</p>
+          <a href="/products/group-31/">View Group 31 →</a>
+        </div>
+        <div class="card">
+          <h3>BCI Group 8D / 4D</h3>
+          <p>Large-capacity batteries for the biggest commercial vehicles and generators.</p>
+          <a href="/products/8d/">View Group 8D →</a>
+        </div>
+        <div class="card">
+          <h3>DIN H8 / H9</h3>
+          <p>European truck standard sizes for MAN, Scania, Volvo, Mercedes and more.</p>
+          <a href="/products/din-h8/">View DIN H8/H9 →</a>
+        </div>
+        <div class="card">
+          <h3>24V Systems</h3>
+          <p>Series-configured battery pairs for heavy trucks, semi trailers and buses.</p>
+          <a href="/products/24v/">View 24V Systems →</a>
+        </div>
+        <div class="card">
+          <h3>EFB &amp; AGM</h3>
+          <p>Enhanced flooded and absorbent glass mat for demanding commercial duty cycles.</p>
+          <a href="/products/fleet/">View EFB/AGM →</a>
+        </div>
+        <div class="card">
+          <h3>Fleet Solutions</h3>
+          <p>Bulk supply, consistent batches and documentation for fleet operators.</p>
+          <a href="/products/fleet/">Fleet Programs →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>OEM &amp; Private Label</h2>
+      <p class="lead">
+        DINWEY is the truck-battery brand of Chengguang Energy, a manufacturer founded in 2002.
+        If you're a distributor, importer or brand looking for your own heavy-duty battery line,
+        we are the factory behind it — custom branding, specification and packaging.
+      </p>
+      <a class="cta" href="/contact/" style="display:inline-block;margin-top:8px;">Discuss OEM / Private Label</a>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2>What Our Partners Value</h2>
+      <p class="lead" style="margin-bottom:24px;">
+        Typical feedback from our partners, anonymized to protect their business identity.
+      </p>
+      <div class="testimonial">
+        <blockquote>
+          "Middle East distributors consistently highlight batch-to-batch consistency — every
+          delivery ships with CCA test data and full documentation."
+        </blockquote>
+        <p class="attribution">— Distributor partner (anonymized)</p>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          "South American importers value OEM customization speed — from drawing to approved
+          sample, with brand and packaging built to spec."
+        </blockquote>
+        <p class="attribution">— Importer partner (anonymized)</p>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          "Fleet operators care most about on-time delivery and complete shipping documentation."
+        </blockquote>
+        <p class="attribution">— Fleet partner (anonymized)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>What battery group size does my truck need?</h3>
+        <p>Heavy-duty North American trucks most commonly use BCI Group 31, while larger commercial vehicles may use Group 8D or 4D. European trucks typically use DIN H8 or H9. Confirm the group size on your existing battery or in the vehicle manual.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do heavy-duty trucks use 12V or 24V systems?</h3>
+        <p>Most semi trucks and heavy commercial vehicles use 24V systems (two 12V batteries in series); light trucks and pickups use 12V. Check your vehicle specification before ordering.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much CCA does a diesel truck battery need?</h3>
+        <p>Diesel engines need high CCA. Heavy-duty trucks commonly require 800–1100+ CCA depending on engine size and climate — colder climates need more. Confirm the exact figure in your vehicle manual.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you offer OEM and private label truck batteries?</h3>
+        <p>Yes. DINWEY is the truck-battery brand of Chengguang Energy (founded 2002), offering OEM and private label programs with custom branding, packaging and specification.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

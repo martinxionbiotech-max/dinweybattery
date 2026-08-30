@@ -1,0 +1,39 @@
+---
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/products/group-31/", label: "Group 31" },
+  { href: "/products/8d/", label: "Group 8D" },
+  { href: "/products/din-h8/", label: "DIN H8/H9" },
+  { href: "/products/24v/", label: "24V Systems" },
+  { href: "/products/fleet/", label: "Fleet Solutions" },
+  { href: "/selection-tool/", label: "Selection Tool" },
+  { href: "/about/", label: "About" },
+  { href: "/contact/", label: "Contact" },
+];
+
+const pathname = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === "/" ? pathname === "/" : pathname.startsWith(href);
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand" aria-label="DINWEY Truck Batteries — Home">
+      <img src="/images/logo.svg" alt="" width="40" height="40" />
+      <span class="brand-text">DINWEY<small>Truck &amp; Heavy-Duty Batteries</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            aria-current={isActive(item.href) ? "page" : undefined}
+            class={isActive(item.href) ? "active" : undefined}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>

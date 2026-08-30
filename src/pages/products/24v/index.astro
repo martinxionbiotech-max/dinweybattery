@@ -1,0 +1,24 @@
+---
+import ProductLayout from "../../../layouts/ProductLayout.astro";
+---
+
+<ProductLayout
+  title="24V Truck Battery Systems"
+  description="DINWEY 24V starting systems for heavy trucks, semi trailers and buses — series-configured 12V battery pairs with consistent matching for balanced charging."
+  specTable={[
+    { spec: "System Voltage", value: "24V (two 12V batteries in series)" },
+    { spec: "Common Pairs", value: "2× Group 31 / 2× DIN H8 / 2× Group 8D" },
+    { spec: "Application", value: "Heavy trucks, semi trailers, buses" },
+    { spec: "Matching", value: "Batch-matched pairs for balanced charging" },
+    { spec: "Technology", value: "Flooded / EFB / AGM" }
+  ]}
+  applications={[
+    "Semi trucks and heavy haulers",
+    "Buses and coaches",
+    "Military and specialty vehicles"
+  ]}
+  faq={[
+    { q: "Why do heavy trucks use 24V?", a: "24V systems halve the current for the same power, allowing thinner wiring and more reliable starting of large diesel engines." },
+    { q: "Can I replace one battery of a 24V pair?", a: "It is strongly recommended to replace both batteries as a matched pair to ensure balanced charging and full service life." }
+  ]}
+/>
