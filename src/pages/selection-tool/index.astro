@@ -39,9 +39,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     </div>
 
     <p class="data-note" style="margin-top:24px;">
-      Recommendations are general guidance based on standard BCI/DIN group sizes and typical
-      diesel CCA requirements. Exact CCA, capacity and dimensions vary by vehicle — always
-      confirm against your vehicle manual or contact us for a datasheet.
+      Recommendations are general guidance based on JIS and DIN heavy-duty battery standards
+      and typical diesel CCA requirements. Exact CCA, capacity and dimensions vary by vehicle
+      — always confirm against your vehicle manual or contact us for a datasheet.
     </p>
   </div>
 
@@ -52,18 +52,18 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     const result = document.getElementById("result");
 
     const rec = {
-      "light-mild": { group: "BCI Group 34 / 65", cca: "600–800 CCA" },
-      "light-cold": { group: "BCI Group 65 / 31", cca: "800–950 CCA" },
-      "light-arctic": { group: "BCI Group 31 (AGM)", cca: "950–1100 CCA" },
-      "medium-mild": { group: "BCI Group 31", cca: "800–950 CCA" },
-      "medium-cold": { group: "BCI Group 31", cca: "950–1100 CCA" },
-      "medium-arctic": { group: "BCI Group 31 (AGM)", cca: "1100+ CCA" },
-      "heavy-mild": { group: "2× Group 31 (24V)", cca: "850–1000 CCA each" },
-      "heavy-cold": { group: "2× Group 31 (24V)", cca: "1000–1100 CCA each" },
-      "heavy-arctic": { group: "2× Group 31 AGM (24V)", cca: "1100+ CCA each" },
-      "european-mild": { group: "DIN H8 / H9", cca: "850–950 A EN" },
-      "european-cold": { group: "DIN H9 (AGM/EFB)", cca: "950–1000 A EN" },
-      "european-arctic": { group: "DIN H9 AGM", cca: "1000+ A EN" },
+      "light-mild": { group: "JIS 145G51 (N150)", cca: "900 CCA" },
+      "light-cold": { group: "JIS 145G51 (N150)", cca: "900 CCA" },
+      "light-arctic": { group: "JIS 190H52 (N200)", cca: "1100 CCA" },
+      "medium-mild": { group: "JIS 190H52 (N200)", cca: "1100 CCA" },
+      "medium-cold": { group: "JIS 190H52 (N200)", cca: "1100 CCA" },
+      "medium-arctic": { group: "JIS 190H52 (N200)", cca: "1100 CCA" },
+      "heavy-mild": { group: "2× JIS 190H52 (N200) — 24V", cca: "1100 CCA each" },
+      "heavy-cold": { group: "2× JIS 190H52 (N200) — 24V", cca: "1100 CCA each" },
+      "heavy-arctic": { group: "2× JIS 190H52 (N200) — 24V", cca: "1100 CCA each" },
+      "european-mild": { group: "DIN 58827 (DIN88)", cca: "800 A EN" },
+      "european-cold": { group: "DIN 60038 (DIN100)", cca: "870 A EN" },
+      "european-arctic": { group: "DIN 60038 (DIN100)", cca: "870 A EN" },
     };
 
     calc.addEventListener("click", () => {
