@@ -7,9 +7,10 @@ interface Props {
   specTable: { spec: string; value: string }[];
   applications: string[];
   faq: { q: string; a: string }[];
+  relatedDocs?: { title: string; url: string }[];
 }
 
-const { title, description, specTable, applications, faq } = Astro.props;
+const { title, description, specTable, applications, faq, relatedDocs = [] } = Astro.props;
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -73,5 +74,17 @@ const productJsonLd = {
     <div style="margin-top:32px;">
       <a class="cta" href="/contact/" style="display:inline-block;background:#f5a623;color:#000;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;">Request Datasheet &amp; Quote</a>
     </div>
+
+    {relatedDocs.length > 0 && (
+      <div style="margin-top:32px;padding:20px;background:#f4f7fb;border-radius:8px;">
+        <h2 style="color:#0f1f3d;margin-top:0;">Related Technical Documentation</h2>
+        <ul style="margin-bottom:0;">
+          {relatedDocs.map((d) => (
+            <li><a href={d.url} target="_blank" rel="noopener" style="color:#1e5aa8;">{d.title}</a></li>
+          ))}
+        </ul>
+        <p class="data-note" style="margin-top:12px;">From the <a href="https://docs.dinweybattery.com/" target="_blank" rel="noopener">DINWEY Knowledge Hub</a>.</p>
+      </div>
+    )}
   </div>
 </BaseLayout>
