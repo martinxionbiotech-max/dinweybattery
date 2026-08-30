@@ -15,7 +15,9 @@
 DINWEY manufactures and supplies truck / heavy-duty / commercial-vehicle
 starting batteries (SLI — Starting, Lighting, Ignition), including:
 
-- Flooded lead-acid truck batteries (BCI Group 31, 8D, 4D; DIN H8/H9)
+- JIS heavy-duty batteries (145G51 / N150, 190H52 / N200)
+- DIN heavy-duty batteries (58827 / DIN88, 60038 / DIN100)
+- BCI Group 31 / 8D (made-to-order, on request)
 - EFB (Enhanced Flooded Battery) for commercial vehicles
 - AGM (Absorbent Glass Mat) batteries for heavy-duty applications
 - 12V and 24V configurations for light/medium/heavy trucks
@@ -24,21 +26,30 @@ starting batteries (SLI — Starting, Lighting, Ignition), including:
 
 - Founded: 2002 (Chengguang Energy)
 - Location: Jinzhou City, Shijiazhuang, Hebei Province, China
+- Facility: 200,000 m², 18 automated lines, 40,000 batteries/day
+- Certifications: IATF 16949, ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, OHSAS 18001, CE
 - Email: martin@dinweys.com
 - WhatsApp: +86 13323237275
 - OEM / private label available
 
 ## Core Topics
 
-- Truck battery selection guide
-- BCI Group Size standards (Group 31 / 8D / 4D)
+- Truck battery complete guide
+- JIS N150 vs N200 heavy-duty battery comparison
+- JIS vs DIN vs BCI battery standards
 - Cold Cranking Amps (CCA) for diesel trucks
+- Reserve Capacity (RC) for truck batteries
 - 12V vs 24V truck electrical systems
-- AGM vs EFB vs flooded for heavy-duty trucks
+- AGM vs flooded for heavy-duty trucks
 
 ## Key Pages
 
 - [Home](https://dinweybattery.com/)
-- [Truck Battery Selection Guide](https://docs.dinweybattery.com/selection-guide/)
-- [BCI Group Size Standards](https://docs.dinweybattery.com/bci-group-sizes/)
+- [JIS Heavy-Duty Batteries](https://dinweybattery.com/products/jis-heavy-duty/)
+- [DIN Heavy-Duty Batteries](https://dinweybattery.com/products/din-heavy-duty/)
+- [24V Systems](https://dinweybattery.com/products/24v/)
+- [Selection Tool](https://dinweybattery.com/selection-tool/)
+- [Knowledge Hub](https://docs.dinweybattery.com/)
+- [Truck Battery Complete Guide](https://docs.dinweybattery.com/complete-guide/)
+- [JIS N150 vs N200](https://docs.dinweybattery.com/jis-n150-vs-n200/)
 - [12V vs 24V Systems](https://docs.dinweybattery.com/12v-vs-24v/)
