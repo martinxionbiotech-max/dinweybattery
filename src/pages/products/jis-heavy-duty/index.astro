@@ -1,0 +1,27 @@
+---
+import ProductLayout from "../../../layouts/ProductLayout.astro";
+---
+
+<ProductLayout
+  title="JIS Heavy-Duty Truck Batteries (N150 / N200)"
+  description="DINWEY JIS-standard heavy-duty truck batteries — 145G51 (N150) and 190H52 (N200) models for large trucks, buses and generators. Manufactured by Chengguang Energy under IATF 16949 quality management."
+  specTable={[
+    { spec: "Model 145G51 (N150)", value: "12V, 135Ah (C20), 900A CCA, 220min RC, 508×222×212mm" },
+    { spec: "Model 190H52 (N200)", value: "12V, 200Ah (C20), 1100A CCA, 320min RC, 520×278×220mm" },
+    { spec: "Standard", value: "JIS D5301" },
+    { spec: "Technology", value: "Heavy-Duty thick-plate flooded (Pb-Sb grid)" },
+    { spec: "Terminals", value: "JIS type A (large post)" },
+    { spec: "Applications", value: "Heavy trucks, buses, generators, off-highway equipment" }
+  ]}
+  applications={[
+    "Heavy-duty trucks and semi trailers",
+    "Buses and coaches",
+    "Diesel generators",
+    "Off-highway and construction equipment"
+  ]}
+  faq={[
+    { q: "What is the difference between N150 and N200?", a: "The JIS N150 (model 145G51) has 135Ah capacity and 900A CCA; the N200 (model 190H52) is larger with 200Ah and 1100A CCA. Choose based on your engine's CCA requirement and battery tray size." },
+    { q: "Are these batteries for 12V or 24V systems?", a: "Each is a 12V battery. Heavy trucks using 24V systems wire two of them in series." },
+    { q: "What CCA does a JIS N200 provide?", a: "The 190H52 (N200) provides 1100A CCA (SAE), suited to large diesel engines." }
+  ]}
+/>

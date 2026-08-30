@@ -1,0 +1,27 @@
+---
+import ProductLayout from "../../../layouts/ProductLayout.astro";
+---
+
+<ProductLayout
+  title="DIN Heavy-Duty Truck Batteries (DIN88 / DIN100)"
+  description="DINWEY DIN-standard heavy-duty truck batteries — DIN88 and DIN100 models for European and Middle East commercial vehicles. Manufactured by Chengguang Energy, certified IATF 16949."
+  specTable={[
+    { spec: "Model 58827 (DIN88)", value: "12V, 88Ah (C20), 800A EN CCA, 150min RC, 353×175×190mm" },
+    { spec: "Model 60038 (DIN100)", value: "12V, 100Ah (C20), 870A EN CCA, 170min RC, 393×175×190mm" },
+    { spec: "Standard", value: "EN 50342-1 (DIN)" },
+    { spec: "Technology", value: "Flooded / EFB / AGM available" },
+    { spec: "Terminals", value: "European conical (T1), left positive" },
+    { spec: "Applications", value: "European trucks, buses, cold-climate starting" }
+  ]}
+  applications={[
+    "European commercial trucks (MAN, Scania, Volvo, Mercedes, DAF)",
+    "European buses and coaches",
+    "Cold-climate starting",
+    "Middle East and North Africa markets"
+  ]}
+  faq={[
+    { q: "What is the difference between DIN88 and DIN100?", a: "DIN100 (model 60038) has higher capacity (100Ah) and CCA (870A EN) than DIN88 (88Ah, 800A EN). DIN100 is physically longer (393mm vs 353mm)." },
+    { q: "Does DIN use a different CCA test than JIS/BCI?", a: "Yes. DIN/EN cold-cranking ratings (EN amperes) differ from SAE CCA. Values are not directly interchangeable — compare within the same standard." },
+    { q: "Is EFB or AGM available for DIN truck batteries?", a: "Yes. DIN heavy-duty models are available in flooded, EFB and AGM technologies depending on duty cycle and vibration requirements." }
+  ]}
+/>
