@@ -43,6 +43,42 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       and typical diesel CCA requirements. Exact CCA, capacity and dimensions vary by vehicle
       — always confirm against your vehicle manual or contact us for a datasheet.
     </p>
+
+    <h2 style="color:#0f1f3d;margin-top:40px;">Full Recommendation Matrix</h2>
+    <p>
+      The table below lists every recommendation the tool above can produce, so the guidance
+      is readable without running any script — and indexable by search engines and AI assistants.
+    </p>
+
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+        <thead>
+          <tr style="background:#0f1f3d;color:#fff;">
+            <th style="padding:10px;text-align:left;">Vehicle type</th>
+            <th style="padding:10px;text-align:left;">Climate</th>
+            <th style="padding:10px;text-align:left;">Recommended battery</th>
+            <th style="padding:10px;text-align:left;">CCA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Light truck / pickup (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Mild / temperate</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 145G51 (N150)</td><td style="padding:10px;border-bottom:1px solid #ddd;">900 CCA</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Light truck / pickup (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Cold winter</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 145G51 (N150)</td><td style="padding:10px;border-bottom:1px solid #ddd;">900 CCA</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Light truck / pickup (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Arctic / extreme cold</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 190H52 (N200)</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Medium-duty truck (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Mild / temperate</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 190H52 (N200)</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Medium-duty truck (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Cold winter</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 190H52 (N200)</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Medium-duty truck (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Arctic / extreme cold</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 190H52 (N200)</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Heavy-duty / semi truck (24V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Mild / temperate</td><td style="padding:10px;border-bottom:1px solid #ddd;">2× JIS 190H52 (N200)
+ — 24V</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA each</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Heavy-duty / semi truck (24V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Cold winter</td><td style="padding:10px;border-bottom:1px solid #ddd;">2× JIS 190H52 (N200)
+ — 24V</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA each</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Heavy-duty / semi truck (24V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Arctic / extreme cold</td><td style="padding:10px;border-bottom:1px solid #ddd;">2× JIS 190H52 (N200)
+ — 24V</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA each</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">European commercial truck</td><td style="padding:10px;border-bottom:1px solid #ddd;">Mild / temperate</td><td style="padding:10px;border-bottom:1px solid #ddd;">DIN 58827 (DIN88)</td><td style="padding:10px;border-bottom:1px solid #ddd;">800 A EN</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">European commercial truck</td><td style="padding:10px;border-bottom:1px solid #ddd;">Cold winter</td><td style="padding:10px;border-bottom:1px solid #ddd;">DIN 60038 (DIN100)</td><td style="padding:10px;border-bottom:1px solid #ddd;">870 A EN</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">European commercial truck</td><td style="padding:10px;border-bottom:1px solid #ddd;">Arctic / extreme cold</td><td style="padding:10px;border-bottom:1px solid #ddd;">DIN 60038 (DIN100)</td><td style="padding:10px;border-bottom:1px solid #ddd;">870 A EN</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <script>
