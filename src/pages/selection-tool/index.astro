@@ -4,14 +4,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 <BaseLayout
   title="Truck Battery Selection Tool"
-  description="Find the right DINWEY truck battery: select your vehicle type, electrical system voltage and climate to get a recommended group size and CCA range."
+  description="Find the right DINWEY truck battery: select your vehicle type, climate and duty cycle to get a recommended group size, CCA, capacity and technology."
 >
   <div class="container section">
     <h1 style="color:#0f1f3d;">Truck Battery Selection Tool</h1>
     <p class="lead">
-      Answer three questions to get a recommended battery group size and cold cranking amp
-      (CCA) range for your truck. This is a guidance tool — always confirm the final
-      specification against your vehicle manual.
+      Answer three questions to get a recommended battery model, cold cranking amp (CCA)
+      range, capacity and technology for your truck. This is a guidance tool — always confirm
+      the final specification against your vehicle manual.
     </p>
 
     <div class="selector">
@@ -20,7 +20,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         <option value="light">Light truck / pickup (12V)</option>
         <option value="medium">Medium-duty truck (12V)</option>
         <option value="heavy">Heavy-duty / semi truck (24V)</option>
+        <option value="bus">Bus / coach (24V)</option>
         <option value="european">European commercial truck</option>
+        <option value="bci">North American truck (BCI)</option>
       </select>
 
       <label for="climate">2. Climate</label>
@@ -28,6 +30,13 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         <option value="mild">Mild / temperate</option>
         <option value="cold">Cold winter</option>
         <option value="arctic">Arctic / extreme cold</option>
+      </select>
+
+      <label for="duty">3. Duty cycle</label>
+      <select id="duty">
+        <option value="standard">Standard starting</option>
+        <option value="high-load">Heavy electrical loads (reefer / liftgate / telematics)</option>
+        <option value="off-highway">High vibration / off-highway</option>
       </select>
 
       <button
@@ -44,10 +53,19 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       — always confirm against your vehicle manual or contact us for a datasheet.
     </p>
 
-    <h2 style="color:#0f1f3d;margin-top:40px;">Full Recommendation Matrix</h2>
+    <h2 style="color:#0f1f3d;margin-top:40px;">How the Tool Works</h2>
     <p>
-      The table below lists every recommendation the tool above can produce, so the guidance
-      is readable without running any script — and indexable by search engines and AI assistants.
+      The tool matches three inputs to a recommendation. <strong>Vehicle type</strong> sets the
+      base group size and voltage. <strong>Climate</strong> determines whether you need more
+      cold-cranking margin. <strong>Duty cycle</strong> decides the battery technology — flooded
+      for standard starting, AGM or an auxiliary bank for heavy loads and vibration.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Full Recommendation Matrix</h2>
+    <p>
+      The table below lists every vehicle × climate recommendation the tool produces, so the
+      guidance is readable without running any script — and indexable by search engines and AI
+      assistants. The duty-cycle dimension is covered in the technology notes below the table.
     </p>
 
     <div style="overflow-x:auto;">
@@ -58,27 +76,52 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             <th style="padding:10px;text-align:left;">Climate</th>
             <th style="padding:10px;text-align:left;">Recommended battery</th>
             <th style="padding:10px;text-align:left;">CCA</th>
+            <th style="padding:10px;text-align:left;">Capacity</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Light truck / pickup (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Mild / temperate</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 145G51 (N150)</td><td style="padding:10px;border-bottom:1px solid #ddd;">900 CCA</td></tr>
-          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Light truck / pickup (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Cold winter</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 145G51 (N150)</td><td style="padding:10px;border-bottom:1px solid #ddd;">900 CCA</td></tr>
-          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Light truck / pickup (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Arctic / extreme cold</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 190H52 (N200)</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA</td></tr>
-          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Medium-duty truck (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Mild / temperate</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 190H52 (N200)</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA</td></tr>
-          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Medium-duty truck (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Cold winter</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 190H52 (N200)</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA</td></tr>
-          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Medium-duty truck (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Arctic / extreme cold</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 190H52 (N200)</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA</td></tr>
-          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Heavy-duty / semi truck (24V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Mild / temperate</td><td style="padding:10px;border-bottom:1px solid #ddd;">2× JIS 190H52 (N200)
- — 24V</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA each</td></tr>
-          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Heavy-duty / semi truck (24V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Cold winter</td><td style="padding:10px;border-bottom:1px solid #ddd;">2× JIS 190H52 (N200)
- — 24V</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA each</td></tr>
-          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Heavy-duty / semi truck (24V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Arctic / extreme cold</td><td style="padding:10px;border-bottom:1px solid #ddd;">2× JIS 190H52 (N200)
- — 24V</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA each</td></tr>
-          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">European commercial truck</td><td style="padding:10px;border-bottom:1px solid #ddd;">Mild / temperate</td><td style="padding:10px;border-bottom:1px solid #ddd;">DIN 58827 (DIN88)</td><td style="padding:10px;border-bottom:1px solid #ddd;">800 A EN</td></tr>
-          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">European commercial truck</td><td style="padding:10px;border-bottom:1px solid #ddd;">Cold winter</td><td style="padding:10px;border-bottom:1px solid #ddd;">DIN 60038 (DIN100)</td><td style="padding:10px;border-bottom:1px solid #ddd;">870 A EN</td></tr>
-          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">European commercial truck</td><td style="padding:10px;border-bottom:1px solid #ddd;">Arctic / extreme cold</td><td style="padding:10px;border-bottom:1px solid #ddd;">DIN 60038 (DIN100)</td><td style="padding:10px;border-bottom:1px solid #ddd;">870 A EN</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Light truck / pickup (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Mild / temperate</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 145G51 (N150)</td><td style="padding:10px;border-bottom:1px solid #ddd;">900 CCA</td><td style="padding:10px;border-bottom:1px solid #ddd;">135 Ah</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Light truck / pickup (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Cold winter</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 145G51 (N150)</td><td style="padding:10px;border-bottom:1px solid #ddd;">900 CCA</td><td style="padding:10px;border-bottom:1px solid #ddd;">135 Ah</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Light truck / pickup (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Arctic / extreme cold</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 190H52 (N200)</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA</td><td style="padding:10px;border-bottom:1px solid #ddd;">200 Ah</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Medium-duty truck (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Mild / temperate</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 190H52 (N200)</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA</td><td style="padding:10px;border-bottom:1px solid #ddd;">200 Ah</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Medium-duty truck (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Cold winter</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 190H52 (N200)</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA</td><td style="padding:10px;border-bottom:1px solid #ddd;">200 Ah</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Medium-duty truck (12V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Arctic / extreme cold</td><td style="padding:10px;border-bottom:1px solid #ddd;">JIS 190H52 (N200)</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA</td><td style="padding:10px;border-bottom:1px solid #ddd;">200 Ah</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Heavy-duty / semi truck (24V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Mild / temperate</td><td style="padding:10px;border-bottom:1px solid #ddd;">2× JIS 190H52 (N200) — 24V</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA each</td><td style="padding:10px;border-bottom:1px solid #ddd;">200 Ah each</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Heavy-duty / semi truck (24V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Cold winter</td><td style="padding:10px;border-bottom:1px solid #ddd;">2× JIS 190H52 (N200) — 24V</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA each</td><td style="padding:10px;border-bottom:1px solid #ddd;">200 Ah each</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Heavy-duty / semi truck (24V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Arctic / extreme cold</td><td style="padding:10px;border-bottom:1px solid #ddd;">2× JIS 190H52 (N200) — 24V</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA each</td><td style="padding:10px;border-bottom:1px solid #ddd;">200 Ah each</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Bus / coach (24V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Mild / temperate</td><td style="padding:10px;border-bottom:1px solid #ddd;">2× JIS 190H52 (N200) — 24V</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA each</td><td style="padding:10px;border-bottom:1px solid #ddd;">200 Ah each</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Bus / coach (24V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Cold winter</td><td style="padding:10px;border-bottom:1px solid #ddd;">2× JIS 190H52 (N200) — 24V</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA each</td><td style="padding:10px;border-bottom:1px solid #ddd;">200 Ah each</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Bus / coach (24V)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Arctic / extreme cold</td><td style="padding:10px;border-bottom:1px solid #ddd;">2× JIS 190H52 (N200) — 24V</td><td style="padding:10px;border-bottom:1px solid #ddd;">1100 CCA each</td><td style="padding:10px;border-bottom:1px solid #ddd;">200 Ah each</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">European commercial truck</td><td style="padding:10px;border-bottom:1px solid #ddd;">Mild / temperate</td><td style="padding:10px;border-bottom:1px solid #ddd;">DIN 58827 (DIN88)</td><td style="padding:10px;border-bottom:1px solid #ddd;">800 A EN</td><td style="padding:10px;border-bottom:1px solid #ddd;">88 Ah</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">European commercial truck</td><td style="padding:10px;border-bottom:1px solid #ddd;">Cold winter</td><td style="padding:10px;border-bottom:1px solid #ddd;">DIN 60038 (DIN100)</td><td style="padding:10px;border-bottom:1px solid #ddd;">870 A EN</td><td style="padding:10px;border-bottom:1px solid #ddd;">100 Ah</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">European commercial truck</td><td style="padding:10px;border-bottom:1px solid #ddd;">Arctic / extreme cold</td><td style="padding:10px;border-bottom:1px solid #ddd;">DIN 60038 (DIN100)</td><td style="padding:10px;border-bottom:1px solid #ddd;">870 A EN</td><td style="padding:10px;border-bottom:1px solid #ddd;">100 Ah</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">North American truck (BCI)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Mild / temperate</td><td style="padding:10px;border-bottom:1px solid #ddd;">BCI Group 31</td><td style="padding:10px;border-bottom:1px solid #ddd;">On request</td><td style="padding:10px;border-bottom:1px solid #ddd;">On request</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">North American truck (BCI)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Cold winter</td><td style="padding:10px;border-bottom:1px solid #ddd;">BCI Group 31</td><td style="padding:10px;border-bottom:1px solid #ddd;">On request</td><td style="padding:10px;border-bottom:1px solid #ddd;">On request</td></tr>
+          <tr><td style="padding:10px;border-bottom:1px solid #ddd;">North American truck (BCI)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Arctic / extreme cold</td><td style="padding:10px;border-bottom:1px solid #ddd;">BCI Group 31 / 8D</td><td style="padding:10px;border-bottom:1px solid #ddd;">On request</td><td style="padding:10px;border-bottom:1px solid #ddd;">On request</td></tr>
         </tbody>
       </table>
     </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Technology by Duty Cycle</h2>
+    <p>
+      The same group size and CCA can be supplied in different battery technologies. Match the
+      technology to how the battery is used:
+    </p>
+    <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+      <thead>
+        <tr style="background:#0f1f3d;color:#fff;">
+          <th style="padding:10px;text-align:left;">Duty cycle</th>
+          <th style="padding:10px;text-align:left;">Recommended technology</th>
+          <th style="padding:10px;text-align:left;">Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Standard starting</td><td style="padding:10px;border-bottom:1px solid #ddd;">Flooded (SLI)</td><td style="padding:10px;border-bottom:1px solid #ddd;">Economical, proven for conventional duty</td></tr>
+        <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Heavy electrical loads</td><td style="padding:10px;border-bottom:1px solid #ddd;">EFB or AGM + auxiliary bank</td><td style="padding:10px;border-bottom:1px solid #ddd;">Higher charge acceptance; a separate deep-cycle bank protects the start battery</td></tr>
+        <tr><td style="padding:10px;border-bottom:1px solid #ddd;">High vibration / off-highway</td><td style="padding:10px;border-bottom:1px solid #ddd;">AGM</td><td style="padding:10px;border-bottom:1px solid #ddd;">Sealed, vibration-resistant, maintenance-free</td></tr>
+      </tbody>
+    </table>
+
     <p style="margin-top:24px;">
       📚 Want the technical detail behind these recommendations? Read the
       <a href="https://docs.dinweysbattery.com/" style="color:#1e5aa8;">DINWEY Knowledge Hub</a> —
@@ -89,31 +132,60 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   <script>
     const vehicle = document.getElementById("vehicle");
     const climate = document.getElementById("climate");
+    const duty = document.getElementById("duty");
     const calc = document.getElementById("calc");
     const result = document.getElementById("result");
 
+    // 车型 × 气候 → 基础型号推荐（数据与产品页 specTable 一致）
     const rec = {
-      "light-mild": { group: "JIS 145G51 (N150)", cca: "900 CCA" },
-      "light-cold": { group: "JIS 145G51 (N150)", cca: "900 CCA" },
-      "light-arctic": { group: "JIS 190H52 (N200)", cca: "1100 CCA" },
-      "medium-mild": { group: "JIS 190H52 (N200)", cca: "1100 CCA" },
-      "medium-cold": { group: "JIS 190H52 (N200)", cca: "1100 CCA" },
-      "medium-arctic": { group: "JIS 190H52 (N200)", cca: "1100 CCA" },
-      "heavy-mild": { group: "2× JIS 190H52 (N200) — 24V", cca: "1100 CCA each" },
-      "heavy-cold": { group: "2× JIS 190H52 (N200) — 24V", cca: "1100 CCA each" },
-      "heavy-arctic": { group: "2× JIS 190H52 (N200) — 24V", cca: "1100 CCA each" },
-      "european-mild": { group: "DIN 58827 (DIN88)", cca: "800 A EN" },
-      "european-cold": { group: "DIN 60038 (DIN100)", cca: "870 A EN" },
-      "european-arctic": { group: "DIN 60038 (DIN100)", cca: "870 A EN" },
+      light: {
+        mild:   { model: "JIS 145G51 (N150)", cca: "900 CCA", ah: "135 Ah", link: "/products/jis-heavy-duty/" },
+        cold:   { model: "JIS 145G51 (N150)", cca: "900 CCA", ah: "135 Ah", link: "/products/jis-heavy-duty/" },
+        arctic: { model: "JIS 190H52 (N200)", cca: "1100 CCA", ah: "200 Ah", link: "/products/jis-heavy-duty/" },
+      },
+      medium: {
+        mild:   { model: "JIS 190H52 (N200)", cca: "1100 CCA", ah: "200 Ah", link: "/products/jis-heavy-duty/" },
+        cold:   { model: "JIS 190H52 (N200)", cca: "1100 CCA", ah: "200 Ah", link: "/products/jis-heavy-duty/" },
+        arctic: { model: "JIS 190H52 (N200)", cca: "1100 CCA", ah: "200 Ah", link: "/products/jis-heavy-duty/" },
+      },
+      heavy: {
+        mild:   { model: "2× JIS 190H52 (N200) — 24V", cca: "1100 CCA each", ah: "200 Ah each", link: "/products/24v/" },
+        cold:   { model: "2× JIS 190H52 (N200) — 24V", cca: "1100 CCA each", ah: "200 Ah each", link: "/products/24v/" },
+        arctic: { model: "2× JIS 190H52 (N200) — 24V", cca: "1100 CCA each", ah: "200 Ah each", link: "/products/24v/" },
+      },
+      bus: {
+        mild:   { model: "2× JIS 190H52 (N200) — 24V", cca: "1100 CCA each", ah: "200 Ah each", link: "/products/24v/" },
+        cold:   { model: "2× JIS 190H52 (N200) — 24V", cca: "1100 CCA each", ah: "200 Ah each", link: "/products/24v/" },
+        arctic: { model: "2× JIS 190H52 (N200) — 24V", cca: "1100 CCA each", ah: "200 Ah each", link: "/products/24v/" },
+      },
+      european: {
+        mild:   { model: "DIN 58827 (DIN88)", cca: "800 A EN", ah: "88 Ah", link: "/products/din-heavy-duty/" },
+        cold:   { model: "DIN 60038 (DIN100)", cca: "870 A EN", ah: "100 Ah", link: "/products/din-heavy-duty/" },
+        arctic: { model: "DIN 60038 (DIN100)", cca: "870 A EN", ah: "100 Ah", link: "/products/din-heavy-duty/" },
+      },
+      bci: {
+        mild:   { model: "BCI Group 31", cca: "On request", ah: "On request", link: "/products/bci-request/" },
+        cold:   { model: "BCI Group 31", cca: "On request", ah: "On request", link: "/products/bci-request/" },
+        arctic: { model: "BCI Group 31 / 8D", cca: "On request", ah: "On request", link: "/products/bci-request/" },
+      },
+    };
+
+    // 应用场景 → 技术建议
+    const dutyNote = {
+      standard: "Technology: flooded (SLI) — economical for conventional starting.",
+      "high-load": "Technology: EFB or AGM, plus a separate auxiliary deep-cycle bank to protect the start battery.",
+      "off-highway": "Technology: AGM — sealed and vibration-resistant for off-highway duty.",
     };
 
     calc.addEventListener("click", () => {
-      const key = vehicle.value + "-" + climate.value;
-      const r = rec[key];
+      const r = rec[vehicle.value]?.[climate.value];
       if (r) {
         result.innerHTML =
-          "<strong>Recommended:</strong> " + r.group +
+          "<strong>Recommended:</strong> " + r.model +
           "<br/>Cold cranking amps: " + r.cca +
+          "<br/>Capacity: " + r.ah +
+          "<br/>" + dutyNote[duty.value] +
+          "<br/><br/><a href=\"" + r.link + "\" style=\"color:#1e5aa8;\">View this battery →</a>" +
           "<br/><br/><em>Confirm final spec against your vehicle manual.</em>";
         result.style.display = "block";
       }
