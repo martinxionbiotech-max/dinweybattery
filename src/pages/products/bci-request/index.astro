@@ -23,13 +23,50 @@ import ProductLayout from "../../../layouts/ProductLayout.astro";
     "Group 31 is the modern heavy-duty standard — the go-to for Class 7–8 trucks, buses and off-highway equipment in North America. Group 8D is the larger, higher-capacity classic size still specified for some heavy equipment. Both are produced on the same 18 automated lines as our JIS and DIN ranges, under the same IATF 16949 quality system.",
     "Because BCI production is made-to-order, standard MOQ is 1 × 20ft container with a lead time of 20–45 days. Contact us with your target group size, CCA requirement and destination to confirm specification and pricing."
   ]}
+  specNotes={[
+    "A BCI group size describes the physical envelope — length, width, height — and the terminal layout, not the electrical rating. Group 31 is today's heavy-duty standard; Group 8D and 4D are larger legacy sizes. Matching the group size is what makes the battery fit the tray and reach the cables.",
+    "BCI batteries are CCA-rated to the SAE J537 test — the same 30-second, −18°C (0°F), 7.2V definition used for JIS batteries. We confirm the exact CCA, capacity and terminal configuration for your group size when you inquire.",
+    "Because BCI production is made-to-order, we build to your specification — group size, CCA, terminal type and orientation, and (where required) stud or post terminals. Final figures are documented in the datasheet and quotation."
+  ]}
+  comparison={{
+    headers: ["Aspect", "Group 31", "Group 8D / 4D"],
+    rows: [
+      ["Voltage", "12V", "12V"],
+      ["Positioning", "Modern heavy-duty standard", "Larger, higher-capacity legacy sizes"],
+      ["Typical use", "Class 7–8 trucks, buses, off-highway", "Heavy equipment with high electrical demand"],
+      ["Terminals", "Stud or post — to specification", "Stud or post — to specification"],
+      ["Availability", "Made-to-order", "Made-to-order"],
+      ["Specification", "Confirmed on inquiry", "Confirmed on inquiry"]
+    ]
+  }}
+  scenarios={[
+    {
+      title: "North American Class 7–8 trucks",
+      body: "Group 31 is the default commercial-truck size in North America, specified by most Class 7–8 OEMs. DINWEY builds Group 31 to your CCA and terminal spec on the same automated lines as our JIS and DIN ranges."
+    },
+    {
+      title: "Off-highway equipment",
+      body: "Construction, agricultural and mining machines subject batteries to heavy vibration and irregular duty. We match plate design and terminal type to the equipment's demands rather than shipping a one-size-fits-all unit."
+    },
+    {
+      title: "Latin American heavy vehicles",
+      body: "Latin American fleets commonly run mixed North American and European platforms. We supply BCI sizes alongside our JIS and DIN lines so a single importer can consolidate sourcing in one container."
+    }
+  ]}
+  maintenance={[
+    "For flooded BCI batteries, check electrolyte and top up with distilled water; sealed AGM or EFB builds are maintenance-free.",
+    "Clean and tighten terminals (stud or post) and protect them from corrosion — a poor connection is a leading cause of no-start on heavy equipment.",
+    "Store fully charged in a cool, dry place and recharge after any deep discharge to prevent sulfation."
+  ]}
   image={{ src: "/images/products/190H52-N200.jpg", alt: "DINWEY heavy-duty truck battery — 190H52 (N200)", width: 1024, height: 1024 }}
   faq={[
     { q: "Do you stock BCI Group 31 batteries?", a: "BCI-standard batteries are produced on request. Our core stocked lines are JIS and DIN standards; BCI Group 31/8D are made-to-order." },
     { q: "What is the MOQ for BCI batteries?", a: "Standard MOQ is 1 × 20ft container, with flexibility for trial orders. Contact us for current terms." },
     { q: "What is the difference between Group 31 and Group 8D?", a: "Group 8D is a larger, higher-capacity battery than Group 31. Group 31 is the modern heavy-duty standard; 8D is an older large-capacity size. Both are available on request." },
     { q: "What lead time should I expect?", a: "Standard lead time is 20–45 days for made-to-order BCI batteries, depending on specification and order volume. Confirm current lead times when you inquire." },
-    { q: "Do you supply BCI batteries for North America?", a: "Yes, on a made-to-order basis. Contact us with your target group size, CCA requirement and destination to confirm specification and pricing." }
+    { q: "Do you supply BCI batteries for North America?", a: "Yes, on a made-to-order basis. Contact us with your target group size, CCA requirement and destination to confirm specification and pricing." },
+    { q: "Can you match the CCA of my existing Group 31?", a: "Yes. Because BCI batteries are made-to-order, we confirm the exact CCA, capacity and terminal configuration against your existing battery or vehicle specification before production." },
+    { q: "Do you build Group 31 in AGM or EFB?", a: "Yes — we can build BCI sizes in flooded, EFB or AGM technology depending on your duty cycle, vibration and electrical load. Confirm the technology when you inquire." }
   ]}
   relatedDocs={[
     { title: "BCI group sizes explained", url: "https://docs.dinweysbattery.com/bci-group-sizes/" },

@@ -8,6 +8,16 @@ interface ProductImage {
   height: number;
 }
 
+interface ComparisonTable {
+  headers: string[];
+  rows: string[][];
+}
+
+interface Scenario {
+  title: string;
+  body: string;
+}
+
 interface Props {
   title: string;
   description: string;
@@ -18,6 +28,10 @@ interface Props {
   intro?: string[];
   image?: ProductImage;
   images?: ProductImage[];
+  specNotes?: string[];
+  comparison?: ComparisonTable;
+  scenarios?: Scenario[];
+  maintenance?: string[];
 }
 
 const {
@@ -29,7 +43,11 @@ const {
   relatedDocs = [],
   intro = [],
   image,
-  images = []
+  images = [],
+  specNotes = [],
+  comparison,
+  scenarios = [],
+  maintenance = []
 } = Astro.props;
 
 const galleryImages = images.length > 0 ? images : image ? [image] : [];
@@ -53,6 +71,17 @@ const productJsonLd = {
   "brand": { "@type": "Brand", "name": "DINWEY" },
   "manufacturer": { "@id": "https://dinweysbattery.com/#organization" }
 };
+
+// 站点内产品线（用于内链：相关产品互链）
+const productLines = [
+  { href: "/products/jis-heavy-duty/", label: "JIS Heavy-Duty (N150/N200)" },
+  { href: "/products/din-heavy-duty/", label: "DIN Heavy-Duty (DIN88/DIN100)" },
+  { href: "/products/bci-request/", label: "BCI Group 31 / 8D" },
+  { href: "/products/24v/", label: "24V Truck Battery Systems" },
+  { href: "/products/fleet/", label: "Fleet & OEM Solutions" }
+];
+const currentPath = Astro.url.pathname.replace(/\/$/, "");
+const siblingLinks = productLines.filter((p) => p.href.replace(/\/$/, "") !== currentPath);
 ---
 
 <BaseLayout title={title} description={description} ogImage={ogImage} jsonLd={[productJsonLd, faqJsonLd]}>
@@ -106,12 +135,68 @@ const productJsonLd = {
       and dimensions vary by model — contact us for a full datasheet matched to your vehicle.
     </p>
 
-    <h2 style="color:#0f1f3d;">Typical Applications</h2>
+    {specNotes.length > 0 && (
+      <div style="margin-top:28px;">
+        <h2 style="color:#0f1f3d;">Understanding These Specifications</h2>
+        {specNotes.map((p) => (
+          <p>{p}</p>
+        ))}
+      </div>
+    )}
+
+    {comparison && (
+      <div style="margin-top:28px;">
+        <h2 style="color:#0f1f3d;">Model Comparison</h2>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead>
+              <tr>
+                {comparison.headers.map((h) => (
+                  <th>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {comparison.rows.map((row) => (
+                <tr>
+                  {row.map((cell) => (
+                    <td>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )}
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Typical Applications</h2>
     <ul>
       {applications.map((a) => (
         <li>{a}</li>
       ))}
     </ul>
+
+    {scenarios.length > 0 && (
+      <div style="margin-top:28px;">
+        <h2 style="color:#0f1f3d;">Application Scenarios in Detail</h2>
+        {scenarios.map((s) => (
+          <div style="margin-bottom:16px;">
+            <h3 style="color:#0f1f3d;margin-bottom:6px;">{s.title}</h3>
+            <p>{s.body}</p>
+          </div>
+        ))}
+      </div>
+    )}
+
+    {maintenance.length > 0 && (
+      <div style="margin-top:28px;">
+        <h2 style="color:#0f1f3d;">Maintenance &amp; Care</h2>
+        {maintenance.map((p) => (
+          <p>{p}</p>
+        ))}
+      </div>
+    )}
 
     <h2 style="color:#0f1f3d;margin-top:32px;">Frequently Asked Questions</h2>
     {faq.map((f) => (
@@ -124,6 +209,17 @@ const productJsonLd = {
     <div style="margin-top:32px;">
       <a class="cta" href="/contact/" style="display:inline-block;background:#f5a623;color:#000;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;">Request Datasheet &amp; Quote</a>
     </div>
+
+    {siblingLinks.length > 0 && (
+      <div style="margin-top:32px;">
+        <h2 style="color:#0f1f3d;">Explore Other DINWEY Product Lines</h2>
+        <ul>
+          {siblingLinks.map((s) => (
+            <li><a href={s.href} style="color:#1e5aa8;">{s.label}</a></li>
+          ))}
+        </ul>
+      </div>
+    )}
 
     {relatedDocs.length > 0 && (
       <div style="margin-top:32px;padding:20px;background:#f4f7fb;border-radius:8px;">

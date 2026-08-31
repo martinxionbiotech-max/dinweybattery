@@ -22,13 +22,51 @@ import ProductLayout from "../../../layouts/ProductLayout.astro";
     "In a 24V system, the two batteries charge and discharge as a single unit, which means they must be treated as a matched pair. Always replace both together, with the same model, age and rating. Replacing only one battery in a series pair causes imbalance and shortens the life of both.",
     "DINWEY supplies the 12V heavy-duty batteries that build 24V systems — the JIS 145G51/190H52 and DIN 58827/60038 — along with guidance on correct series wiring and charging."
   ]}
+  specNotes={[
+    "Why 24V: a 24V system is two 12V batteries in series, doubling voltage so the same cranking power flows at half the current. Lower current means thinner, lighter wiring and less voltage drop — the reason heavy trucks, buses and semi trailers standardized on 24V.",
+    "Matched pairs: the two batteries in a series pair must be identical in model, age and rating. If one is weaker, the pair charges unevenly and both fail early. Always replace a 24V pair together, with two identical batteries.",
+    "Charging: use a charger rated for 24V, or charge each 12V battery individually. A 12V charger applied across a 24V series pair will not bring it to a full charge."
+  ]}
+  comparison={{
+    headers: ["Aspect", "12V system", "24V system"],
+    rows: [
+      ["Voltage", "12V", "24V (two 12V in series)"],
+      ["Current for the same power", "Higher", "Half"],
+      ["Wiring", "Thicker conductors", "Thinner, lighter conductors"],
+      ["Typical vehicles", "Light trucks, pickups, medium trucks", "Heavy trucks, semi trailers, buses"],
+      ["Batteries", "One 12V (e.g., N150/N200, DIN88/DIN100)", "Two matched 12V in series"]
+    ]
+  }}
+  scenarios={[
+    {
+      title: "Semi trucks and heavy haulers",
+      body: "Line-haul tractors run 24V so the starter gets maximum torque with manageable current. Two N200 (190H52) batteries in series provide the cold-cranking reserve a large diesel needs on a cold morning."
+    },
+    {
+      title: "Buses and coaches",
+      body: "24V supports the heavy electrical loads of a modern coach — lighting, HVAC, doors and telematics — while keeping conductor sizes practical across the chassis."
+    },
+    {
+      title: "Military and specialty vehicles",
+      body: "24V is common in military and specialist vehicles for the same reasons: cranking power, load capacity and standardized components that simplify fleet maintenance."
+    }
+  ]}
+  maintenance={[
+    "Always replace both batteries in a 24V pair together with identical models.",
+    "Keep terminals clean and tight on both batteries — a single poor connection unbalances the pair.",
+    "Use a 24V charger, or charge each 12V battery separately with a 12V charger.",
+    "Match battery technology — do not mix flooded and AGM in the same series pair."
+  ]}
   image={{ src: "/images/products/190H52-N200.jpg", alt: "DINWEY 190H52 N200 12V truck battery used in a 24V series pair", width: 1024, height: 1024 }}
   faq={[
     { q: "Why do heavy trucks use 24V?", a: "24V systems halve the current for the same power, allowing thinner wiring and more reliable starting of large diesel engines." },
     { q: "Can I replace one battery of a 24V pair?", a: "It is strongly recommended to replace both batteries as a matched pair to ensure balanced charging and full service life." },
     { q: "How do I wire two 12V batteries for 24V?", a: "Connect the positive terminal of one battery to the negative terminal of the other; the remaining terminals provide 24V across the pair." },
     { q: "Do 24V batteries need a special charger?", a: "Yes. Use a charger rated for 24V, or charge each 12V battery separately with a 12V charger." },
-    { q: "What CCA do 24V truck systems need?", a: "Heavy 24V trucks typically need 850–1100+ CCA per battery, depending on engine size and climate. Confirm the exact figure in your vehicle manual." }
+    { q: "What CCA do 24V truck systems need?", a: "Heavy 24V trucks typically need 850–1100+ CCA per battery, depending on engine size and climate. Confirm the exact figure in your vehicle manual." },
+    { q: "What happens if I mix an old and a new battery in a 24V pair?", a: "The pair charges unevenly: the stronger battery is overcharged and the weaker one undercharged, shortening the life of both. Always use two identical batteries of the same model, age and rating." },
+    { q: "Can I jump-start a 24V truck from a 12V vehicle?", a: "Not directly across the full 24V system. Jump-start procedures for 24V systems vary by vehicle; follow the OEM procedure, and if unsure, charge each 12V battery individually or call a professional." },
+    { q: "Do 24V systems use a single 24V battery?", a: "Most heavy trucks use two 12V batteries in series rather than a single 24V unit, because 12V batteries are more widely available and each can be serviced or replaced individually. Dedicated 24V monobloc units exist but are less common in trucks." }
   ]}
   relatedDocs={[
     { title: "12V vs 24V truck electrical systems", url: "https://docs.dinweysbattery.com/12v-vs-24v/" },

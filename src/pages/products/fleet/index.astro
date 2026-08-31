@@ -25,13 +25,49 @@ import ProductLayout from "../../../layouts/ProductLayout.astro";
     "DINWEY's fleet program is built on a 200,000 m² facility with 18 automated lines producing 40,000 batteries daily under an IATF 16949 quality system. Per-batch CCA test data, certificate of analysis and MSDS documentation ship with every order, so fleet managers can verify consistency rather than trust it.",
     "We support fleets with OEM and private-label programs, custom CCA and capacity specifications, and standard MOQ of 1 × 20ft container with 20–45 day lead time."
   ]}
+  specNotes={[
+    "Why consistency matters: in a fleet, one weak battery strands a vehicle and costs more in downtime than any per-unit saving. DINWEY's program is built around batch consistency — identical chemistry, plate specification and assembly across every unit in an order.",
+    "Documentation: every batch ships with CCA test data, certificate of analysis and MSDS, so fleet managers can verify performance against the specification instead of trusting it.",
+    "Custom specification: for OEM and private-label programs we match CCA, capacity, terminal type and labeling to your requirements, including custom branding and packaging."
+  ]}
+  comparison={{
+    headers: ["Technology", "Flooded (SLI)", "EFB", "AGM"],
+    rows: [
+      ["Construction", "Liquid electrolyte, thick plates", "Enhanced flooded, polyfleece mat", "Absorbed glass mat, sealed"],
+      ["Maintenance", "Serviceable (electrolyte checks)", "Low / maintenance-free", "Maintenance-free, sealed"],
+      ["Vibration resistance", "Good", "Better", "Best"],
+      ["Charge acceptance", "Standard", "Higher", "Highest"],
+      ["Best for", "Conventional starting duty", "Frequent starts, moderate loads", "High vibration, heavy electrical loads"]
+    ]
+  }}
+  scenarios={[
+    {
+      title: "Truck fleet operators",
+      body: "Fleets need predictable life and minimal downtime. Batch-matched batteries with per-batch test data let a fleet manager track performance across vehicles and replace batteries on a schedule rather than after a breakdown."
+    },
+    {
+      title: "Battery distributors and importers",
+      body: "Distributors need a supplier that holds specification, documentation and lead time across repeat orders. DINWEY's automated lines and IATF 16949 system deliver repeatable quality, container after container."
+    },
+    {
+      title: "Private label brand owners",
+      body: "We manufacture to your brand: custom labels, packaging, color and terminal configuration — from drawing to approved pre-production sample, then to mass production."
+    }
+  ]}
+  maintenance={[
+    "Run a scheduled battery program — test batteries at regular service intervals and replace them before they strand a vehicle.",
+    "Document each battery's install date, model and test results to track fleet-wide life and identify failing batches early.",
+    "Store spare batteries charged and cool, and rotate stock so no battery sits discharged on the shelf."
+  ]}
   image={{ src: "/images/products/190H52-N200.jpg", alt: "DINWEY 190H52 N200 heavy-duty truck battery for fleet programs", width: 1024, height: 1024 }}
   faq={[
     { q: "Do you offer private label truck batteries?", a: "Yes. DINWEY is the brand of Chengguang Energy (founded 2002), offering OEM and private label manufacturing with custom branding and packaging." },
     { q: "What documentation do you provide per batch?", a: "Each batch ships with CCA test data, certificate of analysis, MSDS and complete shipping documentation." },
     { q: "What is your typical lead time for bulk orders?", a: "Standard lead time is 20–45 days depending on specification and volume, with MOQ of 1 × 20ft container." },
     { q: "Do you offer custom specification batteries?", a: "Yes. For fleet and OEM programs we can match custom CCA, capacity, terminal type and labeling to your requirements." },
-    { q: "How do you ensure batch-to-batch consistency?", a: "Batteries are produced on automated lines under an IATF 16949 quality management system, with per-batch test data provided for every shipment." }
+    { q: "How do you ensure batch-to-batch consistency?", a: "Batteries are produced on automated lines under an IATF 16949 quality management system, with per-batch test data provided for every shipment." },
+    { q: "Can I get samples before a bulk order?", a: "Yes — OEM and private-label programs typically include a drawing review and an approved pre-production sample before mass production, so you can verify branding and specification." },
+    { q: "Do you support mixed orders (JIS + DIN + BCI in one container)?", a: "Yes. Because JIS, DIN and BCI lines run in the same facility, we can consolidate mixed-standard orders into a single container to help importers and distributors fill a full load." }
   ]}
   relatedDocs={[
     { title: "Fleet battery management guide", url: "https://docs.dinweysbattery.com/fleet-battery-management/" },

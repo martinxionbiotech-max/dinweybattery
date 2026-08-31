@@ -24,6 +24,48 @@ import ProductLayout from "../../../layouts/ProductLayout.astro";
     "The key difference between the two models is size and output. The N150 (145G51) fits standard heavy-truck trays at 508×222×212mm and delivers 900A CCA. The N200 (190H52) is larger at 520×278×220mm and delivers 1100A CCA for the biggest engines and coldest climates. If your tray will take the N200, it is the stronger choice for demanding duty — but always confirm the footprint and terminal orientation before upgrading.",
     "Both are manufactured by Chengguang Energy under an IATF 16949 quality system, with per-batch CCA test data and full documentation provided with every shipment."
   ]}
+  specNotes={[
+    "Cold Cranking Amps (CCA) is measured to SAE J537 — the current a fully charged 12V battery can deliver for 30 seconds at −18°C (0°F) while holding at least 7.2V. The N150's 900A and the N200's 1100A describe cold-start power: a higher figure means a stronger, more dependable start on a cold morning.",
+    "Reserve Capacity (RC), also to SAE J537, is the number of minutes a fully charged battery can sustain a 25-amp load at 27°C (80°F) before the voltage drops to 10.5V. The N150's 220 minutes and the N200's 320 minutes are your buffer for lights, telematics and other loads when the engine is off — or if the alternator fails on the road.",
+    "Capacity is measured at the 20-hour rate (C20). The N150's 135Ah and the N200's 200Ah describe the total energy stored over a slow 20-hour discharge at 25°C — a different measure from the short, high-current burst that CCA describes.",
+    "Fit and terminals: both models use JIS type A large taper posts. The N150's 508×222×212mm footprint suits standard heavy-truck trays; the N200 is larger at 520×278×220mm. Confirm tray length, width, height and terminal position before upgrading from N150 to N200."
+  ]}
+  comparison={{
+    headers: ["Specification", "N150 (145G51)", "N200 (190H52)"],
+    rows: [
+      ["Voltage", "12V", "12V"],
+      ["Capacity (C20)", "135 Ah", "200 Ah"],
+      ["Cold Cranking Amps (SAE J537)", "900 A", "1100 A"],
+      ["Reserve Capacity (SAE J537)", "220 min", "320 min"],
+      ["Dimensions (L×W×H)", "508×222×212 mm", "520×278×220 mm"],
+      ["Terminals", "JIS type A", "JIS type A"],
+      ["Best for", "Standard heavy-truck trays, temperate climates", "Largest engines, coldest climates, high electrical loads"]
+    ]
+  }}
+  scenarios={[
+    {
+      title: "Heavy-duty trucks and semi trailers",
+      body: "On a semi truck the N-series battery must turn over a large diesel engine after overnight rest and long hauls. The thick Pb-Sb plates and high CCA of the N200 handle repeated cold starts and the vibration of highway operation. On 24V semi trucks, two N200 units are wired in series."
+    },
+    {
+      title: "Buses and coaches",
+      body: "City and intercity buses cycle their batteries harder than line-haul trucks — frequent starts, long idle periods and constant accessory load. The N150 and N200's deep-cycling thick plates and generous reserve capacity keep a bus starting reliably through a full service day."
+    },
+    {
+      title: "Diesel generators",
+      body: "Standby and prime diesel generators need a battery that holds its charge through long idle periods and then delivers a strong burst when the control system calls for a start. The N-series flooded design tolerates the float-charge life of a generator bay."
+    },
+    {
+      title: "Off-highway and construction equipment",
+      body: "Excavators, loaders and mining machines combine heavy vibration, dust and irregular duty. The Pb-Sb grid and robust case of the JIS N-series are chosen to survive conditions where a light automotive plate would fail early."
+    }
+  ]}
+  maintenance={[
+    "These are serviceable flooded batteries. Check electrolyte levels periodically and top up with distilled water only when low, keeping the plates covered — never overfill.",
+    "Keep terminals clean, tight and lightly greased to prevent corrosion. A loose or corroded connection reduces cranking current and can strain the charging system.",
+    "Avoid deep discharge. Recharge promptly after use and store fully charged in a cool, dry place — a battery left partially discharged sulfates and permanently loses capacity.",
+    "In a 24V series pair, always replace both batteries together with the same model and age so charging stays balanced."
+  ]}
   images={[
     { src: "/images/products/145G51-N150.jpg", alt: "DINWEY 145G51 JIS N150 truck battery", width: 1024, height: 1024 },
     { src: "/images/products/190H52-N200.jpg", alt: "DINWEY 190H52 JIS N200 truck battery", width: 1024, height: 1024 }
@@ -33,7 +75,10 @@ import ProductLayout from "../../../layouts/ProductLayout.astro";
     { q: "Are these batteries for 12V or 24V systems?", a: "Each is a 12V battery. Heavy trucks using 24V systems wire two of them in series." },
     { q: "What CCA does a JIS N200 provide?", a: "The 190H52 (N200) provides 1100A CCA (SAE), suited to large diesel engines." },
     { q: "What are the dimensions of the N150 and N200?", a: "The N150 (145G51) measures 508×222×212mm; the N200 (190H52) measures 520×278×220mm. Confirm your battery tray will fit the larger model before upgrading." },
-    { q: "Are these batteries maintenance-free?", a: "Heavy-duty JIS models use thick-plate flooded (Pb-Sb) construction, which may require periodic electrolyte checks. AGM versions are available where a maintenance-free option is preferred." }
+    { q: "Are these batteries maintenance-free?", a: "Heavy-duty JIS models use thick-plate flooded (Pb-Sb) construction, which may require periodic electrolyte checks. AGM versions are available where a maintenance-free option is preferred." },
+    { q: "What does Reserve Capacity (RC) mean for a truck battery?", a: "RC is the number of minutes a fully charged 12V battery can sustain a 25-amp load at 27°C before dropping to 10.5V (SAE J537). The N150 offers 220 minutes and the N200 320 minutes — a buffer for lights, telematics and other loads when the engine is off or the alternator fails." },
+    { q: "Why do these batteries use a lead-antimony (Pb-Sb) grid?", a: "Antimony strengthens the positive grid and improves resistance to deep cycling, which suits heavy-duty service. The trade-off is slightly higher water consumption, so these batteries are serviceable. AGM versions are available where maintenance-free operation is preferred." },
+    { q: "Can I fit an N200 in place of an N150?", a: "Only if your tray and cable routing accept the larger 520×278×220mm footprint (the N150 is 508×222×212mm). Confirm length, width, height and terminal orientation before upgrading." }
   ]}
   relatedDocs={[
     { title: "JIS N150 vs N200 — which heavy-duty battery", url: "https://docs.dinweysbattery.com/jis-n150-vs-n200/" },

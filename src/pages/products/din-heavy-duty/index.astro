@@ -24,16 +24,61 @@ import ProductLayout from "../../../layouts/ProductLayout.astro";
     "The two models differ in capacity and footprint. The DIN88 (58827) is a compact 353×175×190mm at 88Ah and 800A EN — suited to many European light and medium commercial vehicles. The DIN100 (60038) steps up to 393×175×190mm, 100Ah and 870A EN for larger trucks and higher electrical loads. Both share the same 175mm width and 190mm height, so the DIN100 fits where a longer tray is available.",
     "Each is available in flooded, EFB and AGM technologies depending on duty cycle and vibration requirements, and every batch ships with CCA test data, certificate of analysis and MSDS documentation."
   ]}
+  specNotes={[
+    "European batteries are cold-cranking rated to EN 50342, not SAE CCA. The two tests measure different things, so the DIN88's 800A EN and the DIN100's 870A EN are not directly comparable to a JIS or BCI CCA figure — always compare within the same standard.",
+    "Reserve Capacity follows the SAE J537 definition: minutes a fully charged battery sustains a 25-amp load at 27°C (80°F) before reaching 10.5V. The DIN88's 150 minutes and the DIN100's 170 minutes are the buffer for lighting and telematics when the engine is off or the alternator fails.",
+    "Capacity is measured at the 20-hour rate (C20). The DIN88's 88Ah and the DIN100's 100Ah describe total energy storage over a slow 20-hour discharge — a different measure from the short burst the EN rating describes.",
+    "Fit and terminals: both use European conical (T1) terminals with left-positive orientation. The DIN88's 353×175×190mm footprint fits many light and medium European commercial vehicles; the DIN100 is longer at 393×175×190mm. Width (175mm) and height (190mm) are identical, so tray length and cable reach decide whether the DIN100 fits."
+  ]}
+  comparison={{
+    headers: ["Specification", "DIN88 (58827)", "DIN100 (60038)"],
+    rows: [
+      ["Voltage", "12V", "12V"],
+      ["Capacity (C20)", "88 Ah", "100 Ah"],
+      ["Cold cranking (EN 50342)", "800 A EN", "870 A EN"],
+      ["Reserve Capacity (SAE J537)", "150 min", "170 min"],
+      ["Dimensions (L×W×H)", "353×175×190 mm", "393×175×190 mm"],
+      ["Terminals", "European conical (T1), left positive", "European conical (T1), left positive"],
+      ["Best for", "European light/medium commercial vehicles", "Larger trucks and higher electrical loads"]
+    ]
+  }}
+  scenarios={[
+    {
+      title: "European commercial trucks (MAN, Scania, Volvo, Mercedes, DAF)",
+      body: "European heavy trucks are specified by DIN group length and EN cold-cranking rating. The DIN88 and DIN100 match the trays and conical terminals of mainstream European marques, and their EN ratings align with the figures printed in European vehicle manuals."
+    },
+    {
+      title: "Cold-climate starting",
+      body: "In cold regions, cold-cranking margin decides whether a diesel starts. The DIN100's higher EN rating is the safer choice for sub-zero operation; the DIN88 suits milder or temperate duty where the extra margin isn't needed."
+    },
+    {
+      title: "Buses and coaches (Europe, Middle East, North Africa)",
+      body: "European and MENA coach operators need a battery that tolerates frequent starts, long idling and high accessory load. The DIN series' reserve capacity, combined with flooded, EFB and AGM options, covers the duty."
+    },
+    {
+      title: "Middle East and North Africa markets",
+      body: "In hot climates the priority shifts from cold cranking to heat tolerance and charge acceptance. DINWEY supplies flooded, EFB and AGM builds so buyers can match the technology to the region's temperature profile and duty cycle."
+    }
+  ]}
+  maintenance={[
+    "Flooded DIN models are serviceable — check electrolyte and top up with distilled water as needed. EFB and AGM builds are sealed and maintenance-free.",
+    "Keep conical terminals clean, tight and protected; a loose European terminal is a common cause of poor starting on commercial vehicles.",
+    "Recharge promptly after discharge and store fully charged in a cool, dry place to prevent sulfation.",
+    "For 24V European trucks using two DIN batteries in series, replace both together with identical models so charging stays balanced."
+  ]}
   images={[
     { src: "/images/products/58827-DIN88.jpg", alt: "DINWEY 58827 DIN88 truck battery", width: 1024, height: 1024 },
     { src: "/images/products/60038-DIN100.jpg", alt: "DINWEY 60038 DIN100 truck battery", width: 1024, height: 1024 }
   ]}
   faq={[
-    { q: "What is the difference between DIN88 and DIN100?", a: "DIN100 (model 60038) has higher capacity (100Ah) and CCA (870A EN) than DIN88 (88Ah, 800A EN). DIN100 is physically longer (393mm vs 353mm)." },
-    { q: "Does DIN use a different CCA test than JIS/BCI?", a: "Yes. DIN/EN cold-cranking ratings (EN amperes) differ from SAE CCA. Values are not directly interchangeable — compare within the same standard." },
+    { q: "What is the difference between DIN88 and DIN100?", a: "DIN100 (model 60038) has higher capacity (100Ah) and cold-cranking rating (870A EN) than DIN88 (88Ah, 800A EN). DIN100 is physically longer (393mm vs 353mm)." },
+    { q: "Does DIN use a different CCA test than JIS/BCI?", a: "Yes. DIN/EN cold-cranking ratings (EN amperes, to EN 50342) differ from SAE CCA. Values are not directly interchangeable — compare within the same standard." },
     { q: "Is EFB or AGM available for DIN truck batteries?", a: "Yes. DIN heavy-duty models are available in flooded, EFB and AGM technologies depending on duty cycle and vibration requirements." },
     { q: "What DIN models do you stock?", a: "Our core DIN lines are the 58827 (DIN88, 88Ah/800A EN) and 60038 (DIN100, 100Ah/870A EN), covering most European heavy trucks. Other DIN sizes are available on request." },
-    { q: "Which European trucks use DIN88 or DIN100?", a: "DIN88 and DIN100 are common in European commercial vehicles. Confirm the exact model and tray dimensions in your vehicle manual before ordering." }
+    { q: "Which European trucks use DIN88 or DIN100?", a: "DIN88 and DIN100 are common in European commercial vehicles. Confirm the exact model and tray dimensions in your vehicle manual before ordering." },
+    { q: "Why is the EN rating different from a CCA rating?", a: "EN cold-cranking amperes (EN 50342) and SAE CCA (SAE J537) use different test voltages and durations, so the numbers aren't interchangeable. The DIN88's 800A EN and DIN100's 870A EN should be compared only against other EN ratings." },
+    { q: "Do I need EFB or AGM for my European truck?", a: "Flooded suits standard starting duty. EFB suits trucks with frequent starts and moderate electrical loads; AGM is the choice for high vibration or heavy electrical loads such as liftgates, reefer units and telematics. All three are available for the DIN88 and DIN100." },
+    { q: "Can I fit a DIN100 where a DIN88 was fitted?", a: "Only if the tray accepts the longer 393mm case (the DIN88 is 353mm). Width (175mm) and height (190mm) are the same, so length and cable reach are the deciding factors." }
   ]}
   relatedDocs={[
     { title: "DIN88 vs DIN100 — European heavy-duty comparison", url: "https://docs.dinweysbattery.com/din88-vs-din100/" },
