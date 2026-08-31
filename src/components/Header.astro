@@ -7,6 +7,7 @@ const navItems = [
   { href: "/products/24v/", label: "24V Systems" },
   { href: "/products/fleet/", label: "Fleet & OEM" },
   { href: "/selection-tool/", label: "Selection Tool" },
+  { href: "https://docs.dinweysbattery.com/", label: "Guides", external: true },
   { href: "/about/", label: "About" },
   { href: "/contact/", label: "Contact" },
 ];
@@ -29,6 +30,8 @@ const isActive = (href: string) =>
             href={item.href}
             aria-current={isActive(item.href) ? "page" : undefined}
             class={isActive(item.href) ? "active" : undefined}
+            target={item.external ? "_blank" : undefined}
+            rel={item.external ? "noopener" : undefined}
           >
             {item.label}
           </a>
