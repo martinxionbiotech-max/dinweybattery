@@ -1,4 +1,4 @@
-# https://dinweybattery.com/robots.txt
+# https://dinweysbattery.com/robots.txt
 
 User-agent: *
 Allow: /
@@ -23,4 +23,4 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://dinweybattery.com/sitemap-index.xml
+Sitemap: https://dinweysbattery.com/sitemap-index.xml

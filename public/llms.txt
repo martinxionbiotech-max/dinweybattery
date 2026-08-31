@@ -7,8 +7,8 @@
 
 - **Brand**: DINWEY (truck & heavy-duty starting batteries)
 - **Parent company**: Chengguang Energy (founded 2002)
-- **Domain**: https://dinweybattery.com
-- **Knowledge Hub**: https://docs.dinweybattery.com
+- **Domain**: https://dinweysbattery.com
+- **Knowledge Hub**: https://docs.dinweysbattery.com
 
 ## What We Do
 
@@ -44,12 +44,12 @@ starting batteries (SLI — Starting, Lighting, Ignition), including:
 
 ## Key Pages
 
-- [Home](https://dinweybattery.com/)
-- [JIS Heavy-Duty Batteries](https://dinweybattery.com/products/jis-heavy-duty/)
-- [DIN Heavy-Duty Batteries](https://dinweybattery.com/products/din-heavy-duty/)
-- [24V Systems](https://dinweybattery.com/products/24v/)
-- [Selection Tool](https://dinweybattery.com/selection-tool/)
-- [Knowledge Hub](https://docs.dinweybattery.com/)
-- [Truck Battery Complete Guide](https://docs.dinweybattery.com/complete-guide/)
-- [JIS N150 vs N200](https://docs.dinweybattery.com/jis-n150-vs-n200/)
-- [12V vs 24V Systems](https://docs.dinweybattery.com/12v-vs-24v/)
+- [Home](https://dinweysbattery.com/)
+- [JIS Heavy-Duty Batteries](https://dinweysbattery.com/products/jis-heavy-duty/)
+- [DIN Heavy-Duty Batteries](https://dinweysbattery.com/products/din-heavy-duty/)
+- [24V Systems](https://dinweysbattery.com/products/24v/)
+- [Selection Tool](https://dinweysbattery.com/selection-tool/)
+- [Knowledge Hub](https://docs.dinweysbattery.com/)
+- [Truck Battery Complete Guide](https://docs.dinweysbattery.com/complete-guide/)
+- [JIS N150 vs N200](https://docs.dinweysbattery.com/jis-n150-vs-n200/)
+- [12V vs 24V Systems](https://docs.dinweysbattery.com/12v-vs-24v/)
