@@ -1,10 +1,50 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const contactJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact DINWEY",
+  "url": "https://dinweysbattery.com/contact/",
+  "mainEntity": { "@id": "https://dinweysbattery.com/#organization" }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you sell truck batteries to end customers or only in bulk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DINWEY primarily supplies distributors, importers, fleet operators and OEM/private-label buyers in bulk. For trade inquiries, email martin@dinweys.com with your vehicle type, group size and target quantity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What information should I include in my inquiry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Include your vehicle type (light/medium/heavy truck or European commercial vehicle), the battery group size or standard (JIS N150/N200, DIN88/DIN100, BCI Group 31/8D), the system voltage (12V or 24V), and your target quantity and destination port."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer OEM and private label truck batteries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. DINWEY is the truck-battery brand of Chengguang Energy (founded 2002), a manufacturer supporting OEM and private-label programs with custom branding, packaging and specification, exported to 70+ countries."
+      }
+    }
+  ]
+};
 ---
 
 <BaseLayout
   title="Contact DINWEY — Truck Battery Inquiry"
   description="Contact DINWEY for truck battery quotes, datasheets, OEM and private label programs. Email martin@dinweys.com or WhatsApp +86 13323237275."
+  jsonLd={[contactJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <h1 style="color:#0f1f3d;">Contact &amp; Inquiry</h1>
@@ -39,6 +79,30 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <li>Electrical system voltage (12V or 24V)</li>
       <li>Target quantity and destination port</li>
     </ul>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Who We Work With</h2>
+    <p>
+      We supply distributors and importers, fleet operators, and OEM / private-label brands
+      worldwide. DINWEY is the truck-battery brand of Chengguang Energy, a manufacturer founded
+      in 2002 with a 200,000 m² facility, 18 automated lines and daily production of 40,000
+      batteries, certified IATF 16949 · ISO 9001 · ISO 14001 · ISO 45001 · OHSAS 18001 · CE,
+      exporting to 70+ countries.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Do you sell truck batteries to end customers or only in bulk?</h3>
+      <p>DINWEY primarily supplies distributors, importers, fleet operators and OEM/private-label buyers in bulk. For trade inquiries, email martin@dinweys.com with your vehicle type, group size and target quantity.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What information should I include in my inquiry?</h3>
+      <p>Include your vehicle type (light/medium/heavy truck or European commercial vehicle), the battery group size or standard (JIS N150/N200, DIN88/DIN100, BCI Group 31/8D), the system voltage (12V or 24V), and your target quantity and destination port.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do you offer OEM and private label truck batteries?</h3>
+      <p>Yes. DINWEY is the truck-battery brand of Chengguang Energy (founded 2002), a manufacturer supporting OEM and private-label programs with custom branding, packaging and specification, exported to 70+ countries.</p>
+    </div>
+
     <p style="margin-top:24px;">
       📚 Not sure which spec you need? Start with the
       <a href="https://docs.dinweysbattery.com/" style="color:#1e5aa8;">DINWEY Knowledge Hub</a> —

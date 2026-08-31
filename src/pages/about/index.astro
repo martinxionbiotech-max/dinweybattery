@@ -1,10 +1,19 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About DINWEY",
+  "url": "https://dinweysbattery.com/about/",
+  "mainEntity": { "@id": "https://dinweysbattery.com/#organization" }
+};
 ---
 
 <BaseLayout
   title="About DINWEY — Truck Battery OEM Factory & Manufacturer"
   description="DINWEY is the truck and heavy-duty starting battery brand of Chengguang Energy, a manufacturer founded in 2002 in Hebei, China. OEM and private label manufacturing."
+  jsonLd={[aboutJsonLd]}
 >
   <div class="container section">
     <h1 style="color:#0f1f3d;">About DINWEY</h1>
