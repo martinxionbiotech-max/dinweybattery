@@ -1,6 +1,13 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 
+interface ProductImage {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
 interface Props {
   title: string;
   description: string;
@@ -9,9 +16,24 @@ interface Props {
   faq: { q: string; a: string }[];
   relatedDocs?: { title: string; url: string }[];
   intro?: string[];
+  image?: ProductImage;
+  images?: ProductImage[];
 }
 
-const { title, description, specTable, applications, faq, relatedDocs = [], intro = [] } = Astro.props;
+const {
+  title,
+  description,
+  specTable,
+  applications,
+  faq,
+  relatedDocs = [],
+  intro = [],
+  image,
+  images = []
+} = Astro.props;
+
+const galleryImages = images.length > 0 ? images : image ? [image] : [];
+const ogImage = galleryImages[0]?.src;
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -33,13 +55,32 @@ const productJsonLd = {
 };
 ---
 
-<BaseLayout title={title} description={description} jsonLd={[productJsonLd, faqJsonLd]}>
+<BaseLayout title={title} description={description} ogImage={ogImage} jsonLd={[productJsonLd, faqJsonLd]}>
   <div class="container section">
     <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#55606e;margin-bottom:16px;">
       <a href="/" style="color:#1e5aa8;">Home</a> &rsaquo; Products &rsaquo; {title}
     </nav>
     <h1 style="color:#0f1f3d;margin-bottom:12px;">{title}</h1>
     <p class="lead">{description}</p>
+
+    {galleryImages.length > 0 && (
+      <div class={galleryImages.length > 1 ? "product-gallery" : "product-media"}>
+        {galleryImages.map((productImage) => (
+          <figure class="product-figure">
+            <img
+              class="product-image"
+              src={productImage.src}
+              alt={productImage.alt}
+              width={productImage.width}
+              height={productImage.height}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>{productImage.alt}</figcaption>
+          </figure>
+        ))}
+      </div>
+    )}
 
     {intro.length > 0 && (
       <div style="margin-top:8px;">
