@@ -1,10 +1,62 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const toolJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "DINWEY Truck Battery Selection Tool",
+  "url": "https://dinweysbattery.com/selection-tool/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any (web browser)",
+  "description": "Interactive tool to recommend a DINWEY truck battery model, CCA, capacity and technology based on vehicle type, climate and duty cycle.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@id": "https://dinweysbattery.com/#organization" }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is the truck battery selection tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tool provides general guidance based on JIS and DIN heavy-duty battery standards and typical diesel CCA requirements. Exact CCA, capacity and dimensions vary by vehicle, so always confirm the final specification against your vehicle manual or contact DINWEY for a datasheet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my truck uses a BCI battery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "North American trucks using BCI Group 31 or 8D batteries are supplied by DINWEY on a made-to-order basis. Select the North American option in the tool and contact us with your target group size and CCA requirement to confirm specification and pricing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use the tool for a 24V truck?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Heavy-duty, semi trucks and buses use 24V systems built from two 12V batteries in series. The tool recommends the matched pair for 24V applications, and both batteries should always be replaced together."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to enter the exact CCA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — the tool derives a recommendation from vehicle type, climate and duty cycle. It gives a CCA range and capacity, but the authoritative requirement is printed in your vehicle manual and on the original battery label."
+      }
+    }
+  ]
+};
 ---
 
 <BaseLayout
   title="Truck Battery Selection Tool"
   description="Find the right DINWEY truck battery: select your vehicle type, climate and duty cycle to get a recommended group size, CCA, capacity and technology."
+  jsonLd={[toolJsonLd, faqJsonLd]}
 >
   <div class="container section">
     <h1 style="color:#0f1f3d;">Truck Battery Selection Tool</h1>
@@ -121,6 +173,24 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         <tr><td style="padding:10px;border-bottom:1px solid #ddd;">High vibration / off-highway</td><td style="padding:10px;border-bottom:1px solid #ddd;">AGM</td><td style="padding:10px;border-bottom:1px solid #ddd;">Sealed, vibration-resistant, maintenance-free</td></tr>
       </tbody>
     </table>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>How accurate is the truck battery selection tool?</h3>
+      <p>The tool provides general guidance based on JIS and DIN heavy-duty battery standards and typical diesel CCA requirements. Exact CCA, capacity and dimensions vary by vehicle, so always confirm the final specification against your vehicle manual or contact DINWEY for a datasheet.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What if my truck uses a BCI battery?</h3>
+      <p>North American trucks using BCI Group 31 or 8D batteries are supplied by DINWEY on a made-to-order basis. Select the North American option in the tool and contact us with your target group size and CCA requirement to confirm specification and pricing.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I use the tool for a 24V truck?</h3>
+      <p>Yes. Heavy-duty, semi trucks and buses use 24V systems built from two 12V batteries in series. The tool recommends the matched pair for 24V applications, and both batteries should always be replaced together.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do I need to enter the exact CCA?</h3>
+      <p>No — the tool derives a recommendation from vehicle type, climate and duty cycle. It gives a CCA range and capacity, but the authoritative requirement is printed in your vehicle manual and on the original battery label.</p>
+    </div>
 
     <p style="margin-top:24px;">
       📚 Want the technical detail behind these recommendations? Read the
