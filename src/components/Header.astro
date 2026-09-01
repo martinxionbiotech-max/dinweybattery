@@ -9,7 +9,7 @@ const navItems = [
   { href: "/selection-tool/", label: "Selection Tool" },
   { href: "https://docs.dinweysbattery.com/", label: "Guides", external: true },
   { href: "/about/", label: "About" },
-  { href: "/contact/", label: "Contact" },
+  { href: "/contact/", label: "Contact", cta: true },
 ];
 
 const pathname = Astro.url.pathname;
@@ -29,7 +29,10 @@ const isActive = (href: string) =>
           <a
             href={item.href}
             aria-current={isActive(item.href) ? "page" : undefined}
-            class={isActive(item.href) ? "active" : undefined}
+            class={[
+              isActive(item.href) ? "active" : "",
+              item.cta ? "nav-cta" : "",
+            ].filter(Boolean).join(" ") || undefined}
             target={item.external ? "_blank" : undefined}
             rel={item.external ? "noopener" : undefined}
           >
