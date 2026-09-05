@@ -76,13 +76,13 @@ const articleJsonLd =
       }
     : null;
 
-// Organization 实体 schema（DINWEY 品牌 + Chengguang Energy 母公司）
+// Organization 实体 schema（DINWEY 品牌 + Chengguang Power Tech Co., Ltd. 母公司）
 const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": SITE + "/#organization",
   "name": "DINWEY",
-  "legalName": "Chengguang Energy (DINWEY brand)",
+  "legalName": "Jinzhou Chengguang Power Source Co., Ltd.",
   "url": SITE,
   "logo": SITE + "/images/logo.png",
   "email": "martin@dinweys.com",
@@ -106,15 +106,13 @@ const orgJsonLd = {
   "areaServed": "Worldwide",
   "parentOrganization": {
     "@type": "Organization",
-    "name": "Chengguang Energy",
+    "name": "Chengguang Power Tech Co., Ltd.",
     "url": "https://chengguangenergy.com"
   },
   "hasCredential": [
     { "@type": "EducationalOccupationalCredential", "name": "IATF 16949" },
     { "@type": "EducationalOccupationalCredential", "name": "ISO 9001:2015" },
-    { "@type": "EducationalOccupationalCredential", "name": "ISO 14001:2015" },
     { "@type": "EducationalOccupationalCredential", "name": "ISO 45001:2018" },
-    { "@type": "EducationalOccupationalCredential", "name": "OHSAS 18001" },
     { "@type": "EducationalOccupationalCredential", "name": "CE Marking" }
   ],
   "knowsAbout": [
