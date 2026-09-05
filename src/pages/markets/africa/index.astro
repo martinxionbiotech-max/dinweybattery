@@ -1,0 +1,139 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What battery standard does Africa use for trucks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most of Sub-Saharan Africa runs JIS N-series batteries (N150/N200, models 145G51/190H52) on Japanese, Korean and Chinese heavy trucks, with DIN/EN batteries on European vehicles in North Africa. Match the battery to the vehicle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What battery stresses matter most in African conditions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Heat, dusty unpaved roads and rough vibration dominate. High temperatures age batteries faster and increase water loss; dust and rough terrain demand robust thick-plate construction and secure hold-downs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you export batteries to Africa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. DINWEY exports JIS N150/N200 heavy-duty batteries to distributors and importers across Africa, with per-batch CCA test data and full shipping documentation on every delivery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are BCI batteries used in Africa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Less commonly. North America and Latin America use BCI Group 31/8D, while most of Africa follows JIS. DINWEY can supply BCI group sizes on request where a fleet specifies them."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Truck Batteries for the African Market"
+  description="JIS N150/N200 heavy-duty truck batteries for African distributors and importers — heat and dust-resistant construction, DIN for North Africa. OEM supply from Chengguang Energy."
+  jsonLd={faqJsonLd}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#55606e;margin-bottom:16px;">
+      <a href="/" style="color:#1e5aa8;">Home</a> &rsaquo; Markets &rsaquo; Africa
+    </nav>
+    <h1 style="color:#0f1f3d;">Truck Batteries for the African Market</h1>
+    <p class="lead">
+      Africa is a core JIS market — Japanese, Korean and Chinese heavy trucks dominate most of the
+      continent, running JIS N150/N200 batteries — with European vehicles taking DIN/EN in North
+      Africa. DINWEY supplies both, built for heat, dust and rough terrain.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Key Takeaways</h2>
+    <ol class="takeaways-list">
+      <li><strong>JIS N150/N200 leads Sub-Saharan Africa</strong> — the core commercial battery on Japanese, Korean and Chinese trucks; DIN/EN serves European vehicles in North Africa.</li>
+      <li><strong>Heat + dust + vibration are the triple stress</strong> — high temperatures age batteries faster, dust and rough roads demand robust plates and secure hold-downs.</li>
+      <li><strong>Match the battery to the vehicle</strong> — a mixed fleet of Japanese and European trucks needs both JIS and DIN coverage from one source.</li>
+      <li><strong>Documentation is a differentiator</strong> — per-batch CCA test data and complete shipping paperwork matter to African importers.</li>
+    </ol>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Battery Standards for the Region</h2>
+    <p>
+      The standard follows the vehicle. Japanese and Korean heavy trucks — and the growing Chinese
+      commercial fleet — run JIS N-series batteries in models N150 (145G51) and N200 (190H52),
+      the workhorse of Sub-Saharan fleets. European commercial vehicles in North Africa take
+      DIN/EN batteries in codes DIN88 (58827) and DIN100 (60038). DINWEY stocks both families so
+      an importer can supply a mixed market from one manufacturer.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Region / vehicle</th><th>Standard</th><th>DINWEY models</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sub-Saharan — Japanese/Korean/Chinese trucks</td><td>JIS</td><td>N150 (145G51) · N200 (190H52)</td></tr>
+        <tr><td>North Africa — European vehicles</td><td>DIN/EN</td><td>DIN88 (58827) · DIN100 (60038)</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Duty-Cycle and Climate Considerations</h2>
+    <p>
+      African operating conditions stress a battery in three ways at once. Heat accelerates plate
+      ageing and increases electrolyte water loss. Dust on unpaved and semi-paved roads can bridge
+      terminals and drain current. Rough terrain transmits constant vibration to the battery tray.
+      DINWEY's thick-plate (Pb-Sb) heavy-duty construction is designed for this combination, with
+      AGM versions available where fleets prefer a sealed design that keeps dust and electrolyte
+      loss out of the equation entirely.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Import &amp; Compliance</h2>
+    <p>
+      Import documentation and any conformity requirements vary by country and evolve over time.
+      Treat figures as indicative and confirm the current certification, labelling and tariff
+      position with your importer or freight forwarder before each shipment.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Product Lines for the Region</h2>
+    <div class="grid grid-2" style="margin-top:16px;">
+      <div class="card">
+        <h3>JIS Heavy-Duty (N150/N200)</h3>
+        <p>145G51 and 190H52 — the region's core commercial battery.</p>
+        <a href="/products/jis-heavy-duty/">View JIS Heavy-Duty →</a>
+      </div>
+      <div class="card">
+        <h3>DIN Heavy-Duty (DIN88/DIN100)</h3>
+        <p>European-standard batteries for North African fleets.</p>
+        <a href="/products/din-heavy-duty/">View DIN Heavy-Duty →</a>
+      </div>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What battery standard does Africa use for trucks?</h3>
+      <p>Most of Sub-Saharan Africa runs JIS N-series batteries (N150/N200, models 145G51/190H52) on Japanese, Korean and Chinese heavy trucks, with DIN/EN batteries on European vehicles in North Africa. Match the battery to the vehicle.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What battery stresses matter most in African conditions?</h3>
+      <p>Heat, dusty unpaved roads and rough vibration dominate. High temperatures age batteries faster and increase water loss; dust and rough terrain demand robust thick-plate construction and secure hold-downs.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do you export batteries to Africa?</h3>
+      <p>Yes. DINWEY exports JIS N150/N200 heavy-duty batteries to distributors and importers across Africa, with per-batch CCA test data and full shipping documentation on every delivery.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Are BCI batteries used in Africa?</h3>
+      <p>Less commonly. North America and Latin America use BCI Group 31/8D, while most of Africa follows JIS. DINWEY can supply BCI group sizes on request where a fleet specifies them.</p>
+    </div>
+
+    <p style="margin-top:24px;">
+      📚 Read more: <a href="https://docs.dinweysbattery.com/jis-vs-din-vs-bci/" target="_blank" rel="noopener">JIS vs DIN vs BCI Standards</a>
+    </p>
+  </div>
+</BaseLayout>

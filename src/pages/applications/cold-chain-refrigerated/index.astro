@@ -1,0 +1,135 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What battery does a refrigerated truck need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A refrigerated truck needs two separate systems: a starting battery with 850–1100+ CCA for the engine, and a deep-cycle or AGM auxiliary bank for the refrigeration unit. One battery cannot serve both jobs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I run the reefer off the starting battery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A 25 A refrigeration unit draws roughly 200 Ah over 8 hours and will deep-discharge a starting battery, damaging it and risking a no-start mid-route. Use a separate auxiliary bank."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What type of battery is best for a reefer unit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deep-cycle or AGM batteries are best for the reefer's continuous draw — they tolerate repeated discharge to about 50% without the plate damage a starting battery suffers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I size a reefer auxiliary bank?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Size it to the reefer's continuous current draw and required runtime. A 25 A unit over 8 hours needs about 200 Ah usable — roughly 400 Ah of bank at the 50% depth-of-discharge limit. Confirm the unit's draw from its specification."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Cold-Chain & Refrigerated Truck Batteries"
+  description="Starting and auxiliary batteries for refrigerated trucks — high CCA for the engine plus a separate deep-cycle bank for the reefer unit. OEM supply from Chengguang Energy."
+  jsonLd={faqJsonLd}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#55606e;margin-bottom:16px;">
+      <a href="/" style="color:#1e5aa8;">Home</a> &rsaquo; Applications &rsaquo; Cold-Chain &amp; Refrigerated
+    </nav>
+    <h1 style="color:#0f1f3d;">Cold-Chain &amp; Refrigerated Truck Batteries</h1>
+    <p class="lead">
+      A refrigerated truck carries two electrical loads that need two different batteries: the
+      engine's cold-start burst and the reefer unit's continuous, hours-long draw. Confusing the
+      two strands drivers mid-route.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Key Takeaways</h2>
+    <ol class="takeaways-list">
+      <li><strong>Two loads demand two battery types</strong> — a starting (SLI) battery for the 850–1100+ CCA crank, and a separate deep-cycle bank for the reefer's continuous draw.</li>
+      <li><strong>Never run the reefer off the starting battery</strong> — a 25 A unit draws ~200 Ah over 8 hours and deep-discharges the plates; the truck starts fine on the lot, then strands the driver after an overnight stop.</li>
+      <li><strong>Isolation is not enough</strong> — a basic isolator only blocks reverse current and drops ~0.3–0.7 V; a DC-DC charger also applies a proper multi-stage charge the cycled auxiliary bank needs.</li>
+      <li><strong>Size the bank to the draw</strong> — a 25 A/8-hour duty needs ~200 Ah usable, or ~400 Ah of bank at the 50% depth-of-discharge limit.</li>
+    </ol>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Why a Reefer Needs Two Systems</h2>
+    <p>
+      The two loads are fundamentally different. The engine needs a short, high-current burst —
+      850–1100+ CCA for a large diesel — delivered in seconds. The refrigeration unit needs a
+      modest but continuous current for hours while the truck is parked overnight or loading.
+    </p>
+    <p>
+      A starting battery is built for the first job: thin plates that deliver high current briefly.
+      Drawing that battery down continuously for hours — as a reefer does — discharges it deeply
+      and permanently damages the plates. The result is a vehicle that starts fine at the depot
+      but won't crank the next morning. The fix is a separate deep-cycle or AGM bank dedicated to
+      the reefer, with the two banks isolated so neither can drag the other down.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Recommended Specifications</h2>
+    <table>
+      <thead>
+        <tr><th>Load</th><th>Battery type</th><th>Key figure</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Engine starting</td><td>Starting (SLI) battery</td><td>850–1100+ CCA</td></tr>
+        <tr><td>Refrigeration unit</td><td>Deep-cycle or AGM auxiliary bank</td><td>~200 Ah usable per 25 A / 8 h</td></tr>
+        <tr><td>System voltage</td><td>12V or 24V per vehicle</td><td>Matched pair rule applies</td></tr>
+        <tr><td>Auxiliary depth of discharge</td><td>~50% limit</td><td>~400 Ah bank for 200 Ah usable</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Figures are representative. Exact CCA, bank capacity and runtime depend on the reefer unit's
+      specified draw — contact us for a datasheet matched to your fleet.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Product Lines for Cold-Chain Fleets</h2>
+    <div class="grid grid-2" style="margin-top:16px;">
+      <div class="card">
+        <h3>Starting Batteries (N150/N200 / DIN)</h3>
+        <p>High-CCA starting batteries for the tractor — JIS 145G51/190H52 or DIN 58827/60038.</p>
+        <a href="/products/jis-heavy-duty/">View JIS Heavy-Duty →</a>
+      </div>
+      <div class="card">
+        <h3>Auxiliary &amp; AGM Banks</h3>
+        <p>Deep-cycle and AGM for the reefer's continuous draw — sealed, maintenance-free.</p>
+        <a href="/products/fleet/">View Fleet &amp; AGM →</a>
+      </div>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What battery does a refrigerated truck need?</h3>
+      <p>A refrigerated truck needs two separate systems: a starting battery with 850–1100+ CCA for the engine, and a deep-cycle or AGM auxiliary bank for the refrigeration unit. One battery cannot serve both jobs.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I run the reefer off the starting battery?</h3>
+      <p>No. A 25 A refrigeration unit draws roughly 200 Ah over 8 hours and will deep-discharge a starting battery, damaging it and risking a no-start mid-route. Use a separate auxiliary bank.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What type of battery is best for a reefer unit?</h3>
+      <p>Deep-cycle or AGM batteries are best for the reefer's continuous draw — they tolerate repeated discharge to about 50% without the plate damage a starting battery suffers.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I size a reefer auxiliary bank?</h3>
+      <p>Size it to the reefer's continuous current draw and required runtime. A 25 A unit over 8 hours needs about 200 Ah usable — roughly 400 Ah of bank at the 50% depth-of-discharge limit. Confirm the unit's draw from its specification.</p>
+    </div>
+
+    <p style="margin-top:24px;">
+      📚 Read the full guide: <a href="https://docs.dinweysbattery.com/cold-chain-refrigerated/" target="_blank" rel="noopener">Cold-Chain &amp; Refrigerated Battery Selection</a>
+    </p>
+  </div>
+</BaseLayout>

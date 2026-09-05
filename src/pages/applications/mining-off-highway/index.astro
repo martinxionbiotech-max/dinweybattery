@@ -1,0 +1,138 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What battery does a mining truck use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Large mining haulers and off-highway equipment commonly run 24V systems built from two 12V heavy-duty batteries in series, with 850–1100+ CCA to crank the large diesel. Group size follows the market — JIS N150/N200 in Asia, DIN88/DIN100 in Europe — always matched to the equipment's tray and CCA specification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do batteries fail faster in mining equipment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Extreme vibration, dust, temperature swings and frequent deep cycling can halve battery life — around 4 years on-road becomes 2 years off-highway. Loose hold-downs, conductive dust on terminals and repeated partial discharge are the main causes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is AGM better than flooded for off-highway equipment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes in most off-highway duty. AGM's absorbent glass mat resists vibration better than flooded, its sealed design prevents electrolyte loss on steep grades and protects against conductive dust, and its 600–1200 cycle life (vs 200–300 for flooded) matches the deeper cycling common in mining."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should off-highway batteries be load-tested?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At least twice a year, more than the annual test recommended for on-road fleets. Harsh off-highway conditions halve life, so a semi-annual load test and hold-down inspection catch weakening batteries before a stall."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Mining & Off-Highway Truck Batteries"
+  description="Heavy-duty starting batteries for mining trucks and off-highway equipment — vibration-resistant construction, 24V systems and 850–1100+ CCA. IATF 16949 certified OEM."
+  jsonLd={faqJsonLd}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#55606e;margin-bottom:16px;">
+      <a href="/" style="color:#1e5aa8;">Home</a> &rsaquo; Applications &rsaquo; Mining &amp; Off-Highway
+    </nav>
+    <h1 style="color:#0f1f3d;">Mining &amp; Off-Highway Truck Batteries</h1>
+    <p class="lead">
+      Excavators, haulers, loaders and drill rigs subject batteries to conditions that destroy
+      ordinary automotive units in months — constant vibration, conductive dust, steep grades and
+      temperature swings from pit floor to surface.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Key Takeaways</h2>
+    <ol class="takeaways-list">
+      <li><strong>Off-highway duty halves battery life</strong> — extreme vibration, dust and deep cycling cut a 4-year on-road battery to roughly 2 years off-highway; rugged construction and a stricter test schedule are non-negotiable.</li>
+      <li><strong>AGM's sealed design matters as much as its vibration resistance</strong> — a vented flooded battery loses electrolyte on steep grades and is vulnerable to conductive dust; AGM removes both risks, with 600–1200 cycle life vs 200–300 for flooded.</li>
+      <li><strong>Large mining haulers still run 24V</strong> — two 12V batteries in series with 850–1100+ CCA for the big diesel, replaced as a matched pair (same model, age and rating).</li>
+      <li><strong>Inspect hold-downs every service, load-test at least twice a year</strong> — vibration loosens brackets, and the annual-test habit is not enough in off-highway duty.</li>
+    </ol>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Why Mining Equipment Needs a Different Battery</h2>
+    <p>
+      A mine-site machine combines the worst of several environments. Vibration from operating on
+      unmade ground and over blasted rock shakes plates and loosens terminals. Conductive dust
+      (from crush plants and ore handling) can bridge exposed terminals and slowly drain a battery.
+      Steep haul-road grades tilt a flooded battery and can expose its plates. On top of that, idle
+      periods between shifts let a battery self-discharge while it is expected to crank again on demand.
+    </p>
+    <p>
+      The answer is a heavy-duty battery engineered for the duty: thick Pb-Sb (lead-antimony) plates
+      that tolerate deep cycling and vibration, or a sealed AGM design that sheds the electrolyte-loss
+      and dust problems of a vented flooded unit. DINWEY supplies both — flooded JIS N150/N200 and
+      DIN88/DIN100 for standard budgets, and AGM where the duty justifies a maintenance-free option.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Recommended Specifications</h2>
+    <table>
+      <thead>
+        <tr><th>Requirement</th><th>Specification</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>System voltage</td><td>24V (two 12V batteries in series) for large haulers; 12V for smaller units</td></tr>
+        <tr><td>Cold Cranking Amps</td><td>850–1100+ CCA (SAE J537) for large diesels</td></tr>
+        <tr><td>Group size</td><td>JIS N150/N200 (Asia/Africa) or DIN88/DIN100 (Europe)</td></tr>
+        <tr><td>Construction</td><td>Thick-plate flooded (Pb-Sb) or sealed AGM</td></tr>
+        <tr><td>Cycle life</td><td>AGM 600–1200 cycles; flooded 200–300 cycles</td></tr>
+        <tr><td>Test schedule</td><td>Load-test at least 2× per year; inspect hold-downs every service</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Specifications are representative ranges. Exact CCA, capacity and dimensions vary by machine —
+      contact us for a datasheet matched to your equipment.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Product Lines for Off-Highway Duty</h2>
+    <div class="grid grid-2" style="margin-top:16px;">
+      <div class="card">
+        <h3>JIS Heavy-Duty (N150/N200)</h3>
+        <p>Thick-plate flooded batteries for large machines — 145G51 (N150) 900A CCA, 190H52 (N200) 1100A CCA.</p>
+        <a href="/products/jis-heavy-duty/">View JIS Heavy-Duty →</a>
+      </div>
+      <div class="card">
+        <h3>AGM (maintenance-free)</h3>
+        <p>Sealed, vibration-tolerant AGM for steep grades and conductive dust — 600–1200 cycle life.</p>
+        <a href="/products/fleet/">View Fleet &amp; AGM →</a>
+      </div>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What battery does a mining truck use?</h3>
+      <p>Large mining haulers and off-highway equipment commonly run 24V systems built from two 12V heavy-duty batteries in series, with 850–1100+ CCA to crank the large diesel. Group size follows the market — JIS N150/N200 in Asia, DIN88/DIN100 in Europe — always matched to the equipment's tray and CCA specification.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why do batteries fail faster in mining equipment?</h3>
+      <p>Extreme vibration, dust, temperature swings and frequent deep cycling can halve battery life — around 4 years on-road becomes 2 years off-highway. Loose hold-downs, conductive dust on terminals and repeated partial discharge are the main causes.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is AGM better than flooded for off-highway equipment?</h3>
+      <p>Yes in most off-highway duty. AGM's absorbent glass mat resists vibration better than flooded, its sealed design prevents electrolyte loss on steep grades and protects against conductive dust, and its 600–1200 cycle life (vs 200–300 for flooded) matches the deeper cycling common in mining.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How often should off-highway batteries be load-tested?</h3>
+      <p>At least twice a year, more than the annual test recommended for on-road fleets. Harsh off-highway conditions halve life, so a semi-annual load test and hold-down inspection catch weakening batteries before a stall.</p>
+    </div>
+
+    <p style="margin-top:24px;">
+      📚 Read the full guide: <a href="https://docs.dinweysbattery.com/mining-off-highway/" target="_blank" rel="noopener">Mining &amp; Off-Highway Battery Selection</a>
+    </p>
+  </div>
+</BaseLayout>

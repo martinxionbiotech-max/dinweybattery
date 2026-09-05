@@ -1,0 +1,138 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What battery standard does Latin America use for trucks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Latin America predominantly follows the BCI standard — Group 31 and 8D sizes — matching North American heavy trucks, though European and Japanese vehicles also appear. Match the battery to the vehicle and its tray."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can DINWEY supply BCI Group 31 and 8D batteries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, made to order via our BCI production line. BCI group sizes carry SAE J537 cold-cranking ratings (tested at −18°C), and we supply them on request for Latin American and North American fleets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between BCI and JIS sizing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BCI uses group numbers (31, 8D) defined by the Battery Council International for North America and Latin America, with CCA tested to SAE J537 at −18°C. JIS uses model codes (N150, N200) for Asia and Africa, tested to JIS D5301 at −15°C. They are not interchangeable — match the standard to the vehicle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you export batteries to Latin America?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. DINWEY supplies BCI Group 31/8D on request, plus OEM customization, to importers and distributors across Latin America, with per-batch test data and full shipping documentation."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Truck Batteries for the Latin American Market"
+  description="BCI Group 31/8D heavy-duty truck batteries for Latin American importers and distributors — SAE J537 CCA, made to order. OEM supply from Chengguang Energy."
+  jsonLd={faqJsonLd}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#55606e;margin-bottom:16px;">
+      <a href="/" style="color:#1e5aa8;">Home</a> &rsaquo; Markets &rsaquo; Latin America
+    </nav>
+    <h1 style="color:#0f1f3d;">Truck Batteries for the Latin American Market</h1>
+    <p class="lead">
+      Latin America follows the BCI standard — Group 31 and 8D sizes to match North American heavy
+      trucks — with SAE J537 cold-cranking ratings. DINWEY supplies these group sizes on request,
+      with OEM customization for importers and distributors.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Key Takeaways</h2>
+    <ol class="takeaways-list">
+      <li><strong>BCI Group 31/8D is the regional standard</strong> — matching North American heavy trucks, rated to SAE J537 at −18°C.</li>
+      <li><strong>Made to order</strong> — BCI sizes are supplied on request via our BCI production line, with OEM/private-label customization.</li>
+      <li><strong>Standards are not interchangeable</strong> — BCI group numbers differ from JIS model codes and DIN capacity codes; match the battery to the vehicle and its tray.</li>
+      <li><strong>OEM speed matters</strong> — importers value a fast drawing-to-sample turnaround, with brand and packaging built to spec.</li>
+    </ol>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Battery Standards for the Region</h2>
+    <p>
+      Latin America's heavy-truck fleet is dominated by North American makes, which use BCI
+      (Battery Council International) group sizes — principally Group 31 and 8D. CCA is tested to
+      SAE J537 at −18°C. European and Japanese vehicles also appear in some markets, so an importer
+      may need DIN or JIS coverage alongside BCI. DINWEY's BCI line is produced to order, so a
+      distributor can specify Group 31 or 8D and get the exact size their market requires.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Standard</th><th>Issuing body</th><th>CCA test</th><th>Heavy-duty sizes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>BCI</td><td>Battery Council International</td><td>SAE J537 (−18°C)</td><td>Group 31, 8D</td></tr>
+        <tr><td>JIS</td><td>Japanese Industrial Standards</td><td>JIS D5301 (−15°C)</td><td>N150, N200</td></tr>
+        <tr><td>DIN/EN</td><td>Deutsches Institut für Normung</td><td>EN 50342-1 (−18°C)</td><td>DIN88, DIN100</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">OEM &amp; Private Label for the Region</h2>
+    <p>
+      Latin American importers consistently value customization speed — moving from a drawing to an
+      approved sample with brand, packaging and terminal type built to spec. DINWEY's OEM program
+      covers the full private-label scope: brand, packaging, specification and terminal type, for
+      distributors, importers and brands worldwide.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Import &amp; Compliance</h2>
+    <p>
+      Import documentation and any conformity requirements vary by country and evolve over time.
+      Treat figures as indicative and confirm the current certification, labelling and tariff
+      position with your importer or freight forwarder before each shipment.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Product Lines for the Region</h2>
+    <div class="grid grid-2" style="margin-top:16px;">
+      <div class="card">
+        <h3>BCI Group 31 / 8D</h3>
+        <p>North American group sizes, made to order via our BCI production line.</p>
+        <a href="/products/bci-request/">View BCI (on request) →</a>
+      </div>
+      <div class="card">
+        <h3>Fleet &amp; OEM</h3>
+        <p>Bulk supply, batch consistency and private-label customization for importers.</p>
+        <a href="/products/fleet/">View Fleet Programs →</a>
+      </div>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What battery standard does Latin America use for trucks?</h3>
+      <p>Latin America predominantly follows the BCI standard — Group 31 and 8D sizes — matching North American heavy trucks, though European and Japanese vehicles also appear. Match the battery to the vehicle and its tray.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can DINWEY supply BCI Group 31 and 8D batteries?</h3>
+      <p>Yes, made to order via our BCI production line. BCI group sizes carry SAE J537 cold-cranking ratings (tested at −18°C), and we supply them on request for Latin American and North American fleets.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the difference between BCI and JIS sizing?</h3>
+      <p>BCI uses group numbers (31, 8D) defined by the Battery Council International for North America and Latin America, with CCA tested to SAE J537 at −18°C. JIS uses model codes (N150, N200) for Asia and Africa, tested to JIS D5301 at −15°C. They are not interchangeable — match the standard to the vehicle.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do you export batteries to Latin America?</h3>
+      <p>Yes. DINWEY supplies BCI Group 31/8D on request, plus OEM customization, to importers and distributors across Latin America, with per-batch test data and full shipping documentation.</p>
+    </div>
+
+    <p style="margin-top:24px;">
+      📚 Read more: <a href="https://docs.dinweysbattery.com/jis-vs-din-vs-bci/" target="_blank" rel="noopener">JIS vs DIN vs BCI Standards</a>
+    </p>
+  </div>
+</BaseLayout>

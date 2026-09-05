@@ -6,6 +6,24 @@ const navItems = [
   { href: "/products/bci-request/", label: "BCI Group 31/8D" },
   { href: "/products/24v/", label: "24V Systems" },
   { href: "/products/fleet/", label: "Fleet & OEM" },
+  {
+    label: "Applications",
+    children: [
+      { href: "/applications/mining-off-highway/", label: "Mining & Off-Highway" },
+      { href: "/applications/cold-chain-refrigerated/", label: "Cold-Chain & Refrigerated" },
+      { href: "/applications/bus-coach/", label: "Bus & Coach" },
+      { href: "/applications/diesel-generator/", label: "Diesel Generators" },
+    ],
+  },
+  {
+    label: "Markets",
+    children: [
+      { href: "/markets/middle-east/", label: "Middle East" },
+      { href: "/markets/africa/", label: "Africa" },
+      { href: "/markets/latin-america/", label: "Latin America" },
+      { href: "/markets/southeast-asia/", label: "Southeast Asia" },
+    ],
+  },
   { href: "/selection-tool/", label: "Selection Tool" },
   { href: "https://docs.dinweysbattery.com/", label: "Guides", external: true },
   { href: "/about/", label: "About" },
@@ -25,20 +43,43 @@ const isActive = (href: string) =>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
       {
-        navItems.map((item) => (
-          <a
-            href={item.href}
-            aria-current={isActive(item.href) ? "page" : undefined}
-            class={[
-              isActive(item.href) ? "active" : "",
-              item.cta ? "nav-cta" : "",
-            ].filter(Boolean).join(" ") || undefined}
-            target={item.external ? "_blank" : undefined}
-            rel={item.external ? "noopener" : undefined}
-          >
-            {item.label}
-          </a>
-        ))
+        navItems.map((item) => {
+          if (item.children) {
+            return (
+              <div class="nav-group">
+                <button class="nav-group-toggle" aria-haspopup="true" aria-expanded="false">
+                  {item.label} ▾
+                </button>
+                <div class="nav-dropdown" role="menu">
+                  {item.children.map((child) => (
+                    <a
+                      href={child.href}
+                      role="menuitem"
+                      aria-current={isActive(child.href) ? "page" : undefined}
+                      class={isActive(child.href) ? "active" : ""}
+                    >
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            );
+          }
+          return (
+            <a
+              href={item.href}
+              aria-current={isActive(item.href) ? "page" : undefined}
+              class={[
+                isActive(item.href) ? "active" : "",
+                item.cta ? "nav-cta" : "",
+              ].filter(Boolean).join(" ") || undefined}
+              target={item.external ? "_blank" : undefined}
+              rel={item.external ? "noopener" : undefined}
+            >
+              {item.label}
+            </a>
+          );
+        })
       }
     </nav>
   </div>

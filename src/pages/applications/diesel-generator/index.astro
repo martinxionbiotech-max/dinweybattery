@@ -1,0 +1,138 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What battery does a diesel generator use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Diesel generators use a starting battery matched to the engine's cranking requirement — often a heavy-duty flooded or AGM battery with 850–1100+ CCA. Larger generators may use 24V starting systems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is a generator battery different from a vehicle battery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The chemistry is identical; the duty is not. A vehicle battery is recharged daily by the alternator, while a generator battery sits idle and self-discharges 3–5% a month — 9–15% of a 135 Ah battery in three idle months — yet must still deliver high CCA on demand. A float charger, not the alternator, keeps it alive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do standby generator batteries fail?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sulfation, not use. A battery that sits at a low state of charge for months self-discharges and progressively sulfates, losing capacity invisibly until the one cold night it must crank. A float charger or maintainer prevents it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I replace a generator battery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generator batteries typically last 3–5 years, but standby units that sit idle need regular charging to avoid sulfation. Test annually and replace proactively before a critical start."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Diesel Generator Starting Batteries"
+  description="Starting batteries for standby and prime diesel generators — high CCA on demand plus the float-charge discipline standby duty requires. OEM supply from Chengguang Energy."
+  jsonLd={faqJsonLd}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#55606e;margin-bottom:16px;">
+      <a href="/" style="color:#1e5aa8;">Home</a> &rsaquo; Applications &rsaquo; Diesel Generators
+    </nav>
+    <h1 style="color:#0f1f3d;">Diesel Generator Starting Batteries</h1>
+    <p class="lead">
+      A standby generator's battery is the component most likely to fail — not because it works
+      hard, but because it sits idle for months and is expected to crank on demand. The chemistry
+      is the same as a truck battery; the duty is not.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Key Takeaways</h2>
+    <ol class="takeaways-list">
+      <li><strong>Idle is the enemy, not use</strong> — a battery with no load still self-discharges ~3–5% a month; a 135 Ah N150 sheds 9–15% of capacity in three idle months.</li>
+      <li><strong>A float charger keeps it alive, not the CCA label</strong> — the alternator recharges a vehicle daily; a standby generator has no such duty cycle, so a charger or maintainer holds the charge.</li>
+      <li><strong>Sulfation is the silent killer</strong> — a battery left below full charge sulfates progressively, losing capacity invisibly until the cold night it must start.</li>
+      <li><strong>Test annually, replace proactively</strong> — 3–5 year service life is typical, but critical-start sites warrant annual load testing and planned replacement.</li>
+    </ol>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Why Generator Duty Is Different</h2>
+    <p>
+      A truck battery earns its keep every day: the engine starts, the alternator recharges it, and
+      the cycle repeats. A standby generator sits in a bay for weeks or months, slowly self-discharging
+      at 3–5% a month, then — the moment the grid fails or the control system calls for a start — it
+      must deliver the full cold-crank burst instantly.
+    </p>
+    <p>
+      The failure mode is invisible. As a battery sits below full charge, lead sulfate crystals form
+      on the plates and harden, permanently reducing capacity. The operator sees no warning until the
+      one critical morning the generator won't crank. The fix is disciplined: a float charger or
+      maintainer that holds the battery at full charge, plus an annual load test that catches a
+      weakening battery before it matters.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Recommended Specifications</h2>
+    <table>
+      <thead>
+        <tr><th>Requirement</th><th>Specification</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Cold Cranking Amps</td><td>850–1100+ CCA matched to the engine</td></tr>
+        <tr><td>System voltage</td><td>12V or 24V per the generator's starting system</td></tr>
+        <tr><td>Construction</td><td>Heavy-duty flooded or AGM</td></tr>
+        <tr><td>Self-discharge (idle)</td><td>3–5% per month</td></tr>
+        <tr><td>Service life</td><td>3–5 years with float-charge discipline</td></tr>
+        <tr><td>Maintenance</td><td>Float charger + annual load test</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Specifications are representative ranges. Contact us for a datasheet matched to your
+      generator's engine and starting-system voltage.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Product Lines for Generator Starting</h2>
+    <div class="grid grid-2" style="margin-top:16px;">
+      <div class="card">
+        <h3>JIS Heavy-Duty (N150/N200)</h3>
+        <p>Thick-plate flooded batteries that tolerate float-charge life — 145G51 and 190H52.</p>
+        <a href="/products/jis-heavy-duty/">View JIS Heavy-Duty →</a>
+      </div>
+      <div class="card">
+        <h3>AGM (maintenance-free)</h3>
+        <p>Sealed AGM for low-maintenance standby bays and critical sites.</p>
+        <a href="/products/fleet/">View Fleet &amp; AGM →</a>
+      </div>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What battery does a diesel generator use?</h3>
+      <p>Diesel generators use a starting battery matched to the engine's cranking requirement — often a heavy-duty flooded or AGM battery with 850–1100+ CCA. Larger generators may use 24V starting systems.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How is a generator battery different from a vehicle battery?</h3>
+      <p>The chemistry is identical; the duty is not. A vehicle battery is recharged daily by the alternator, while a generator battery sits idle and self-discharges 3–5% a month — 9–15% of a 135 Ah battery in three idle months — yet must still deliver high CCA on demand. A float charger, not the alternator, keeps it alive.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why do standby generator batteries fail?</h3>
+      <p>Sulfation, not use. A battery that sits at a low state of charge for months self-discharges and progressively sulfates, losing capacity invisibly until the one cold night it must crank. A float charger or maintainer prevents it.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How often should I replace a generator battery?</h3>
+      <p>Generator batteries typically last 3–5 years, but standby units that sit idle need regular charging to avoid sulfation. Test annually and replace proactively before a critical start.</p>
+    </div>
+
+    <p style="margin-top:24px;">
+      📚 Read the full guide: <a href="https://docs.dinweysbattery.com/diesel-generator/" target="_blank" rel="noopener">Diesel Generator Battery Selection</a>
+    </p>
+  </div>
+</BaseLayout>

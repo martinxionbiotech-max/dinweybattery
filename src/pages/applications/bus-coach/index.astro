@@ -1,0 +1,137 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What battery does a bus or coach use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Buses and coaches use heavy-duty starting batteries matched to the engine — typically 24V for large intercity coaches (two 12V batteries in series) and 12V for smaller city buses. Group sizes follow the market: JIS N150/N200 or DIN88/DIN100."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do bus batteries wear out faster than truck batteries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Buses cycle their batteries harder than line-haul trucks — frequent starts, long idle periods and constant accessory load (lighting, doors, HVAC, passenger information) draw on the battery throughout a service day. Deep-cycling thick plates and generous reserve capacity are essential."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do buses use 12V or 24V systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Large intercity coaches typically use 24V (two 12V batteries in series); smaller city buses and shuttle minibuses often use 12V. Always match the vehicle's specification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What reserve capacity does a bus need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A bus benefits from generous reserve capacity because of its constant accessory load. A JIS N150 offers 220 minutes and an N200 offers 320 minutes (SAE J537) — a buffer for lighting, doors and telematics when the engine is off or idling."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Bus & Coach Starting Batteries"
+  description="Heavy-duty starting batteries for buses and coaches — deep-cycling thick plates, high reserve capacity and 12V/24V options. OEM supply from Chengguang Energy."
+  jsonLd={faqJsonLd}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#55606e;margin-bottom:16px;">
+      <a href="/" style="color:#1e5aa8;">Home</a> &rsaquo; Applications &rsaquo; Bus &amp; Coach
+    </nav>
+    <h1 style="color:#0f1f3d;">Bus &amp; Coach Starting Batteries</h1>
+    <p class="lead">
+      City and intercity buses cycle their batteries harder than line-haul trucks — frequent starts,
+      long idle periods and constant accessory load demand deep-cycling thick plates and generous
+      reserve capacity.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Key Takeaways</h2>
+    <ol class="takeaways-list">
+      <li><strong>Buses cycle harder than trucks</strong> — frequent stops, long idling and constant accessory load (lighting, doors, HVAC, passenger information) draw on the battery all service day.</li>
+      <li><strong>Thick Pb-Sb plates tolerate the deep cycling</strong> — the same deep-cycle-tolerant construction used in heavy-duty truck batteries keeps a bus starting reliably through a full shift.</li>
+      <li><strong>Reserve capacity is the engine-off buffer</strong> — N150 offers 220 minutes, N200 offers 320 minutes (SAE J537) for lights, telematics and a failed alternator.</li>
+      <li><strong>Large coaches run 24V</strong> — two 12V batteries in series; smaller city buses and shuttles often 12V — always match the vehicle.</li>
+    </ol>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Why Buses Need Heavy-Duty Construction</h2>
+    <p>
+      The difference between a bus and a long-haul truck is duty cycle. A truck runs for hours
+      with the alternator topping up the battery. A city bus starts and stops dozens of times a
+      day, idles through traffic and passenger loading, and constantly runs doors, interior
+      lighting, HVAC and passenger information systems — even when the engine is off.
+    </p>
+    <p>
+      Each accessory draw inches the battery toward discharge, and each restart asks for another
+      cold-crank burst. A light automotive plate would fail early under that repeated cycling. The
+      heavy-duty thick-plate (Pb-Sb) design DINWEY uses is engineered for exactly this duty —
+      tolerating repeated partial discharge and recharge while still delivering the high CCA a
+      large diesel needs on every start.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Recommended Specifications</h2>
+    <table>
+      <thead>
+        <tr><th>Requirement</th><th>Specification</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>System voltage</td><td>24V for large coaches (2× 12V series); 12V for small buses</td></tr>
+        <tr><td>Cold Cranking Amps</td><td>850–1100+ CCA for large diesels</td></tr>
+        <tr><td>Group size</td><td>JIS N150 (145G51) / N200 (190H52) or DIN88/DIN100</td></tr>
+        <tr><td>Reserve capacity</td><td>N150 220 min · N200 320 min (SAE J537)</td></tr>
+        <tr><td>Construction</td><td>Thick-plate flooded (Pb-Sb); AGM for maintenance-free fleets</td></tr>
+      </tbody>
+    </table>
+    <p class="data-note">
+      Specifications are representative ranges. Confirm exact group size, CCA and voltage against
+      the vehicle manual — contact us for a datasheet.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Product Lines for Bus &amp; Coach Fleetss</h2>
+    <div class="grid grid-2" style="margin-top:16px;">
+      <div class="card">
+        <h3>JIS Heavy-Duty (N150/N200)</h3>
+        <p>145G51 (N150) 900A CCA / 220 min RC and 190H52 (N200) 1100A CCA / 320 min RC.</p>
+        <a href="/products/jis-heavy-duty/">View JIS Heavy-Duty →</a>
+      </div>
+      <div class="card">
+        <h3>DIN Heavy-Duty (DIN88/DIN100)</h3>
+        <p>European-standard batteries for MAN, Mercedes, Scania and Volvo coaches.</p>
+        <a href="/products/din-heavy-duty/">View DIN Heavy-Duty →</a>
+      </div>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What battery does a bus or coach use?</h3>
+      <p>Buses and coaches use heavy-duty starting batteries matched to the engine — typically 24V for large intercity coaches (two 12V batteries in series) and 12V for smaller city buses. Group sizes follow the market: JIS N150/N200 or DIN88/DIN100.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why do bus batteries wear out faster than truck batteries?</h3>
+      <p>Buses cycle their batteries harder than line-haul trucks — frequent starts, long idle periods and constant accessory load (lighting, doors, HVAC, passenger information) draw on the battery throughout a service day. Deep-cycling thick plates and generous reserve capacity are essential.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do buses use 12V or 24V systems?</h3>
+      <p>Large intercity coaches typically use 24V (two 12V batteries in series); smaller city buses and shuttle minibuses often use 12V. Always match the vehicle's specification.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What reserve capacity does a bus need?</h3>
+      <p>A bus benefits from generous reserve capacity because of its constant accessory load. A JIS N150 offers 220 minutes and an N200 offers 320 minutes (SAE J537) — a buffer for lighting, doors and telematics when the engine is off or idling.</p>
+    </div>
+
+    <p style="margin-top:24px;">
+      📚 Read the full guide: <a href="https://docs.dinweysbattery.com/fleet-battery-management/" target="_blank" rel="noopener">Fleet Battery Management</a>
+    </p>
+  </div>
+</BaseLayout>

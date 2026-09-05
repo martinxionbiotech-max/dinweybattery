@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What battery standard does Southeast Asia use for trucks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Southeast Asia is a core JIS market — Japanese and Korean heavy trucks dominate, running JIS N-series batteries in model codes N150 (145G51) and N200 (190H52). Match the battery to the vehicle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is JIS the safe spec for Southeast Asia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JIS N-series (N100/N120/N150/N200) is the core commercial range across Southeast Asia, matching local Japanese/Korean trucks and their terminal conventions. Importers should specify JIS rather than China's domestic GB codes to match local aftermarket demand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What battery stresses matter most in Southeast Asia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Heat and humidity dominate. High ambient temperatures accelerate ageing and increase water loss in flooded batteries, and humidity can promote terminal corrosion, so robust thick-plate construction and clean, tight terminals matter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you export batteries to Southeast Asia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. DINWEY exports JIS N150/N200 heavy-duty batteries to distributors and importers across Southeast Asia, with per-batch CCA test data and full shipping documentation."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Truck Batteries for the Southeast Asian Market"
+  description="JIS N150/N200 heavy-duty truck batteries for Southeast Asian distributors and importers — the region's core commercial battery. OEM supply from Chengguang Energy."
+  jsonLd={faqJsonLd}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#55606e;margin-bottom:16px;">
+      <a href="/" style="color:#1e5aa8;">Home</a> &rsaquo; Markets &rsaquo; Southeast Asia
+    </nav>
+    <h1 style="color:#0f1f3d;">Truck Batteries for the Southeast Asian Market</h1>
+    <p class="lead">
+      Southeast Asia is a core JIS market — Japanese and Korean heavy trucks dominate regional
+      fleets, running JIS N-series batteries. DINWEY stocks the full N150/N200 range, built for the
+      region's heat and humidity.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Key Takeaways</h2>
+    <ol class="takeaways-list">
+      <li><strong>JIS N-series is the region's backbone</strong> — N100/N120/N150/N200 is the core commercial range across Southeast Asia.</li>
+      <li><strong>Specify JIS, not GB</strong> — China's domestic GB codes are the reference for exporters, but importers should specify JIS to match local vehicles and terminal conventions.</li>
+      <li><strong>Heat and humidity stress batteries</strong> — high temperatures age plates faster and increase water loss; humidity promotes terminal corrosion.</li>
+      <li><strong>N150/N200 covers the range</strong> — N150 (145G51) 900A CCA for standard trays, N200 (190H52) 1100A CCA for the largest engines.</li>
+    </ol>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Battery Standards for the Region</h2>
+    <p>
+      Japanese and Korean heavy trucks — the dominant makes in Southeast Asia — use JIS (Japanese
+      Industrial Standards) sizing, with model codes N150 (145G51) and N200 (190H52) the workhorses
+      of commercial fleets. The N150 delivers 900A CCA from a 508×222×212mm footprint standard for
+      heavy-truck trays; the N200 is larger at 520×278×220mm with 1100A CCA for the biggest engines.
+      Importers should specify JIS rather than China's domestic GB reference codes to match local
+      aftermarket demand and terminal conventions.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Model</th><th>Standard</th><th>Capacity</th><th>CCA</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>N150 (145G51)</td><td>JIS</td><td>135 Ah (C20)</td><td>900A</td></tr>
+        <tr><td>N200 (190H52)</td><td>JIS</td><td>200 Ah (C20)</td><td>1100A</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Heat &amp; Humidity Considerations</h2>
+    <p>
+      Southeast Asia's tropical climate stresses a battery through heat and humidity. High ambient
+      temperatures speed the chemical reactions that age plates and increase electrolyte water loss
+      in flooded designs. Humidity promotes corrosion on terminals and connections, which raises
+      resistance and reduces cranking current. DINWEY's thick-plate (Pb-Sb) heavy-duty construction
+      holds up under this duty, and AGM versions are available where fleets prefer a sealed,
+      maintenance-free option that resists corrosion better than vented flooded designs.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Import &amp; Compliance</h2>
+    <p>
+      Import documentation and any conformity requirements vary by country and evolve over time.
+      Treat figures as indicative and confirm the current certification, labelling and tariff
+      position with your importer or freight forwarder before each shipment.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Product Lines for the Region</h2>
+    <div class="grid grid-2" style="margin-top:16px;">
+      <div class="card">
+        <h3>JIS Heavy-Duty (N150/N200)</h3>
+        <p>145G51 and 190H52 — the region's core commercial battery.</p>
+        <a href="/products/jis-heavy-duty/">View JIS Heavy-Duty →</a>
+      </div>
+      <div class="card">
+        <h3>24V Systems</h3>
+        <p>Series-configured pairs for heavy trucks, semi trailers and buses.</p>
+        <a href="/products/24v/">View 24V Systems →</a>
+      </div>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What battery standard does Southeast Asia use for trucks?</h3>
+      <p>Southeast Asia is a core JIS market — Japanese and Korean heavy trucks dominate, running JIS N-series batteries in model codes N150 (145G51) and N200 (190H52). Match the battery to the vehicle.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why is JIS the safe spec for Southeast Asia?</h3>
+      <p>JIS N-series (N100/N120/N150/N200) is the core commercial range across Southeast Asia, matching local Japanese/Korean trucks and their terminal conventions. Importers should specify JIS rather than China's domestic GB codes to match local aftermarket demand.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What battery stresses matter most in Southeast Asia?</h3>
+      <p>Heat and humidity dominate. High ambient temperatures accelerate ageing and increase water loss in flooded batteries, and humidity can promote terminal corrosion, so robust thick-plate construction and clean, tight terminals matter.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do you export batteries to Southeast Asia?</h3>
+      <p>Yes. DINWEY exports JIS N150/N200 heavy-duty batteries to distributors and importers across Southeast Asia, with per-batch CCA test data and full shipping documentation.</p>
+    </div>
+
+    <p style="margin-top:24px;">
+      📚 Read more: <a href="https://docs.dinweysbattery.com/jis-vs-din-vs-bci/" target="_blank" rel="noopener">JIS vs DIN vs BCI Standards</a>
+    </p>
+  </div>
+</BaseLayout>
