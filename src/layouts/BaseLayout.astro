@@ -58,9 +58,17 @@ const articleJsonLd =
         headline: cleanTitle,
         description,
         image: ogImage.startsWith("http") ? ogImage : SITE + ogImage,
-        author: author
-          ? { "@type": "Organization", name: author, url: SITE }
-          : { "@type": "Organization", name: "DINWEY", url: SITE },
+        author: {
+          "@type": "Person",
+          name: author || "Martin Wong",
+          jobTitle: "Sales Director",
+          worksFor: {
+            "@type": "Organization",
+            name: "Chengguang Energy",
+            url: "https://chengguangenergy.com"
+          },
+          url: SITE + "/about/"
+        },
         publisher: { "@id": SITE + "/#organization" },
         datePublished: datePublished,
         dateModified: dateModified || datePublished,

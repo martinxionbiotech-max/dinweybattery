@@ -70,8 +70,15 @@ const productJsonLd = {
   "@type": "Product",
   "name": title,
   "description": description,
+  "image": ogImage,
   "brand": { "@type": "Brand", "name": "DINWEY" },
-  "manufacturer": { "@id": "https://dinweysbattery.com/#organization" }
+  "manufacturer": { "@id": "https://dinweysbattery.com/#organization" },
+  "author": {
+    "@type": "Person",
+    "name": "Martin Wong",
+    "jobTitle": "Sales Director",
+    "worksFor": { "@id": "https://dinweysbattery.com/#organization" }
+  }
 };
 
 // 站点内产品线（用于内链：相关产品互链）
