@@ -5,6 +5,13 @@ import ProductLayout from "../../../layouts/ProductLayout.astro";
 <ProductLayout
   title="DIN Heavy-Duty Truck Batteries (DIN88 / DIN100)"
   description="DINWEY DIN-standard heavy-duty truck batteries — DIN88 and DIN100 models for European and Middle East commercial vehicles. IATF 16949 certified."
+  takeaways={[
+    "**DIN88 and DIN100 differ mainly in length and capacity** — 88Ah/800A EN/353mm vs 100Ah/870A EN/393mm, same 175×190mm cross-section.",
+    "**EN CCA is not interchangeable with JIS or SAE** — 800A EN and 900A JIS are different test baselines; compare within one standard.",
+    "**Left-positive T1 conical terminals are the European norm** — not interchangeable with JIS type A posts; reversed polarity is a costly mistake.",
+    "**150 vs 170 minutes of RC** — the DIN100 buys roughly 20 extra minutes of engine-off load before voltage collapses.",
+    "**Flooded, EFB or AGM** — pick AGM for cold-climate starting or vibration, flooded for standard European duty."
+  ]}
   specTable={[
     { spec: "Model 58827 (DIN88)", value: "12V, 88Ah (C20), 800A EN CCA, 150min RC, 353×175×190mm" },
     { spec: "Model 60038 (DIN100)", value: "12V, 100Ah (C20), 870A EN CCA, 170min RC, 393×175×190mm" },
