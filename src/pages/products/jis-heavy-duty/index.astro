@@ -32,7 +32,7 @@ import ProductLayout from "../../../layouts/ProductLayout.astro";
     "Both are manufactured by Chengguang Power Tech Co., Ltd. under an IATF 16949 quality system, with per-batch CCA test data and full documentation provided with every shipment."
   ]}
   specNotes={[
-    "Cold Cranking Amps (CCA) is measured to SAE J537 — the current a fully charged 12V battery can deliver for 30 seconds at −18°C (0°F) while holding at least 7.2V. The N150's 900A and the N200's 1100A describe cold-start power: a higher figure means a stronger, more dependable start on a cold morning.",
+    "Cold Cranking Amps (CCA) is measured to JIS D5301 — the current a fully charged 12V battery can deliver for 30 seconds at −15°C while holding at least 7.2V. The N150's 900A and the N200's 1100A describe cold-start power: a higher figure means a stronger, more dependable start on a cold morning.",
     "Reserve Capacity (RC), also to SAE J537, is the number of minutes a fully charged battery can sustain a 25-amp load at 27°C (80°F) before the voltage drops to 10.5V. The N150's 220 minutes and the N200's 320 minutes are your buffer for lights, telematics and other loads when the engine is off — or if the alternator fails on the road.",
     "Capacity is measured at the 20-hour rate (C20). The N150's 135Ah and the N200's 200Ah describe the total energy stored over a slow 20-hour discharge at 25°C — a different measure from the short, high-current burst that CCA describes.",
     "Fit and terminals: both models use JIS type A large taper posts. The N150's 508×222×212mm footprint suits standard heavy-truck trays; the N200 is larger at 520×278×220mm. Confirm tray length, width, height and terminal position before upgrading from N150 to N200."
@@ -42,7 +42,7 @@ import ProductLayout from "../../../layouts/ProductLayout.astro";
     rows: [
       ["Voltage", "12V", "12V"],
       ["Capacity (C20)", "135 Ah", "200 Ah"],
-      ["Cold Cranking Amps (SAE J537)", "900 A", "1100 A"],
+      ["Cold Cranking Amps (JIS D5301)", "900 A", "1100 A"],
       ["Reserve Capacity (SAE J537)", "220 min", "320 min"],
       ["Dimensions (L×W×H)", "508×222×212 mm", "520×278×220 mm"],
       ["Terminals", "JIS type A", "JIS type A"],
@@ -80,7 +80,7 @@ import ProductLayout from "../../../layouts/ProductLayout.astro";
   faq={[
     { q: "What is the difference between N150 and N200?", a: "The JIS N150 (model 145G51) has 135Ah capacity and 900A CCA; the N200 (model 190H52) is larger with 200Ah and 1100A CCA. Choose based on your engine's CCA requirement and battery tray size." },
     { q: "Are these batteries for 12V or 24V systems?", a: "Each is a 12V battery. Heavy trucks using 24V systems wire two of them in series." },
-    { q: "What CCA does a JIS N200 provide?", a: "The 190H52 (N200) provides 1100A CCA (SAE), suited to large diesel engines." },
+    { q: "What CCA does a JIS N200 provide?", a: "The 190H52 (N200) provides 1100A CCA (JIS D5301), suited to large diesel engines." },
     { q: "What are the dimensions of the N150 and N200?", a: "The N150 (145G51) measures 508×222×212mm; the N200 (190H52) measures 520×278×220mm. Confirm your battery tray will fit the larger model before upgrading." },
     { q: "Are these batteries maintenance-free?", a: "Heavy-duty JIS models use thick-plate flooded (Pb-Sb) construction, which may require periodic electrolyte checks. AGM versions are available where a maintenance-free option is preferred." },
     { q: "What does Reserve Capacity (RC) mean for a truck battery?", a: "RC is the number of minutes a fully charged 12V battery can sustain a 25-amp load at 27°C before dropping to 10.5V (SAE J537). The N150 offers 220 minutes and the N200 320 minutes — a buffer for lights, telematics and other loads when the engine is off or the alternator fails." },
