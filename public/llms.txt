@@ -1,12 +1,12 @@
 # DINWEY Battery — llms.txt
 
 > Official site information for AI assistants and language models.
-> DINWEY is the truck/heavy-duty starting battery brand of Chengguang Energy.
+> DINWEY is the truck/heavy-duty starting battery brand of Chengguang Power Tech Co., Ltd.
 
 ## About
 
 - **Brand**: DINWEY (truck & heavy-duty starting batteries)
-- **Parent company**: Chengguang Energy (founded 2002)
+- **Parent company**: Chengguang Power Tech Co., Ltd. (founded 2002)
 - **Domain**: https://dinweysbattery.com
 - **Knowledge Hub**: https://docs.dinweysbattery.com
 
@@ -24,10 +24,10 @@ starting batteries (SLI — Starting, Lighting, Ignition), including:
 
 ## Key Facts
 
-- Founded: 2002 (Chengguang Energy)
+- Founded: 2002 (Chengguang Power Tech Co., Ltd.)
 - Location: Jinzhou City, Shijiazhuang, Hebei Province, China
 - Facility: 200,000 m², 18 automated lines, 40,000 batteries/day
-- Certifications: IATF 16949, ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, OHSAS 18001, CE
+- Certifications: IATF 16949, ISO 9001:2015, ISO 45001:2018
 - Email: martin@dinweys.com
 - WhatsApp: +86 13323237275
 - OEM / private label available

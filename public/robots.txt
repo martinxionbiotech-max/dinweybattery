@@ -4,22 +4,37 @@ User-agent: *
 Allow: /
 
 # AI crawlers explicitly welcome (AIO strategy)
+
+# Google-Extended: allow crawling for Gemini/AI Overviews, but opt out of training (ai-train)
+User-agent: Google-Extended
+Allow: /
+ai-train: no
+
+# OpenAI
 User-agent: GPTBot
 Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 User-agent: ChatGPT-User
 Allow: /
+
+# Anthropic
 User-agent: ClaudeBot
 Allow: /
 User-agent: Claude-Web
 Allow: /
-User-agent: PerplexityBot
-Allow: /
-User-agent: Google-Extended
-Allow: /
 User-agent: anthropic-ai
 Allow: /
+
+# Common Crawl
+User-agent: CCBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Cohere
 User-agent: cohere-ai
 Allow: /
 
