@@ -1,14 +1,22 @@
 ---
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/products/jis-heavy-duty/", label: "JIS N150/N200" },
-  { href: "/products/din-heavy-duty/", label: "DIN88/DIN100" },
-  { href: "/products/bci-request/", label: "BCI Group 31/8D" },
-  { href: "/products/24v/", label: "24V Systems" },
-  { href: "/products/fleet/", label: "Fleet & OEM" },
   {
-    label: "Applications",
+    label: "Batteries",
     children: [
+      { href: "/products/jis-heavy-duty/", label: "JIS Heavy-Duty (N150/N200)" },
+      { href: "/products/din-heavy-duty/", label: "DIN Heavy-Duty (DIN88/DIN100)" },
+      { href: "/products/bci-request/", label: "BCI Group 31 / 8D" },
+      { href: "/products/24v/", label: "24V Systems" },
+      { href: "/products/fleet/", label: "Fleet & OEM" },
+      { href: "/batteries/", label: "All Models" },
+    ],
+  },
+  {
+    label: "Fitment",
+    children: [
+      { href: "/truck-models/", label: "Truck Model Fitment" },
+      { href: "/selection-tool/", label: "Selection Tool" },
       { href: "/applications/mining-off-highway/", label: "Mining & Off-Highway" },
       { href: "/applications/cold-chain-refrigerated/", label: "Cold-Chain & Refrigerated" },
       { href: "/applications/bus-coach/", label: "Bus & Coach" },
@@ -24,9 +32,13 @@ const navItems = [
       { href: "/markets/southeast-asia/", label: "Southeast Asia" },
     ],
   },
-  { href: "/selection-tool/", label: "Selection Tool" },
-  { href: "https://docs.dinweysbattery.com/", label: "Guides", external: true },
-  { href: "/about/", label: "About" },
+  {
+    label: "Resources",
+    children: [
+      { href: "https://docs.dinweysbattery.com/", label: "Knowledge Base", external: true },
+      { href: "/about/", label: "About Us" },
+   ],
+  },
   { href: "/contact/", label: "Contact", cta: true },
 ];
 
