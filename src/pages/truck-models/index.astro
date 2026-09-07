@@ -1,0 +1,340 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const SITE = "https://dinweysbattery.com";
+
+// 免责声明（每个 MEDIUM fitment 页面必须标注）
+const disclaimer =
+  "Industry reference, not DINWEY official OEM confirmation. Battery groups listed below are sourced from independent commercial-vehicle fitment guides (Club Assist Commercial Fitment Guide and Century Batteries Selection Guide). Always confirm group size, terminal type, terminal orientation, polarity and tray dimensions against your specific vehicle before ordering.";
+
+// 7 辆 MEDIUM 车型（来自 knowledge/data/vehicles/vehicle-master.json）
+// 只用已核实的 T1 证据；Isuzu F 诚实标注 needs inquiry。
+const vehicles = [
+  {
+    id: "HINO-700",
+    brand: "Hino",
+    model: "700 Series",
+    generation: "FS / FY / SH / SS",
+    year: "2004–2016",
+    electricalSystem: "24V",
+    batteryQuantity: 2,
+    oemBattery: "N150 (JIS)",
+    batteryGroup: "N150",
+    dinweyRecommendation: "145G51 (N150)",
+    fitmentEvidence:
+      "Club Assist Commercial Fitment Guide: Hino 700 Series FS/FY/SH/SS 2004-2016 = N150 (MF150/SN150/HCC150); Century Batteries Selection Guide: Hino 700 Series = N150.",
+    source: "Club Assist Commercial Fitment Guide + Century Batteries Selection Guide",
+    confidence: "MEDIUM",
+    needsInquiry: false,
+    recommendationLinks: [
+      { href: "/batteries/jis/n150/", label: "145G51 (N150)" },
+    ],
+  },
+  {
+    id: "VOLVO-FH",
+    brand: "Volvo Trucks",
+    model: "FH",
+    generation: "FH (FH12 / FH16)",
+    year: "1998–on",
+    electricalSystem: "24V",
+    batteryQuantity: 2,
+    oemBattery: "N150 (up to 2013) / N200 (2014-on)",
+    batteryGroup: "N150 (1998–2013) / N200 (2014-on)",
+    dinweyRecommendation: "145G51 (N150) up to 2013; 190H52 (N200) 2014-on",
+    fitmentEvidence:
+      "Club Assist Volvo Trucks note: most Australian-assembled Volvo trucks to 2013 = 2×N150 behind cabin; European-built = 2×MFN150A (DIN). Volvo FH 2014-on = N200. eBay cross-ref: N150 fits Volvo FH580/FH12/FH16.",
+    source: "Club Assist Commercial Fitment Guide",
+    confidence: "MEDIUM",
+    needsInquiry: false,
+    recommendationLinks: [
+      { href: "/batteries/jis/n150/", label: "145G51 (N150) — up to 2013" },
+      { href: "/batteries/jis/n200/", label: "190H52 (N200) — 2014-on" },
+    ],
+  },
+  {
+    id: "VOLVO-FM",
+    brand: "Volvo Trucks",
+    model: "FM",
+    generation: "FM7 / FM9 / FM10 / FM12 / FM13 / FMX",
+    year: "1998–on",
+    electricalSystem: "24V",
+    batteryQuantity: 2,
+    oemBattery: "N150 (up to 2013) / N200 (2014-on, FMX 2010-on)",
+    batteryGroup: "N150 (1998–2013) / N200 (2014-on)",
+    dinweyRecommendation: "145G51 (N150) for up to 2013; 190H52 (N200) for 2014-on",
+    fitmentEvidence:
+      "Club Assist: Volvo FM7/FM9/FM10/FM12 1998-2013 = N150 (2×N150); Volvo FM 410/540 2014-on = N200; Volvo FMX 11/13 2010-on = N200. Note: most Australian-assembled = N150, European-built = MFN150A Euro/DIN spec.",
+    source: "Club Assist Commercial Fitment Guide",
+    confidence: "MEDIUM",
+    needsInquiry: false,
+    recommendationLinks: [
+      { href: "/batteries/jis/n150/", label: "145G51 (N150) — up to 2013" },
+      { href: "/batteries/jis/n200/", label: "190H52 (N200) — 2014-on" },
+    ],
+  },
+  {
+    id: "SCANIA-R",
+    brand: "Scania",
+    model: "R Series",
+    generation: "R420 / R480 / R500 / R560 / R580 / R620 / R730",
+    year: "2005–on",
+    electricalSystem: "24V",
+    batteryQuantity: 2,
+    oemBattery: "N150 (2005–2014) / N200 (2015-on Euro VI)",
+    batteryGroup: "N150 (2005–2014) / N200 (2015-on)",
+    dinweyRecommendation: "145G51 (N150) 2005–2014; 190H52 (N200) 2015-on",
+    fitmentEvidence:
+      "RDP / Club Assist fitment guide: Scania R420/R480/R500/R560/R580 2005-2014 = N150; Scania R490/R500/R580/R620/R730 Euro VI 2015-on = N200 (276mm width). Scania R113/R143 1987-1997 = N150.",
+    source: "RDP Battery Fitment Guide + Club Assist",
+    confidence: "MEDIUM",
+    needsInquiry: false,
+    recommendationLinks: [
+      { href: "/batteries/jis/n150/", label: "145G51 (N150) — 2005–2014" },
+      { href: "/batteries/jis/n200/", label: "190H52 (N200) — 2015-on" },
+    ],
+  },
+  {
+    id: "MAN-TGS",
+    brand: "MAN",
+    model: "TGS",
+    generation: "standard (222mm width) / heavy-duty (273mm width)",
+    year: "2007–on",
+    electricalSystem: "24V",
+    batteryQuantity: 2,
+    oemBattery: "N150L (standard, 222mm) / N200 (H/D, 273mm)",
+    batteryGroup: "N150L (standard) / N200 (heavy-duty option)",
+    dinweyRecommendation: "145G51 (N150L) standard; 190H52 (N200) for 273mm heavy-duty option",
+    fitmentEvidence:
+      "Club Assist Commercial Fitment Guide: MAN TGS Series 2007-on = N150L (standard 222mm), N200 (H/D option 273mm).",
+    source: "Club Assist Commercial Fitment Guide",
+    confidence: "MEDIUM",
+    needsInquiry: false,
+    recommendationLinks: [
+      { href: "/batteries/jis/n150/", label: "145G51 (N150L) — standard" },
+      { href: "/batteries/jis/n200/", label: "190H52 (N200) — heavy-duty" },
+    ],
+  },
+  {
+    id: "MAN-TGX",
+    brand: "MAN",
+    model: "TGX",
+    generation: "standard / heavy-duty (273mm)",
+    year: "2007–on",
+    electricalSystem: "24V",
+    batteryQuantity: 2,
+    oemBattery: "N150L (2007–2013) / N200 (H/D 273mm)",
+    batteryGroup: "N150L (2007–2013) / N200 (heavy-duty)",
+    dinweyRecommendation: "145G51 (N150L) for 2007–2013; 190H52 (N200) for 273mm heavy-duty option",
+    fitmentEvidence:
+      "Club Assist Commercial Fitment Guide: MAN TGX Series 2007-2013 = N150L; H/D option (273mm) = N200.",
+    source: "Club Assist Commercial Fitment Guide",
+    confidence: "MEDIUM",
+    needsInquiry: false,
+    recommendationLinks: [
+      { href: "/batteries/jis/n150/", label: "145G51 (N150L) — 2007–2013" },
+      { href: "/batteries/jis/n200/", label: "190H52 (N200) — heavy-duty" },
+    ],
+  },
+  {
+    id: "ISUZU-F",
+    brand: "Isuzu",
+    model: "F Series (Forward)",
+    generation: "FRR / FSR / FSD (Sitec series)",
+    year: "2009–on (current)",
+    electricalSystem: "24V",
+    batteryQuantity: 2,
+    oemBattery: "N100L (JIS)",
+    batteryGroup: "N100L",
+    dinweyRecommendation: null,
+    fitmentEvidence:
+      "Club Assist Commercial Fitment Guide: Isuzu FRR600 (Sitec III) 2009-on, FSD 120-260/140-260 current, FSR 120-260 current = N100L (SN100L/N100CMF/HCC100L-XHD).",
+    source: "Club Assist Commercial Fitment Guide",
+    confidence: "MEDIUM",
+    needsInquiry: true,
+    recommendationLinks: [],
+  },
+];
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/" },
+    { "@type": "ListItem", "position": 2, "name": "Truck Model Fitment", "item": SITE + "/truck-models/" },
+  ],
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I find the right DINWEY battery for my truck model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text":
+          "Find your truck model below. Each listed model shows the OEM battery group (e.g. N150/N200) and the corresponding DINWEY model (145G51/190H52). These are industry references — always confirm your vehicle's group size, terminal orientation and tray dimensions before ordering.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Are these fitment listings officially confirmed by the vehicle manufacturers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text":
+          "No. The battery groups are sourced from independent commercial-vehicle fitment guides (Club Assist and Century Batteries). They are industry references, not DINWEY official OEM confirmations or vehicle-manufacturer endorsements. Verify against your vehicle specification.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the Isuzu F Series show 'needs inquiry' instead of a DINWEY model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text":
+          "The Isuzu F Series uses the JIS N100L group, which is not currently in the DINWEY standard product line. Contact DINWEY to confirm whether a compatible model or custom solution is available.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Does a 24V truck need two batteries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text":
+          "Yes. A 24V truck electrical system uses two 12V batteries wired in series. Always replace both together with identical models to keep charging balanced.",
+      },
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Truck Model Battery Fitment — DINWEY Heavy-Duty Reference"
+  description="Find the DINWEY heavy-duty battery for your truck model. Hino 700, Volvo FH/FM, Scania R Series, MAN TGS/TGX and Isuzu F Series — with OEM battery group and DINWEY model reference (industry fitment guide, not OEM confirmation)."
+  ogType="article"
+  author="Martin Wong"
+  datePublished="2026-09-07"
+  dateModified="2026-09-07"
+  jsonLd={[breadcrumbJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#55606e;margin-bottom:16px;">
+      <a href="/" style="color:#1e5aa8;">Home</a> &rsaquo; Truck Model Fitment
+    </nav>
+
+    <h1 style="color:#0f1f3d;margin-bottom:12px;">Truck Model Battery Fitment Reference</h1>
+    <p class="lead">
+      Find the DINWEY heavy-duty starting battery for your truck model. Below are the truck
+      models for which independent fitment guides document a battery group, mapped to the
+      corresponding DINWEY model.
+    </p>
+
+    <div style="margin:24px 0;padding:16px 20px;background:#fff8ec;border-left:4px solid #f5a623;border-radius:6px;">
+      <p style="margin:0;">
+        <strong>Disclaimer:</strong> {disclaimer}
+      </p>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Models With Verified Fitment Reference</h2>
+
+    {
+      vehicles.map((v) => (
+        <div class="fitment-card" style="margin:24px 0;padding:20px 24px;background:#ffffff;border:1px solid #e3e8ef;border-radius:8px;">
+          <h3 style="color:#0f1f3d;margin:0 0 4px;">
+            {v.brand} {v.model}
+            <span style="font-weight:400;font-size:0.85rem;color:#55606e;"> — {v.generation}</span>
+          </h3>
+          <p style="margin:0 0 12px;color:#55606e;font-size:0.95rem;">
+            {v.year} · {v.electricalSystem} system ({v.batteryQuantity} batteries in series)
+          </p>
+
+          <table style="margin-bottom:12px;">
+            <thead>
+              <tr><th>Field</th><th>Value</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>OEM battery group</td>
+                <td><strong>{v.batteryGroup}</strong>{v.oemBattery ? ` (${v.oemBattery})` : ""}</td>
+              </tr>
+              <tr>
+                <td>DINWEY recommendation</td>
+                <td>
+                  {v.dinweyRecommendation ? (
+                    <strong>{v.dinweyRecommendation}</strong>
+                  ) : (
+                    <em style="color:#c0392b;">No direct DINWEY model — needs inquiry</em>
+                  )}
+                </td>
+              </tr>
+              <tr>
+                <td>Confidence</td>
+                <td><strong>{v.confidence}</strong> — industry reference, not DINWEY official OEM confirmation</td>
+              </tr>
+            </tbody>
+          </table>
+
+          {!v.needsInquiry && v.recommendationLinks.length > 0 && (
+            <p style="margin:0 0 12px;">
+              <strong>DINWEY model pages:</strong>{" "}
+              {v.recommendationLinks.map((l, i) => (
+                <>
+                  {i > 0 && " · "}
+                  <a href={l.href} style="color:#1e5aa8;">{l.label}</a>
+                </>
+              ))}
+            </p>
+          )}
+
+          {v.needsInquiry && (
+            <div style="padding:12px 16px;background:#fdf2f2;border-left:4px solid #c0392b;border-radius:6px;margin-bottom:12px;">
+              <p style="margin:0;">
+                <strong>Needs inquiry:</strong> This model uses the JIS {v.batteryGroup} group, which is
+                not currently in the DINWEY standard product line.{" "}
+                <a href="/contact/" style="color:#1e5aa8;">Contact DINWEY</a> to confirm whether a
+                compatible or custom solution is available.
+              </p>
+            </div>
+          )}
+
+          <p class="data-note" style="margin:0;">
+            Fitment evidence: {v.fitmentEvidence} — {v.source}.
+          </p>
+        </div>
+      ))
+    }
+
+    <h2 style="color:#0f1f3d;margin-top:40px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>How do I find the right DINWEY battery for my truck model?</h3>
+      <p>Find your truck model above. Each listed model shows the OEM battery group (e.g. N150/N200) and the corresponding DINWEY model (145G51/190H52). These are industry references — always confirm your vehicle's group size, terminal orientation and tray dimensions before ordering.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Are these fitment listings officially confirmed by the vehicle manufacturers?</h3>
+      <p>No. The battery groups are sourced from independent commercial-vehicle fitment guides (Club Assist and Century Batteries). They are industry references, not DINWEY official OEM confirmations or vehicle-manufacturer endorsements. Verify against your vehicle specification.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why does the Isuzu F Series show "needs inquiry" instead of a DINWEY model?</h3>
+      <p>The Isuzu F Series uses the JIS N100L group, which is not currently in the DINWEY standard product line. Contact DINWEY to confirm whether a compatible model or custom solution is available.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does a 24V truck need two batteries?</h3>
+      <p>Yes. A 24V truck electrical system uses two 12V batteries wired in series. Always replace both together with identical models to keep charging balanced.</p>
+    </div>
+
+    <div style="margin-top:32px;padding:20px;background:#f4f7fb;border-radius:8px;">
+      <h2 style="color:#0f1f3d;margin-top:0;">Browse the Full Battery Range</h2>
+      <ul style="margin-bottom:0;">
+        <li><a href="/batteries/" style="color:#1e5aa8;">Battery Model Reference (145G51 / 190H52 / 58827 / 60038)</a></li>
+        <li><a href="/products/jis-heavy-duty/" style="color:#1e5aa8;">JIS Heavy-Duty Batteries (family overview)</a></li>
+        <li><a href="/products/din-heavy-duty/" style="color:#1e5aa8;">DIN Heavy-Duty Batteries (family overview)</a></li>
+        <li><a href="/selection-tool/" style="color:#1e5aa8;">Battery Selection Tool</a></li>
+      </ul>
+    </div>
+
+    <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px;">
+      <a class="cta" href="/contact/" style="display:inline-block;background:#f5a623;color:#000;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;">Confirm Fitment — Contact Us</a>
+      <a class="cta" href="https://wa.me/8613323237275" target="_blank" rel="noopener" style="display:inline-block;background:#25D366;color:#fff;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;">WhatsApp — Contact Now</a>
+    </div>
+  </div>
+</BaseLayout>
