@@ -1,0 +1,94 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const definedTermSetJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://dinweysbattery.com/batteries/#term-set",
+  "name": "DINWEY Truck Battery Model Reference",
+  "description": "A structured reference of DINWEY heavy-duty truck battery models across JIS and DIN standards, with verified specifications.",
+  "hasDefinedTerm": [
+    { "@type": "DefinedTerm", "name": "145G51", "termCode": "145G51", "url": "https://dinweysbattery.com/batteries/jis/n150/" },
+    { "@type": "DefinedTerm", "name": "190H52", "termCode": "190H52", "url": "https://dinweysbattery.com/batteries/jis/n200/" },
+    { "@type": "DefinedTerm", "name": "58827", "termCode": "58827", "url": "https://dinweysbattery.com/batteries/din/din88/" },
+    { "@type": "DefinedTerm", "name": "60038", "termCode": "60038", "url": "https://dinweysbattery.com/batteries/din/din100/" }
+  ]
+};
+---
+
+<BaseLayout title="DINWEY Truck Battery Models — JIS & DIN Reference" description="A structured reference of DINWEY heavy-duty truck battery models — 145G51 (N150), 190H52 (N200), 58827 (DIN88), 60038 (DIN100) — with verified specifications across JIS and DIN standards." ogType="article" jsonLd={[definedTermSetJsonLd]}>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#55606e;margin-bottom:16px;">
+      <a href="/" style="color:#1e5aa8;">Home</a> &rsaquo; Battery Models
+    </nav>
+
+    <h1 style="color:#0f1f3d;margin-bottom:12px;">DINWEY Truck Battery Models</h1>
+    <p class="lead">
+      A structured reference of DINWEY's core heavy-duty truck battery models across JIS and
+      DIN standards. Each model page carries its full specification — voltage, capacity, CCA,
+      reserve capacity and dimensions — with the test standard each rating is measured against.
+    </p>
+
+    <div style="margin:24px 0;padding:16px 20px;background:#f4f7fb;border-left:4px solid #f5a623;border-radius:6px;">
+      <p style="margin:0;">
+        <strong>Important:</strong> JIS CCA, DIN EN cold-cranking and BCI (SAE) CCA are measured
+        under different standards and are <strong>not directly comparable</strong>. Note the test
+        standard on each model. Always confirm fit by group size, terminal type, polarity and tray
+        dimensions against your vehicle manual.
+      </p>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">JIS Heavy-Duty Models</h2>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr><th>Model</th><th>Group</th><th>Voltage</th><th>Capacity</th><th>CCA</th><th>Dimensions (L×W×H)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="/batteries/jis/n150/" style="color:#1e5aa8;"><strong>145G51</strong></a></td>
+            <td>N150</td><td>12V</td><td>135 Ah</td><td>900 A (SAE)</td><td>508×222×212 mm</td>
+          </tr>
+          <tr>
+            <td><a href="/batteries/jis/n200/" style="color:#1e5aa8;"><strong>190H52</strong></a></td>
+            <td>N200</td><td>12V</td><td>200 Ah</td><td>1100 A (SAE)</td><td>520×278×220 mm</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">DIN Heavy-Duty Models</h2>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr><th>Model</th><th>Group</th><th>Voltage</th><th>Capacity</th><th>EN Cold-Cranking</th><th>Dimensions (L×W×H)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="/batteries/din/din88/" style="color:#1e5aa8;"><strong>58827</strong></a></td>
+            <td>DIN88</td><td>12V</td><td>88 Ah</td><td>800 A (EN)</td><td>353×175×190 mm</td>
+          </tr>
+          <tr>
+            <td><a href="/batteries/din/din100/" style="color:#1e5aa8;"><strong>60038</strong></a></td>
+            <td>DIN100</td><td>12V</td><td>100 Ah</td><td>870 A (EN)</td><td>393×175×190 mm</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:32px;padding:20px;background:#f4f7fb;border-radius:8px;">
+      <h2 style="color:#0f1f3d;margin-top:0;">Looking for a broader product view?</h2>
+      <ul style="margin-bottom:0;">
+        <li><a href="/products/jis-heavy-duty/" style="color:#1e5aa8;">JIS Heavy-Duty Batteries (family overview)</a></li>
+        <li><a href="/products/din-heavy-duty/" style="color:#1e5aa8;">DIN Heavy-Duty Batteries (family overview)</a></li>
+        <li><a href="/products/bci-request/" style="color:#1e5aa8;">BCI Group 31 / 8D (on request)</a></li>
+        <li><a href="/selection-tool/" style="color:#1e5aa8;">Battery Selection Tool</a></li>
+      </ul>
+    </div>
+
+    <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px;">
+      <a class="cta" href="/contact/" style="display:inline-block;background:#f5a623;color:#000;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;">Request a Datasheet</a>
+      <a class="cta" href="https://wa.me/8613323237275" target="_blank" rel="noopener" style="display:inline-block;background:#25D366;color:#fff;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;">WhatsApp — Contact Now</a>
+    </div>
+  </div>
+</BaseLayout>
