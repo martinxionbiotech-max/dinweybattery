@@ -1,0 +1,66 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "battery": "https://schema.org/",
+    "dinwey": "https://dinweysbattery.com/"
+  },
+  "name": "DINWEY Heavy-Duty Starting Batteries — Model Dataset",
+  "description": "Machine-readable specification dataset for DINWEY truck and heavy-duty starting batteries (JIS and DIN group sizes), manufactured by Chengguang Power Tech Co., Ltd.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "DINWEY",
+    "legalName": "Chengguang Power Tech Co., Ltd.",
+    "url": "https://dinweysbattery.com"
+  },
+  "dateModified": "2026-09-07",
+  "models": [
+    {
+      "model": "145G51",
+      "standard": "JIS",
+      "groupSize": "N150",
+      "voltage": "12V",
+      "capacityAh": 135,
+      "ccaA": 900,
+      "ccaStandard": "JIS D5301",
+      "reserveCapacityMin": 220,
+      "dimensionsMm": { "length": 508, "width": 222, "height": 212 },
+      "url": "https://dinweysbattery.com/batteries/jis/n150/"
+    },
+    {
+      "model": "190H52",
+      "standard": "JIS",
+      "groupSize": "N200",
+      "voltage": "12V",
+      "capacityAh": 200,
+      "ccaA": 1100,
+      "ccaStandard": "JIS D5301",
+      "reserveCapacityMin": 320,
+      "dimensionsMm": { "length": 520, "width": 278, "height": 220 },
+      "url": "https://dinweysbattery.com/batteries/jis/n200/"
+    },
+    {
+      "model": "58827",
+      "standard": "DIN",
+      "groupSize": "DIN88",
+      "voltage": "12V",
+      "capacityAh": 88,
+      "ccaA": 800,
+      "ccaStandard": "EN 50342-1",
+      "reserveCapacityMin": 150,
+      "dimensionsMm": { "length": 353, "width": 175, "height": 190 },
+      "url": "https://dinweysbattery.com/batteries/din/din88/"
+    },
+    {
+      "model": "60038",
+      "standard": "DIN",
+      "groupSize": "DIN100",
+      "voltage": "12V",
+      "capacityAh": 100,
+      "ccaA": 870,
+      "ccaStandard": "EN 50342-1",
+      "reserveCapacityMin": 170,
+      "dimensionsMm": { "length": 393, "width": 175, "height": 190 },
+      "url": "https://dinweysbattery.com/batteries/din/din100/"
+    }
+  ]
+}
