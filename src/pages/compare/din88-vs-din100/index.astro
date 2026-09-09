@@ -1,0 +1,258 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const SITE = "https://dinweysbattery.com";
+
+const comparisonJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "DIN88 vs DIN100 Heavy-Duty Truck Battery: Which One Do You Need?",
+  "description": "DIN88 (58827) vs DIN100 (60038): the difference in case length, capacity, EN cold-cranking, reserve capacity and tray fit — with a buyer decision guide for European trucks.",
+  "image": SITE + "/images/products/58827-DIN88.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Martin Wong",
+    "jobTitle": "Sales Director",
+    "worksFor": { "@id": SITE + "/#organization" }
+  },
+  "publisher": { "@id": SITE + "/#organization" },
+  "datePublished": "2026-09-09",
+  "dateModified": "2026-09-09",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": SITE + "/compare/din88-vs-din100/" }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between DIN88 and DIN100?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The DIN100 (model 60038) has a 40mm longer case than the DIN88 (model 58827) — 393mm vs 353mm — while width (175mm) and height (190mm) are identical. The longer case gives the DIN100 higher capacity (100Ah vs 88Ah) and EN cold-cranking (870A vs 800A)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I replace a DIN88 with a DIN100?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if your tray has 40mm of spare length. The DIN100 keeps the same width and height but is 40mm longer, so it will not fit a tray sized exactly for a DIN88. Confirm tray length and hold-down position before upgrading."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the DIN100 better than the DIN88?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The DIN100 is higher-output (100Ah, 870A EN, 170min RC) but longer and heavier. If the DIN88 meets your engine's cranking requirement and fits your tray, it is the correct and more economical choice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are DIN and JIS cold-cranking ratings comparable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. DIN batteries use EN cold-cranking (EN 50342-1), a different test from JIS CCA or SAE CCA. An 800A EN rating is not directly comparable to an 800A JIS figure — compare only within the same standard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the DIN88 or DIN100 come in AGM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both are available in flooded, EFB and AGM technologies. The size-class decision (DIN88 vs DIN100) is separate from the technology decision — you can have a DIN88 in AGM or a DIN100 in flooded."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="DIN88 vs DIN100 Heavy-Duty Truck Battery — Which One Do You Need?"
+  description="DIN88 (58827) vs DIN100 (60038): the difference in case length, capacity, EN cold-cranking and reserve capacity — with a buyer decision guide for European trucks."
+  canonical="/compare/din88-vs-din100/"
+  ogType="article"
+  author="Martin Wong"
+  datePublished="2026-09-09"
+  dateModified="2026-09-09"
+  jsonLd={[comparisonJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#55606e;margin-bottom:16px;">
+      <a href="/" style="color:#1e5aa8;">Home</a> &rsaquo; Compare &rsaquo; DIN88 vs DIN100
+    </nav>
+
+    <h1 style="color:#0f1f3d;margin-bottom:12px;">DIN88 vs DIN100 Heavy-Duty Truck Battery</h1>
+    <p class="lead">
+      The DIN100 (60038) is simply a longer version of the DIN88 (58827) — same 175mm width, same
+      190mm height, but 40mm more case length. That extra length buys more capacity and stronger cold
+      cranking, but only if your truck's tray has the room for it.
+    </p>
+
+    <div style="margin:20px 0;padding:16px 20px;background:#f4f7fb;border-left:4px solid #f5a623;border-radius:6px;">
+      <h2 style="color:#0f1f3d;margin:0 0 10px;">Direct Answer</h2>
+      <p style="margin:0;">
+        <strong>DIN88 (58827)</strong> = 12V, 88Ah, 800A EN, 150min RC, 353×175×190mm. <strong>DIN100
+        (60038)</strong> = 12V, 100Ah, 870A EN, 170min RC, 393×175×190mm. Both are EN 50342-1 flooded
+        batteries with European conical (T1) terminals, available in flooded, EFB and AGM. <strong>The
+        only physical difference is case length</strong> — the DIN100 is 40mm longer, so it needs a
+        longer tray than the DIN88.
+      </p>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Key Takeaways</h2>
+    <ol class="takeaways-list">
+      <li><strong>"DIN88" and "DIN100" are size classes, not ratings</strong> — the model code (58827 / 60038) carries the actual capacity and cold-cranking figure.</li>
+      <li><strong>The upgrade is length-only</strong> — DIN100 keeps the DIN88's 175mm width and 190mm height; it is just 40mm longer, unlike a JIS N150→N200 jump where width is the blocker.</li>
+      <li><strong>EN cold-cranking is not JIS CCA</strong> — 800A EN is measured to EN 50342-1 and cannot be compared against a JIS or SAE figure.</li>
+      <li><strong>Size and technology are separate decisions</strong> — both sizes come in flooded, EFB and AGM; don't let the size choice force a technology choice.</li>
+      <li><strong>Check the tray length, not the width</strong> — a tray that holds a DIN88 will usually hold a DIN100 only if there is 40mm of spare length.</li>
+    </ol>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Specification Comparison</h2>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr><th>Specification</th><th>DIN88 (58827)</th><th>DIN100 (60038)</th><th>What it means</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Voltage</td><td>12V</td><td>12V</td><td>Identical — both are single 12V batteries</td></tr>
+          <tr><td>Capacity (C20)</td><td>88 Ah</td><td>100 Ah</td><td>DIN100 stores ~14% more energy</td></tr>
+          <tr><td>Cold-cranking (EN 50342-1)</td><td>800 A</td><td>870 A</td><td>DIN100 gives a stronger cold start</td></tr>
+          <tr><td>Reserve Capacity (SAE J537)</td><td>150 min</td><td>170 min</td><td>DIN100 = +20 min engine-off buffer</td></tr>
+          <tr><td>Dimensions (L×W×H)</td><td>353×175×190 mm</td><td>393×175×190 mm</td><td>Same width &amp; height — DIN100 is 40mm longer</td></tr>
+          <tr><td>Terminal</td><td>European conical (T1)</td><td>European conical (T1)</td><td>Same terminal type, left positive</td></tr>
+          <tr><td>Technology</td><td>Flooded / EFB / AGM</td><td>Flooded / EFB / AGM</td><td>Same technology options</td></tr>
+          <tr><td>Typical application</td><td>Standard European trucks, buses, cold climates</td><td>Larger European trucks, high electrical loads</td><td>DIN100 for the heavier duty</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="data-note">
+      Figures are DINWEY first-party specifications (EN 50342-1 cold-cranking). Third-party DIN88 CCA
+      commonly ranges ~800–850A and height varies (190mm vs some 174mm builds) by manufacturer — always
+      compare within one standard and confirm against the specific datasheet.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">What Is the Difference?</h2>
+    <p>
+      The DIN88 and DIN100 are the two core DIN-format heavy-duty battery classes for European
+      commercial vehicles. Both are 12V batteries with European conical (T1) terminals, built to the
+      EN 50342-1 cold-cranking standard, and both are offered in flooded, EFB and AGM construction.
+    </p>
+    <p>
+      The difference is case length and the output that comes with it. The DIN100 is 40mm longer
+      (393mm vs 353mm) but shares the exact same width (175mm) and height (190mm). That longer case
+      holds more plate area, which is why the DIN100 delivers more capacity (100Ah vs 88Ah), stronger
+      cold cranking (870A vs 800A EN) and more reserve capacity (170min vs 150min).
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:28px;">Why the Difference Matters</h2>
+    <div class="grid grid-3" style="margin-top:12px;">
+      <div class="card">
+        <h3>Tray Length</h3>
+        <p>The DIN100 needs 40mm more length than the DIN88. In the tight battery tray of a European truck, that extra length — not width or height — is what decides whether it fits.</p>
+      </div>
+      <div class="card">
+        <h3>Cold-Start Margin</h3>
+        <p>870A vs 800A EN is a modest but real gain for the largest engines and the coldest mornings. If the engine is marginal on cranking, the DIN100 is the safer bet.</p>
+      </div>
+      <div class="card">
+        <h3>Electrical Load</h3>
+        <p>The extra 20 minutes of reserve capacity helps when a truck runs telematics, lighting or lift-gate loads with the engine off.</p>
+      </div>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Are They Interchangeable?</h2>
+    <p>
+      <strong>Only if the tray has spare length.</strong> Because width and height are identical, the
+      only fit constraint is the 40mm length difference. A DIN100 will not drop into a tray sized
+      exactly for a DIN88 without 40mm of free length and a hold-down that reaches the longer case.
+    </p>
+    <p>
+      The reverse is easier: a DIN88 will usually fit a tray built for a DIN100 (leaving 40mm of
+      empty space, which may need a spacer or block), but it delivers less capacity and cranking, so
+      only step down if the DIN88 meets your engine's requirement.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Buyer Decision Guide</h2>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr><th>Your situation</th><th>Choose</th><th>Why</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Standard European truck, tray sized for DIN88</td><td><strong>DIN88 (58827)</strong></td><td>Fits the tray; 800A EN meets normal diesel cranking</td></tr>
+          <tr><td>Larger truck / high electrical load / cold climate</td><td><strong>DIN100 (60038)</strong></td><td>100Ah and 870A EN with 170min RC for heavy duty</td></tr>
+          <tr><td>Tray has 40mm spare length and wants more power</td><td><strong>DIN100 (60038)</strong></td><td>Length-only upgrade — no width/height change</td></tr>
+          <tr><td>Existing DIN88 battery, working fine</td><td><strong>DIN88 (58827)</strong></td><td>Direct replacement — no tray change needed</td></tr>
+          <tr><td>Wants maintenance-free but tray is DIN88-sized</td><td><strong>DIN88 AGM</strong></td><td>Keep the size, upgrade the technology to AGM</td></tr>
+          <tr><td>24V system, replacing a pair</td><td><strong>Two identical</strong></td><td>Two DIN88 or two DIN100, never mixed</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">What to Check Before Ordering</h2>
+    <ul>
+      <li>Tray length — the DIN100 is 40mm longer than the DIN88; width and height are the same.</li>
+      <li>Terminal orientation and cable reach (European conical T1, left positive).</li>
+      <li>Engine cranking requirement — compare within EN 50342-1, not against JIS or SAE figures.</li>
+      <li>Whether the vehicle is 12V or 24V (two batteries in series).</li>
+      <li>Technology choice — flooded, EFB or AGM — independent of the DIN88/DIN100 size decision.</li>
+    </ul>
+
+    <div style="margin:24px 0;padding:16px 20px;background:#fff8ec;border-left:4px solid #f5a623;border-radius:6px;">
+      <p style="margin:0;">
+        <strong>Verification note:</strong> Specifications vary by manufacturer. The DIN88 and DIN100
+        figures above are DINWEY first-party specifications. Always confirm the exact group size,
+        terminal type, polarity and tray dimensions against your vehicle manual before replacement.
+      </p>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is the difference between DIN88 and DIN100?</h3>
+      <p>The DIN100 (60038) is 40mm longer than the DIN88 (58827) — 393mm vs 353mm — with the same 175mm width and 190mm height, giving 100Ah and 870A EN vs 88Ah and 800A EN.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I replace a DIN88 with a DIN100?</h3>
+      <p>Only with 40mm of spare tray length. The DIN100 keeps the same width and height but is longer, so it will not fit a tray sized exactly for a DIN88.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is the DIN100 always the better battery?</h3>
+      <p>No. It is higher-output but longer and heavier. If the DIN88 meets your engine's requirement and fits your tray, it is the correct and more economical choice.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Are DIN and JIS cold-cranking ratings comparable?</h3>
+      <p>No. DIN uses EN cold-cranking (EN 50342-1), a different test from JIS CCA or SAE CCA. An 800A EN rating is not comparable to an 800A JIS figure.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does the DIN88 or DIN100 come in AGM?</h3>
+      <p>Both are available in flooded, EFB and AGM. The size decision (DIN88 vs DIN100) is separate from the technology decision.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <h2 style="color:#0f1f3d;">Related Models</h2>
+      <ul>
+        <li><a href="/batteries/din/din88/" style="color:#1e5aa8;">58827 (DIN88) — full specification</a></li>
+        <li><a href="/batteries/din/din100/" style="color:#1e5aa8;">60038 (DIN100) — full specification</a></li>
+        <li><a href="/products/din-heavy-duty/" style="color:#1e5aa8;">DIN Heavy-Duty product family</a></li>
+        <li><a href="/compare/n150-vs-n200/" style="color:#1e5aa8;">N150 vs N200 — JIS comparison</a></li>
+        <li><a href="/truck-models/" style="color:#1e5aa8;">Truck model fitment reference</a></li>
+      </ul>
+    </div>
+
+    <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px;">
+      <a class="cta" href="/contact/" style="display:inline-block;background:#f5a623;color:#000;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;">Confirm Fitment — Get a Datasheet</a>
+      <a class="cta" href="https://wa.me/8613323237275" target="_blank" rel="noopener" style="display:inline-block;background:#25D366;color:#fff;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;">WhatsApp — Contact Now</a>
+    </div>
+
+    <div style="margin-top:24px;padding:16px 20px;background:#f4f7fb;border-radius:8px;">
+      <p class="data-note" style="margin:0;">
+        Sources: DINWEY first-party specification (battery-master-data.json); cross-referenced against
+        The Battery Centre DIN88 listing and the EN 50342-1 cold-cranking standard.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

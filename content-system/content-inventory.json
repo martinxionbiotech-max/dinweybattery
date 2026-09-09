@@ -382,6 +382,24 @@
       "schema_type": "Article + FAQPage"
     },
     {
+      "url": "/compare/din88-vs-din100/",
+      "title": "DIN88 vs DIN100 Heavy-Duty Truck Battery — Which One Do You Need?",
+      "content_type": "comparison",
+      "primary_keyword": "DIN88 vs DIN100",
+      "secondary_keywords": ["58827 vs 60038", "DIN88 DIN100 difference", "DIN heavy duty battery comparison"],
+      "entities": ["DIN88", "DIN100", "58827", "60038", "EN 50342-1", "cold-cranking", "European conical terminal", "flooded", "EFB", "AGM"],
+      "search_intent": "comparison",
+      "language": "en",
+      "status": "live",
+      "quality_score": 87,
+      "sources": ["battery-master-data.json", "The Battery Centre DIN88 listing", "EN 50342-1"],
+      "last_updated": "2026-09-09",
+      "target_market": "Europe, Middle East, North Africa",
+      "target_buyer": "fleet operator, distributor, mechanic",
+      "internal_links": ["/batteries/din/din88/", "/batteries/din/din100/", "/products/din-heavy-duty/", "/compare/n150-vs-n200/", "/truck-models/"],
+      "schema_type": "Article + FAQPage"
+    },
+    {
       "url": "/markets/southeast-asia/",
       "title": "Truck Batteries for Southeast Asia — DINWEY",
       "content_type": "market",

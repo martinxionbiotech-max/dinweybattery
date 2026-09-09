@@ -18,7 +18,7 @@
     { "keyword": "60038 battery", "intent": "commercial_investigation", "url": "/batteries/din/din100/", "priority": "P1", "country": "global", "language": "en", "status": "mapped", "notes": "Model entity page" },
     { "keyword": "DIN100 battery", "intent": "commercial_investigation", "url": "/batteries/din/din100/", "priority": "P1", "country": "global", "language": "en", "status": "mapped", "notes": "Model entity page" },
     { "keyword": "N150 vs N200", "intent": "comparison", "url": "/compare/n150-vs-n200/", "priority": "P2", "country": "global", "language": "en", "status": "mapped", "notes": "Type B comparison — published 2026-09-09" },
-    { "keyword": "DIN88 vs DIN100", "intent": "comparison", "url": "/compare/din88-vs-din100/", "priority": "P2", "country": "global", "language": "en", "status": "planned", "notes": "Type B comparison" },
+    { "keyword": "DIN88 vs DIN100", "intent": "comparison", "url": "/compare/din88-vs-din100/", "priority": "P2", "country": "global", "language": "en", "status": "mapped", "notes": "Type B comparison — published 2026-09-09" },
     { "keyword": "JIS vs DIN battery", "intent": "informational", "url": "/knowledge/jis-vs-din-vs-bci/", "priority": "P5", "country": "global", "language": "en", "status": "planned", "notes": "Standards cluster — currently only on docs subdomain" },
     { "keyword": "BCI Group 31 battery", "intent": "commercial", "url": "/products/bci-request/", "priority": "P1", "country": "North America", "language": "en", "status": "mapped", "notes": "" },
     { "keyword": "24V truck battery", "intent": "commercial", "url": "/products/24v/", "priority": "P1", "country": "global", "language": "en", "status": "mapped", "notes": "" },
