@@ -1,0 +1,258 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const SITE = "https://dinweysbattery.com";
+
+const comparisonJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "JIS N150 vs N200 Heavy-Duty Truck Battery: Which One Do You Need?",
+  "description": "N150 (145G51) vs N200 (190H52): size, capacity, CCA, reserve capacity, tray fit and 24V pairing — with a buyer decision guide.",
+  "image": SITE + "/images/products/145G51-N150.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Martin Wong",
+    "jobTitle": "Sales Director",
+    "worksFor": { "@id": SITE + "/#organization" }
+  },
+  "publisher": { "@id": SITE + "/#organization" },
+  "datePublished": "2026-09-09",
+  "dateModified": "2026-09-09",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": SITE + "/compare/n150-vs-n200/" }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between JIS N150 and N200?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "N200 (model 190H52) is larger and higher-output than N150 (model 145G51): 200Ah vs 135Ah capacity, 1100A vs 900A CCA, 320min vs 220min reserve capacity, and 520×278×220mm vs 508×222×212mm. Both are 12V JIS D5301 batteries with JIS type A terminals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I replace an N150 with an N200?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually not. The N200 is 56mm wider (278mm vs 222mm) and 12mm longer, so it will not fit an N150 tray. Only upgrade if your tray, cables and hold-down accept the larger footprint. Confirm dimensions and terminal orientation before ordering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does N150 or N200 have higher CCA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "N200 has higher CCA — 1100A vs 900A, both measured to JIS D5301. Higher CCA matters for the largest engines and cold-climate starting, but compare only within the same standard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which should I choose for a 24V truck?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use two identical batteries — two N150 or two N200 — wired in series. Never pair one N150 with one N200. Choose N200 only if the engine and tray demand it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is N200 always better than N150?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. N200 is more powerful but larger, heavier and more expensive. If the N150 meets your engine's CCA requirement and fits your tray, it is the correct and more economical choice."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="JIS N150 vs N200 Heavy-Duty Truck Battery — Which One Do You Need?"
+  description="N150 (145G51) vs N200 (190H52): the difference in size, capacity, CCA, reserve capacity and 24V pairing — with a buyer decision guide for JIS-market trucks."
+  canonical="/compare/n150-vs-n200/"
+  ogType="article"
+  author="Martin Wong"
+  datePublished="2026-09-09"
+  dateModified="2026-09-09"
+  jsonLd={[comparisonJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#55606e;margin-bottom:16px;">
+      <a href="/" style="color:#1e5aa8;">Home</a> &rsaquo; Compare &rsaquo; N150 vs N200
+    </nav>
+
+    <h1 style="color:#0f1f3d;margin-bottom:12px;">JIS N150 vs N200 Heavy-Duty Truck Battery</h1>
+    <p class="lead">
+      The N200 (190H52) is larger and higher-output than the N150 (145G51) in every way — more
+      capacity, more CCA, more reserve capacity and a bigger case. The real question is not which
+      is "better" but which one your truck's tray and engine actually require.
+    </p>
+
+    <div style="margin:20px 0;padding:16px 20px;background:#f4f7fb;border-left:4px solid #f5a623;border-radius:6px;">
+      <h2 style="color:#0f1f3d;margin:0 0 10px;">Direct Answer</h2>
+      <p style="margin:0;">
+        <strong>N150 (145G51)</strong> = 12V, 135Ah, 900A CCA, 220min RC, 508×222×212mm — the standard
+        heavy-truck tray size. <strong>N200 (190H52)</strong> = 12V, 200Ah, 1100A CCA, 320min RC,
+        520×278×220mm — the larger, higher-output model. Both are JIS D5301 flooded batteries with
+        JIS type A terminals. <strong>The deciding factor is almost always tray width</strong>: the
+        N200's 278mm width will not fit an N150's 222mm tray.
+      </p>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Key Takeaways</h2>
+    <ol class="takeaways-list">
+      <li><strong>"N150" and "N200" are size classes, not capacity ratings</strong> — the model code (145G51 / 190H52) carries the actual specification.</li>
+      <li><strong>The N200 is not a drop-in upgrade</strong> — it is 56mm wider (278 vs 222mm), so it usually will not fit an N150 tray.</li>
+      <li><strong>1100A vs 900A CCA only matters if you need it</strong> — the N200 suits the largest engines and cold climates; the N150 covers standard heavy-truck duty.</li>
+      <li><strong>Reserve capacity jumps from 220 to 320 minutes</strong> — the N200 gives more engine-off buffer for high electrical loads.</li>
+      <li><strong>In a 24V truck, pair identical batteries</strong> — two N150s or two N200s, never one of each.</li>
+    </ol>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Specification Comparison</h2>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr><th>Specification</th><th>N150 (145G51)</th><th>N200 (190H52)</th><th>What it means</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Voltage</td><td>12V</td><td>12V</td><td>Identical — both are single 12V batteries</td></tr>
+          <tr><td>Capacity (C20)</td><td>135 Ah</td><td>200 Ah</td><td>N200 stores ~48% more energy</td></tr>
+          <tr><td>CCA (JIS D5301)</td><td>900 A</td><td>1100 A</td><td>N200 gives a stronger cold start</td></tr>
+          <tr><td>Reserve Capacity (SAE J537)</td><td>220 min</td><td>320 min</td><td>N200 = +100 min engine-off buffer</td></tr>
+          <tr><td>Dimensions (L×W×H)</td><td>508×222×212 mm</td><td>520×278×220 mm</td><td>N200 is wider and taller — check the tray</td></tr>
+          <tr><td>Terminal</td><td>JIS type A</td><td>JIS type A</td><td>Same terminal type</td></tr>
+          <tr><td>Technology</td><td>Pb-Sb thick plate</td><td>Pb-Sb thick plate</td><td>Same flooded construction</td></tr>
+          <tr><td>Typical application</td><td>Standard heavy trucks, buses, generators</td><td>Largest trucks, semi trailers, cold climates</td><td>N200 for the heaviest duty</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="data-note">
+      Figures are DINWEY first-party specifications (JIS D5301). Third-party N150 CCA commonly ranges
+      ~750–1100A and dimensions vary slightly by manufacturer — always compare within one standard and
+      confirm against the specific datasheet.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">What Is the Difference?</h2>
+    <p>
+      The N150 and N200 are the two core JIS heavy-duty battery classes. Both are 12V flooded
+      batteries built on a thick-plate lead-antimony (Pb-Sb) grid — deliberately heavier than a car
+      battery so they can survive the deep cycling and vibration of a large diesel engine.
+    </p>
+    <p>
+      The difference is physical size and electrical output. The N200 is larger in every dimension
+      and delivers more capacity (200Ah vs 135Ah), more cold cranking (1100A vs 900A) and more
+      reserve capacity (320min vs 220min). Think of the N150 as the standard heavy-truck battery and
+      the N200 as the uprated version for the largest engines and hardest conditions.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:28px;">Why the Difference Matters</h2>
+    <div class="grid grid-3" style="margin-top:12px;">
+      <div class="card">
+        <h3>Tray Fit</h3>
+        <p>The N200's 278mm width vs the N150's 222mm is the real constraint. A battery that does not fit the tray and hold-down is useless regardless of its rating.</p>
+      </div>
+      <div class="card">
+        <h3>Cold-Start Margin</h3>
+        <p>In cold climates or for the largest engines, 1100A turns over what 900A cannot. The N200 is the safer choice where cranking demand is highest.</p>
+      </div>
+      <div class="card">
+        <h3>Electrical Load</h3>
+        <p>The extra 100 minutes of reserve capacity matters when a truck runs heavy lights, telematics and refrigeration off the battery while the engine is off.</p>
+      </div>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Are They Interchangeable?</h2>
+    <p>
+      <strong>No, not physically.</strong> The N200's larger case (520×278×220mm vs 508×222×212mm)
+      means it will not drop into an N150 tray. The reverse is also problematic: an N150 in an N200
+      tray leaves it loose and may not meet the engine's cranking requirement.
+    </p>
+    <p>
+      What <em>is</em> interchangeable is the electrical role — both are 12V batteries with JIS type A
+      terminals, so in a 12V application they do the same job at different power levels. In a 24V
+      system (two batteries in series), you must use two identical units.
+    </p>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Buyer Decision Guide</h2>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr><th>Your situation</th><th>Choose</th><th>Why</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Standard heavy truck, temperate climate, N150 tray</td><td><strong>N150 (145G51)</strong></td><td>Fits the standard tray; 900A meets normal diesel cranking</td></tr>
+          <tr><td>Largest engine / semi trailer / cold climate</td><td><strong>N200 (190H52)</strong></td><td>1100A cold-start margin and 320min RC for heavy duty</td></tr>
+          <tr><td>High electrical load (reefer, telematics, liftgate)</td><td><strong>N200 (190H52)</strong></td><td>Extra reserve capacity sustains loads with the engine off</td></tr>
+          <tr><td>Existing N150 battery, working fine</td><td><strong>N150 (145G51)</strong></td><td>Direct replacement — no tray change needed</td></tr>
+          <tr><td>24V system, replacing a pair</td><td><strong>Two identical</strong></td><td>Two N150 or two N200, never mixed</td></tr>
+          <tr><td>Wants more power but N150 tray</td><td><strong>Confirm fit first</strong></td><td>The N200 likely will not fit — verify before ordering</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">What to Check Before Ordering</h2>
+    <ul>
+      <li>Tray length, width and height — the N200 is 56mm wider than the N150.</li>
+      <li>Terminal orientation and cable reach.</li>
+      <li>Engine CCA requirement — compare within JIS D5301, not against other vendors' N150 figures.</li>
+      <li>Whether the vehicle is 12V or 24V (two batteries in series).</li>
+      <li>Your electrical load — reserve capacity matters for engine-off accessories.</li>
+    </ul>
+
+    <div style="margin:24px 0;padding:16px 20px;background:#fff8ec;border-left:4px solid #f5a623;border-radius:6px;">
+      <p style="margin:0;">
+        <strong>Verification note:</strong> Specifications vary by manufacturer. The N150 and N200
+        figures above are DINWEY first-party specifications. Always confirm the exact group size,
+        terminal type, polarity and tray dimensions against your vehicle manual before replacement.
+      </p>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is the difference between JIS N150 and N200?</h3>
+      <p>The N200 (190H52) is larger and higher-output than the N150 (145G51): 200Ah vs 135Ah, 1100A vs 900A CCA, 320min vs 220min RC, and a bigger 520×278×220mm case.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I replace an N150 with an N200?</h3>
+      <p>Usually not — the N200 is 56mm wider and will not fit an N150 tray. Only upgrade if your tray, cables and hold-down accept the larger footprint.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which has higher CCA, N150 or N200?</h3>
+      <p>The N200: 1100A vs 900A, both measured to JIS D5301. Higher CCA matters for the largest engines and cold climates.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is N200 always the better battery?</h3>
+      <p>No. It is more powerful but larger, heavier and more expensive. If the N150 meets your engine's CCA requirement and fits your tray, it is the correct and more economical choice.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What should I use in a 24V truck?</h3>
+      <p>Two identical batteries in series — two N150 or two N200, never one of each — so charging stays balanced.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <h2 style="color:#0f1f3d;">Related Models</h2>
+      <ul>
+        <li><a href="/batteries/jis/n150/" style="color:#1e5aa8;">145G51 (N150) — full specification</a></li>
+        <li><a href="/batteries/jis/n200/" style="color:#1e5aa8;">190H52 (N200) — full specification</a></li>
+        <li><a href="/products/jis-heavy-duty/" style="color:#1e5aa8;">JIS Heavy-Duty product family</a></li>
+        <li><a href="/products/24v/" style="color:#1e5aa8;">24V truck battery systems</a></li>
+        <li><a href="/truck-models/" style="color:#1e5aa8;">Truck model fitment reference</a></li>
+      </ul>
+    </div>
+
+    <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px;">
+      <a class="cta" href="/contact/" style="display:inline-block;background:#f5a623;color:#000;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;">Confirm Fitment — Get a Datasheet</a>
+      <a class="cta" href="https://wa.me/8613323237275" target="_blank" rel="noopener" style="display:inline-block;background:#25D366;color:#fff;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;">WhatsApp — Contact Now</a>
+    </div>
+
+    <div style="margin-top:24px;padding:16px 20px;background:#f4f7fb;border-radius:8px;">
+      <p class="data-note" style="margin:0;">
+        Sources: DINWEY first-party specification (battery-master-data.json); cross-referenced against
+        Bosch JIS catalog, Century Batteries cross-reference chart, and BCI Group Sizes standard.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
