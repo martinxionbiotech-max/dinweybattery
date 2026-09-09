@@ -2,7 +2,7 @@
 
 ## Site Overview
 - **URL**: https://dinweysbattery.com
-- **Repo**: `martinxionbiotech-max/dinweybattery` (main) + `dinweybattery/knowledge` (KB subdir)
+- **Repo**: `martinxionbiotech-max/dinweysbattery` (main) + `dinweysbattery/knowledge` (KB subdir)
 - **Framework**: Astro 5.7, static output
 - **Hosting**: Cloudflare Pages
 - **Pages**: 25 static pages
