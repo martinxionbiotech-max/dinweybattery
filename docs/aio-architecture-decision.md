@@ -6,7 +6,7 @@
 - **Framework**: Astro 5.7, static output
 - **Hosting**: Cloudflare Pages
 - **Pages**: 25 static pages
-- **Brand**: DINWEY — truck/heavy-duty starting batteries (brand of Chengguang Power Tech Co., Ltd.)
+- **Brand**: DINWEYS — truck/heavy-duty starting batteries (brand of Chengguang Power Tech Co., Ltd.)
 - **Knowledge Hub**: https://docs.dinweysbattery.com (already deployed, HTTP 200)
 
 ## Architecture

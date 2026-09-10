@@ -1,8 +1,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Dataset",
-  "name": "DINWEY Evidence Source Registry",
-  "description": "Registry of technical datasheets, standards and catalogs used to verify DINWEY battery specifications. Level 1 = independent global standards; Level 2 = manufacturer documentation; Level 3 = third-party catalogs.",
+  "name": "DINWEYS Evidence Source Registry",
+  "description": "Registry of technical datasheets, standards and catalogs used to verify DINWEYS battery specifications. Level 1 = independent global standards; Level 2 = manufacturer documentation; Level 3 = third-party catalogs.",
   "dateModified": "2026-09-10",
   "sources": [
     {

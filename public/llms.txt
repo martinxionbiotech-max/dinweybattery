@@ -1,18 +1,18 @@
-# DINWEY Battery — llms.txt
+# DINWEYS Battery — llms.txt
 
 > Official site information for AI assistants and language models.
-> DINWEY is the truck/heavy-duty starting battery brand of Chengguang Power Tech Co., Ltd.
+> DINWEYS is the truck/heavy-duty starting battery brand of Chengguang Power Tech Co., Ltd.
 
 ## About
 
-- **Brand**: DINWEY (truck & heavy-duty starting batteries)
+- **Brand**: DINWEYS (truck & heavy-duty starting batteries)
 - **Parent company**: Chengguang Power Tech Co., Ltd. (founded 2002)
 - **Domain**: https://dinweysbattery.com
 - **Knowledge Hub**: https://docs.dinweysbattery.com
 
 ## What We Do
 
-DINWEY manufactures and supplies truck / heavy-duty / commercial-vehicle
+DINWEYS manufactures and supplies truck / heavy-duty / commercial-vehicle
 starting batteries (SLI — Starting, Lighting, Ignition), including:
 
 - JIS heavy-duty batteries (145G51 / N150, 190H52 / N200)

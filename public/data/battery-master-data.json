@@ -4,17 +4,17 @@
     "battery": "https://schema.org/",
     "dinwey": "https://dinweysbattery.com/"
   },
-  "name": "DINWEY Battery Master Data",
-  "description": "Single source of truth for DINWEY heavy-duty truck starting battery specifications across JIS, DIN and BCI standards. Manufacturer: Chengguang Power Tech Co., Ltd.",
+  "name": "DINWEYS Battery Master Data",
+  "description": "Single source of truth for DINWEYS heavy-duty truck starting battery specifications across JIS, DIN and BCI standards. Manufacturer: Chengguang Power Tech Co., Ltd.",
   "publisher": {
     "@type": "Organization",
-    "name": "DINWEY",
+    "name": "DINWEYS",
     "legalName": "Chengguang Power Tech Co., Ltd.",
     "url": "https://dinweysbattery.com"
   },
   "dateModified": "2026-09-09",
   "dataProvenance": {
-    "method": "First-party manufacturer specification (DINWEY datasheet and published product pages), cross-referenced against independent industry fitment guides and third-party battery catalogs where available.",
+    "method": "First-party manufacturer specification (DINWEYS datasheet and published product pages), cross-referenced against independent industry fitment guides and third-party battery catalogs where available.",
     "verificationPolicy": "Fields not published by the manufacturer are left null and marked 'unverified'. Third-party catalog/industry reference specifications are marked 'reference' and always carry source + source_url. Ratings are never interpolated or assumed. Specifications vary by manufacturer — always confirm against the specific vehicle.",
     "sourceTiers": {
       "tier1": "Manufacturer datasheet, standards organizations (JIS D5301, EN 50342-1, SAE J537)",
@@ -23,9 +23,9 @@
     }
   },
   "fieldDefinitions": {
-    "model": "DINWEY model code (e.g. 145G51)",
+    "model": "DINWEYS model code (e.g. 145G51)",
     "alternate_model": "Alternate / OEM-equivalent code (e.g. N150)",
-    "model_family": "Product family within DINWEY range",
+    "model_family": "Product family within DINWEYS range",
     "manufacturer_code": "Manufacturer's internal model code",
     "standard": "Battery standard system (JIS / DIN / BCI)",
     "group": "Group-size class (e.g. N150, DIN88, Group 31)",
@@ -54,7 +54,7 @@
     "country": "Manufacturing country / primary market",
     "source": "Provenance of the specification",
     "source_url": "URL of the source",
-    "verification_status": "confirmed_first_party | reference | unverified | on_request (reference = third-party catalog/industry source, not DINWEY first-party)",
+    "verification_status": "confirmed_first_party | reference | unverified | on_request (reference = third-party catalog/industry source, not DINWEYS first-party)",
     "last_verified": "ISO date of last verification",
     "notes": "Qualification and verification notes"
   },
@@ -89,11 +89,11 @@
       "vehicle_type": "Heavy trucks, semi trailers, buses and coaches, diesel generators",
       "truck_brand": "Hino 700 Series, Volvo FH/FM (up to 2013), Scania R Series (2005–2014), MAN TGS/TGX (N150L standard)",
       "country": "China (manufactured); primary markets Asia, Middle East, Africa",
-      "source": "DINWEY manufacturer specification (first-party) + cross-reference Club Assist / Century Batteries fitment guides",
+      "source": "DINWEYS manufacturer specification (first-party) + cross-reference Club Assist / Century Batteries fitment guides",
       "source_url": "https://dinweysbattery.com/batteries/jis/n150/",
       "verification_status": "confirmed_first_party",
       "last_verified": "2026-09-09",
-      "notes": "Dimensions, CCA and RC are DINWEY's first-party figures. Independent catalogs list N150 at 500–510mm length and 210–257mm height with CCA 750–1100 depending on manufacturer — confirm exact tray dimensions and rating before replacement. Weight not published by manufacturer."
+      "notes": "Dimensions, CCA and RC are DINWEYS's first-party figures. Independent catalogs list N150 at 500–510mm length and 210–257mm height with CCA 750–1100 depending on manufacturer — confirm exact tray dimensions and rating before replacement. Weight not published by manufacturer."
     },
     {
       "model": "190H52",
@@ -125,11 +125,11 @@
       "vehicle_type": "Heavy trucks, long-haul semi trailers, buses and coaches, diesel generators",
       "truck_brand": "Volvo FH/FM (2014-on), Scania R Series (2015-on Euro VI), MAN TGS/TGX (heavy-duty 273mm option)",
       "country": "China (manufactured); primary markets Asia, Middle East, Africa",
-      "source": "DINWEY manufacturer specification (first-party) + cross-reference Club Assist / Century Batteries fitment guides",
+      "source": "DINWEYS manufacturer specification (first-party) + cross-reference Club Assist / Century Batteries fitment guides",
       "source_url": "https://dinweysbattery.com/batteries/jis/n200/",
       "verification_status": "confirmed_first_party",
       "last_verified": "2026-09-09",
-      "notes": "Independent catalogs list N200 at ~521–523×278–279×240–248mm with CCA up to ~1130 depending on manufacturer. DINWEY's 520×278×220mm and 1100A are first-party figures. Confirm tray dimensions before upgrading from N150. Weight not published by manufacturer."
+      "notes": "Independent catalogs list N200 at ~521–523×278–279×240–248mm with CCA up to ~1130 depending on manufacturer. DINWEYS's 520×278×220mm and 1100A are first-party figures. Confirm tray dimensions before upgrading from N150. Weight not published by manufacturer."
     },
     {
       "model": "58827",
@@ -161,7 +161,7 @@
       "vehicle_type": "European light/medium commercial trucks, buses",
       "truck_brand": "MAN, Scania, Volvo, Mercedes-Benz Trucks, DAF",
       "country": "China (manufactured); primary markets Europe, Middle East, North Africa",
-      "source": "DINWEY manufacturer specification (first-party)",
+      "source": "DINWEYS manufacturer specification (first-party)",
       "source_url": "https://dinweysbattery.com/batteries/din/din88/",
       "verification_status": "confirmed_first_party",
       "last_verified": "2026-09-09",
@@ -197,7 +197,7 @@
       "vehicle_type": "European heavy trucks, buses",
       "truck_brand": "MAN, Scania, Volvo, Mercedes-Benz Trucks, DAF",
       "country": "China (manufactured); primary markets Europe, Middle East, North Africa",
-      "source": "DINWEY manufacturer specification (first-party)",
+      "source": "DINWEYS manufacturer specification (first-party)",
       "source_url": "https://dinweysbattery.com/batteries/din/din100/",
       "verification_status": "confirmed_first_party",
       "last_verified": "2026-09-09",
@@ -233,11 +233,11 @@
       "vehicle_type": "Class 7–8 trucks, buses, off-highway equipment",
       "truck_brand": null,
       "country": "China (manufactured); primary markets North America, Latin America",
-      "source": "DINWEY made-to-order BCI line (no published stock specification)",
+      "source": "DINWEYS made-to-order BCI line (no published stock specification)",
       "source_url": "https://dinweysbattery.com/products/bci-request/",
       "verification_status": "on_request",
       "last_verified": "2026-09-09",
-      "notes": "Made-to-order — no shelf stock. Exact CCA, capacity, dimensions, terminal type and polarity are confirmed on inquiry. Reference only: BCI Group 31 is nominally 330×173×240mm with SAE J537 CCA; do not treat as DINWEY rating."
+      "notes": "Made-to-order — no shelf stock. Exact CCA, capacity, dimensions, terminal type and polarity are confirmed on inquiry. Reference only: BCI Group 31 is nominally 330×173×240mm with SAE J537 CCA; do not treat as DINWEYS rating."
     },
     {
       "model": "Group 8D",
@@ -269,11 +269,11 @@
       "vehicle_type": "Heavy equipment with high electrical demand",
       "truck_brand": null,
       "country": "China (manufactured); primary markets North America, Latin America",
-      "source": "DINWEY made-to-order BCI line (no published stock specification)",
+      "source": "DINWEYS made-to-order BCI line (no published stock specification)",
       "source_url": "https://dinweysbattery.com/products/bci-request/",
       "verification_status": "on_request",
       "last_verified": "2026-09-09",
-      "notes": "Made-to-order — legacy large-capacity size (larger than Group 31). No published DINWEY stock rating; confirm on inquiry. Reference only: BCI 8D is nominally ~520×275×240mm with SAE J537 CCA."
+      "notes": "Made-to-order — legacy large-capacity size (larger than Group 31). No published DINWEYS stock rating; confirm on inquiry. Reference only: BCI 8D is nominally ~520×275×240mm with SAE J537 CCA."
     },
     {
       "model": "Group 4D",
@@ -305,11 +305,11 @@
       "vehicle_type": "Heavy equipment",
       "truck_brand": null,
       "country": "China (manufactured); primary markets North America, Latin America",
-      "source": "DINWEY made-to-order BCI line (no published stock specification)",
+      "source": "DINWEYS made-to-order BCI line (no published stock specification)",
       "source_url": "https://dinweysbattery.com/products/bci-request/",
       "verification_status": "on_request",
       "last_verified": "2026-09-09",
-      "notes": "Made-to-order — legacy large-capacity size. No published DINWEY stock rating; confirm on inquiry."
+      "notes": "Made-to-order — legacy large-capacity size. No published DINWEYS stock rating; confirm on inquiry."
     },
     {
       "model": "65D31R",
@@ -345,7 +345,7 @@
       "source_url": "https://www.bravabatteries.com/product/n70-65d31r-12v70ah-smf-car-battery",
       "verification_status": "reference",
       "last_verified": "2026-09-09",
-      "notes": "Third-party reference — NOT a DINWEY published stock rating. BRAVA lists 70Ah (C20), CCA 580A (JIS), RC 118 min, case 304×170×203mm (total height 225mm); Western Battery lists 600A (EN) at 304×173×200mm; BCI lists max envelope 306×173×225mm. Confirm exact tray and rating before replacement."
+      "notes": "Third-party reference — NOT a DINWEYS published stock rating. BRAVA lists 70Ah (C20), CCA 580A (JIS), RC 118 min, case 304×170×203mm (total height 225mm); Western Battery lists 600A (EN) at 304×173×200mm; BCI lists max envelope 306×173×225mm. Confirm exact tray and rating before replacement."
     },
     {
       "model": "95E41R",
@@ -381,7 +381,7 @@
       "source_url": "https://sebangbattery.com/applications-product/jis",
       "verification_status": "reference",
       "last_verified": "2026-09-09",
-      "notes": "Third-party reference — NOT a DINWEY published stock rating. Sebang lists N100 (95E41R) at 100Ah (C20), RC 180 min, CCA 730A, 410×175×235mm; BCI lists max envelope 410×176×234mm. Third-party CCA varies ~700–870A across manufacturers."
+      "notes": "Third-party reference — NOT a DINWEYS published stock rating. Sebang lists N100 (95E41R) at 100Ah (C20), RC 180 min, CCA 730A, 410×175×235mm; BCI lists max envelope 410×176×234mm. Third-party CCA varies ~700–870A across manufacturers."
     },
     {
       "model": "N120",
@@ -417,7 +417,7 @@
       "source_url": "https://sebangbattery.com/applications-product/jis",
       "verification_status": "reference",
       "last_verified": "2026-09-09",
-      "notes": "Third-party reference — NOT a DINWEY published stock rating. Sebang lists N120 at 120Ah (C20), RC 230 min, CCA 820A, 505×183×240mm; Continental lists 880A CCA at 505×181×257mm. Third-party CCA varies ~800–900A; height varies 208–257mm across manufacturers. Confirm tray and rating before replacement."
+      "notes": "Third-party reference — NOT a DINWEYS published stock rating. Sebang lists N120 at 120Ah (C20), RC 230 min, CCA 820A, 505×183×240mm; Continental lists 880A CCA at 505×181×257mm. Third-party CCA varies ~800–900A; height varies 208–257mm across manufacturers. Confirm tray and rating before replacement."
     },
     {
       "model": "245H52",
@@ -453,7 +453,7 @@
       "source_url": "https://www.uplusbattery.com/Product/150.html",
       "verification_status": "reference",
       "last_verified": "2026-09-09",
-      "notes": "Third-party reference — NOT a DINWEY published stock rating. UPLUS lists 245H52 (N220) at 220Ah (C20), RC 456 min, CCA 1200A, 515×265×216mm (total height 254mm) — a capacity/CCA step above N200 (190H52). Powsea also lists 245H52 as 12V 220Ah. Confirm tray and rating before replacement."
+      "notes": "Third-party reference — NOT a DINWEYS published stock rating. UPLUS lists 245H52 (N220) at 220Ah (C20), RC 456 min, CCA 1200A, 515×265×216mm (total height 254mm) — a capacity/CCA step above N200 (190H52). Powsea also lists 245H52 as 12V 220Ah. Confirm tray and rating before replacement."
     },
     {
       "model": "56638",
@@ -489,7 +489,7 @@
       "source_url": "https://westernbattery.en.made-in-china.com/product/qwDTvZFHfAUt/China-DIN66-56638-Maintenance-Free-Calcium-Plus-Mf-Car-Battery-12V-66ah.html",
       "verification_status": "reference",
       "last_verified": "2026-09-09",
-      "notes": "Third-party reference — NOT a DINWEY published stock rating. Sources list 66Ah (C20) at 278×175×190mm (King Power reports 278×174×189mm). EN cold-cranking not published in a single authoritative source for this size — left null. DIN66 shares the 278mm length class with DIN74 but lower capacity."
+      "notes": "Third-party reference — NOT a DINWEYS published stock rating. Sources list 66Ah (C20) at 278×175×190mm (King Power reports 278×174×189mm). EN cold-cranking not published in a single authoritative source for this size — left null. DIN66 shares the 278mm length class with DIN74 but lower capacity."
     },
     {
       "model": "57412",
@@ -525,7 +525,7 @@
       "source_url": "https://www.landportbv.com/en/products/accu-57412",
       "verification_status": "reference",
       "last_verified": "2026-09-09",
-      "notes": "Third-party reference — NOT a DINWEY published stock rating. Landport lists 74Ah (C20), CCA 680A (EN), 278×175×190mm; third-party CCA ranges ~580–690A (EN). Same 278mm length class as DIN66/DIN74; higher capacity than DIN66. EN CCA is not directly comparable to JIS/SAE CCA."
+      "notes": "Third-party reference — NOT a DINWEYS published stock rating. Landport lists 74Ah (C20), CCA 680A (EN), 278×175×190mm; third-party CCA ranges ~580–690A (EN). Same 278mm length class as DIN66/DIN74; higher capacity than DIN66. EN CCA is not directly comparable to JIS/SAE CCA."
     },
     {
       "model": "Group 6D",
@@ -557,11 +557,11 @@
       "vehicle_type": "Heavy equipment with high electrical demand",
       "truck_brand": null,
       "country": "China (manufactured); primary markets North America, Latin America",
-      "source": "DINWEY made-to-order BCI line + BCI Group Sizes reference dimensions",
+      "source": "DINWEYS made-to-order BCI line + BCI Group Sizes reference dimensions",
       "source_url": "https://dinweysbattery.com/products/bci-request/",
       "verification_status": "on_request",
       "last_verified": "2026-09-09",
-      "notes": "Made-to-order — no shelf stock. Exact CCA, capacity, terminal and polarity confirmed on inquiry. Reference only: BCI Group 6D nominal max dimensions 527×254×260mm (BCI Group Sizes) — wider than 4D (254mm vs 222mm). Do not treat as DINWEY stock rating."
+      "notes": "Made-to-order — no shelf stock. Exact CCA, capacity, terminal and polarity confirmed on inquiry. Reference only: BCI Group 6D nominal max dimensions 527×254×260mm (BCI Group Sizes) — wider than 4D (254mm vs 222mm). Do not treat as DINWEYS stock rating."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "@context": { "schema": "https://schema.org/" },
-  "name": "DINWEY Vehicle Fitment Database",
-  "description": "Truck model → battery group → DINWEY model mapping. Fitment is sourced from independent commercial-vehicle fitment guides, marked with confidence level. Not DINWEY official OEM confirmation.",
+  "name": "DINWEYS Vehicle Fitment Database",
+  "description": "Truck model → battery group → DINWEYS model mapping. Fitment is sourced from independent commercial-vehicle fitment guides, marked with confidence level. Not DINWEYS official OEM confirmation.",
   "dateModified": "2026-09-09",
   "verificationLevels": {
     "confirmed": "Manufacturer-documented fitment (Tier 1)",
@@ -9,7 +9,7 @@
     "typical": "Common industry practice, not model-specific",
     "unverified": "No authoritative source"
   },
-  "disclaimer": "Industry reference, not DINWEY official OEM confirmation. Always confirm group size, terminal type, terminal orientation, polarity and tray dimensions against the specific vehicle before ordering.",
+  "disclaimer": "Industry reference, not DINWEYS official OEM confirmation. Always confirm group size, terminal type, terminal orientation, polarity and tray dimensions against the specific vehicle before ordering.",
   "vehicles": [
     {
       "brand": "Hino",
@@ -28,7 +28,7 @@
       "polarity": null,
       "source": "Club Assist Commercial Fitment Guide + Century Batteries Selection Guide",
       "verification_status": "reference",
-      "notes": "N150 (MF150/SN150/HCC150) per Club Assist. DINWEY recommendation: 145G51 (N150)."
+      "notes": "N150 (MF150/SN150/HCC150) per Club Assist. DINWEYS recommendation: 145G51 (N150)."
     },
     {
       "brand": "Volvo Trucks",
@@ -142,7 +142,7 @@
       "polarity": null,
       "source": "Club Assist Commercial Fitment Guide",
       "verification_status": "reference",
-      "notes": "Uses JIS N100L group — not in DINWEY standard line. Needs inquiry."
+      "notes": "Uses JIS N100L group — not in DINWEYS standard line. Needs inquiry."
     }
   ]
 }

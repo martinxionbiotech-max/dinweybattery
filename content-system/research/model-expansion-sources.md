@@ -3,7 +3,7 @@
 Research date: 2026-09-09. Purpose: expand `battery-master-data.json` model coverage
 from 7 to 14 heavy-duty truck battery models. All third-party entries are marked
 `verification_status: reference` (never `confirmed_first_party`, which is reserved
-for DINWEY first-party datasheets).
+for DINWEYS first-party datasheets).
 
 ## Source Registry
 
@@ -39,7 +39,7 @@ for DINWEY first-party datasheets).
   in a single authoritative source → left `null`.
 - **DIN74** (57412): 74Ah (C20), CCA 680A (EN), 278×175×190mm (S10); 277×174×188mm
   (S11). Third-party CCA range ~580–690A (EN).
-- **BCI Group 6D**: reference only; 527×254×260mm max envelope (S13). DINWEY
+- **BCI Group 6D**: reference only; 527×254×260mm max envelope (S13). DINWEYS
   made-to-order (`on_request`) — no published stock rating.
 
 ## Cross-Reference Conflicts

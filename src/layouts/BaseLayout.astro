@@ -20,7 +20,7 @@ interface Props {
 
 const {
   title,
-  description = "DINWEY is a truck & heavy-duty starting battery brand — JIS N150/N200, DIN88/DIN100, EFB and AGM. Manufactured by Chengguang Power Tech Co., Ltd. (founded 2002). OEM and private label programs.",
+  description = "DINWEYS is a truck & heavy-duty starting battery brand — JIS N150/N200, DIN88/DIN100, EFB and AGM. Manufactured by Chengguang Power Tech Co., Ltd. (founded 2002). OEM and private label programs.",
   canonical,
   ogType = "website",
   ogImage = "/images/og-default.jpg",
@@ -34,12 +34,12 @@ const {
 } = Astro.props;
 
 const SITE = "https://dinweysbattery.com";
-const BRAND = "DINWEY";
-const BRAND_FULL = "DINWEY — Truck & Heavy-Duty Starting Batteries";
+const BRAND = "DINWEYS";
+const BRAND_FULL = "DINWEYS — Truck & Heavy-Duty Starting Batteries";
 
 // 标题规范化
 const cleanTitle = title.replace(/\u200b/gi, "").trim();
-const hasBrand = cleanTitle.toUpperCase().includes("DINWEY");
+const hasBrand = cleanTitle.toUpperCase().includes("DINWEYS");
 const baseTitle = cleanTitle || BRAND_FULL;
 const fullTitle = hasBrand ? baseTitle : `${baseTitle} | ${BRAND}`;
 
@@ -76,15 +76,15 @@ const articleJsonLd =
       }
     : null;
 
-// Organization 实体 schema（DINWEY 品牌 + Chengguang Power Tech Co., Ltd. 母公司）
+// Organization 实体 schema（DINWEYS 品牌 + Chengguang Power Tech Co., Ltd. 母公司）
 const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": SITE + "/#organization",
-  "name": "DINWEY",
+  "name": "DINWEYS",
   "url": SITE,
   "logo": SITE + "/images/logo.png",
-  "brand": { "@type": "Brand", "name": "DINWEY" },
+  "brand": { "@type": "Brand", "name": "DINWEYS" },
   "manufacturer": { "@id": SITE + "/#manufacturer" },
   "email": "martin@dinweys.com",
   "telephone": "+86-13323237275",

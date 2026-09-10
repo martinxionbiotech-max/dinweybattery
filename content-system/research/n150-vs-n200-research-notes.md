@@ -1,6 +1,6 @@
 # Research Notes — N150 vs N200 (JIS Heavy-Duty Comparison)
 
-**Project**: DINWEY Battery V2.0 Content Engineering
+**Project**: DINWEYS Battery V2.0 Content Engineering
 **Mode**: B — Content Creation (Comparison Engine, Type B)
 **Date**: 2026-09-09
 **Skill**: deep-research-human-writer V3.0
@@ -14,7 +14,7 @@
 
 | ID | Source | Tier | Claim supported |
 |----|--------|------|-----------------|
-| S01 | DINWEY battery-master-data.json (first-party) | 1 | 145G51: 135Ah/900A CCA/220RC/508×222×212mm; 190H52: 200Ah/1100A CCA/320RC/520×278×220mm |
+| S01 | DINWEYS battery-master-data.json (first-party) | 1 | 145G51: 135Ah/900A CCA/220RC/508×222×212mm; 190H52: 200Ah/1100A CCA/320RC/520×278×220mm |
 | S02 | Bosch battery brochure (boschaftermarket.com PDF) | 2 | 145G51 JIS 150Ah, CCA 750–950, 508×222×238–257mm; 190H52 JIS 200Ah, CCA 1130, 521–523×279×240–248mm |
 | S03 | Century Batteries AU cross-reference chart | 2 | N150 = 145G51/190G51/160G51 family; N200 = 190H52 |
 | S04 | Club Assist Commercial Fitment Guide (via site) | 2 | Hino 700, Volvo FH/FM, MAN TGS/TGX, Scania R = N150/N200 |
@@ -29,14 +29,14 @@
 - The "N" number is a JIS size class; the model code (145G51/190H52) carries the specific rating. [S01, S03]
 
 ## Conflicting / Variable Data
-| Field | DINWEY (S01) | Bosch (S02) | SSB (S05) | Powsea (S07) |
+| Field | DINWEYS (S01) | Bosch (S02) | SSB (S05) | Powsea (S07) |
 |-------|--------------|-------------|-----------|--------------|
 | N150 CCA | 900 A | 750–950 A | 1100 A | — |
 | N150 L×W×H | 508×222×212 | 508×222×238–257 | 510×220×196 | 508×211×193 |
 | N200 CCA | 1100 A | 1130 A | — | — |
 | N200 L×W×H | 520×278×220 | 521–523×279×240–248 | — | 515×267×216 |
 
-**Resolution**: CCA and dimensions vary by manufacturer and product version. Within JIS D5301 the N150 typically spans ~750–1100A and N200 ~1100–1200A. DINWEY's figures are first-party and specific to its models; third-party figures are reference ranges. This variance is itself the key buyer insight: compare within one standard and confirm the specific datasheet.
+**Resolution**: CCA and dimensions vary by manufacturer and product version. Within JIS D5301 the N150 typically spans ~750–1100A and N200 ~1100–1200A. DINWEYS's figures are first-party and specific to its models; third-party figures are reference ranges. This variance is itself the key buyer insight: compare within one standard and confirm the specific datasheet.
 
 ## Competitor Gap Analysis
 Competitors (Bosch, Yuasa, Century, SSB, Powsea, 247 Auto) publish spec tables and fitment charts but:

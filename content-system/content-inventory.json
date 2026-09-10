@@ -1,11 +1,11 @@
 {
-  "name": "DINWEY Content Inventory",
+  "name": "DINWEYS Content Inventory",
   "description": "Complete inventory of dinweysbattery.com content assets with keyword, intent, entity and schema mapping. Maintains the single keyword→URL mapping to prevent cannibalization.",
   "dateModified": "2026-09-09",
   "pages": [
     {
       "url": "/",
-      "title": "DINWEY OEM Factory | Truck & Heavy-Duty Starting Batteries",
+      "title": "DINWEYS OEM Factory | Truck & Heavy-Duty Starting Batteries",
       "content_type": "homepage",
       "primary_keyword": "truck battery manufacturer",
       "secondary_keywords": [
@@ -14,7 +14,7 @@
         "commercial vehicle battery supplier"
       ],
       "entities": [
-        "DINWEY",
+        "DINWEYS",
         "Chengguang Power Tech Co., Ltd.",
         "JIS",
         "DIN",
@@ -43,11 +43,11 @@
     },
     {
       "url": "/batteries/",
-      "title": "DINWEY Truck Battery Models — JIS & DIN Reference",
+      "title": "DINWEYS Truck Battery Models — JIS & DIN Reference",
       "content_type": "battery_model_index",
       "primary_keyword": "truck battery models",
       "secondary_keywords": [
-        "DINWEY battery model",
+        "DINWEYS battery model",
         "145G51",
         "190H52",
         "58827",
@@ -86,7 +86,7 @@
     },
     {
       "url": "/batteries/jis/n150/",
-      "title": "145G51 (N150) Heavy-Duty Truck Battery — DINWEY",
+      "title": "145G51 (N150) Heavy-Duty Truck Battery — DINWEYS",
       "content_type": "battery_model",
       "primary_keyword": "145G51 battery",
       "secondary_keywords": [
@@ -124,7 +124,7 @@
     },
     {
       "url": "/batteries/jis/n200/",
-      "title": "190H52 (N200) Heavy-Duty Truck Battery — DINWEY",
+      "title": "190H52 (N200) Heavy-Duty Truck Battery — DINWEYS",
       "content_type": "battery_model",
       "primary_keyword": "190H52 battery",
       "secondary_keywords": [
@@ -162,7 +162,7 @@
     },
     {
       "url": "/batteries/din/din88/",
-      "title": "58827 (DIN88) Heavy-Duty Truck Battery — DINWEY",
+      "title": "58827 (DIN88) Heavy-Duty Truck Battery — DINWEYS",
       "content_type": "battery_model",
       "primary_keyword": "58827 battery",
       "secondary_keywords": [
@@ -199,7 +199,7 @@
     },
     {
       "url": "/batteries/din/din100/",
-      "title": "60038 (DIN100) Heavy-Duty Truck Battery — DINWEY",
+      "title": "60038 (DIN100) Heavy-Duty Truck Battery — DINWEYS",
       "content_type": "battery_model",
       "primary_keyword": "60038 battery",
       "secondary_keywords": [
@@ -236,7 +236,7 @@
     },
     {
       "url": "/products/jis-heavy-duty/",
-      "title": "N150 / N200 JIS Heavy-Duty Truck Batteries — DINWEY OEM",
+      "title": "N150 / N200 JIS Heavy-Duty Truck Batteries — DINWEYS OEM",
       "content_type": "product_family",
       "primary_keyword": "JIS heavy duty truck battery",
       "secondary_keywords": [
@@ -273,7 +273,7 @@
     },
     {
       "url": "/products/din-heavy-duty/",
-      "title": "DIN88 / DIN100 Heavy-Duty Truck Batteries — DINWEY OEM",
+      "title": "DIN88 / DIN100 Heavy-Duty Truck Batteries — DINWEYS OEM",
       "content_type": "product_family",
       "primary_keyword": "DIN heavy duty truck battery",
       "secondary_keywords": [
@@ -310,7 +310,7 @@
     },
     {
       "url": "/products/24v/",
-      "title": "24V Truck Battery Systems — DINWEY Heavy-Duty OEM",
+      "title": "24V Truck Battery Systems — DINWEYS Heavy-Duty OEM",
       "content_type": "product_family",
       "primary_keyword": "24V truck battery system",
       "secondary_keywords": [
@@ -345,7 +345,7 @@
     },
     {
       "url": "/products/fleet/",
-      "title": "Fleet Battery Solutions & OEM — DINWEY Heavy-Duty Batteries",
+      "title": "Fleet Battery Solutions & OEM — DINWEYS Heavy-Duty Batteries",
       "content_type": "oem_fleet",
       "primary_keyword": "fleet battery supplier",
       "secondary_keywords": [
@@ -354,7 +354,7 @@
         "fleet battery program"
       ],
       "entities": [
-        "DINWEY",
+        "DINWEYS",
         "Chengguang Power Tech Co., Ltd.",
         "IATF 16949",
         "OEM",
@@ -381,7 +381,7 @@
     },
     {
       "url": "/products/bci-request/",
-      "title": "BCI Group 31 / 8D Truck Batteries — DINWEY Heavy-Duty OEM",
+      "title": "BCI Group 31 / 8D Truck Batteries — DINWEYS Heavy-Duty OEM",
       "content_type": "product_family",
       "primary_keyword": "BCI group 31 truck battery",
       "secondary_keywords": [
@@ -416,7 +416,7 @@
     },
     {
       "url": "/truck-models/",
-      "title": "Truck Model Battery Fitment — DINWEY Heavy-Duty Reference",
+      "title": "Truck Model Battery Fitment — DINWEYS Heavy-Duty Reference",
       "content_type": "vehicle_fitment",
       "primary_keyword": "truck battery fitment",
       "secondary_keywords": [
@@ -459,7 +459,7 @@
     },
     {
       "url": "/selection-tool/",
-      "title": "Truck Battery Selection Tool — DINWEY",
+      "title": "Truck Battery Selection Tool — DINWEYS",
       "content_type": "tool",
       "primary_keyword": "truck battery selection tool",
       "secondary_keywords": [
@@ -468,7 +468,7 @@
         "battery group size calculator"
       ],
       "entities": [
-        "DINWEY",
+        "DINWEYS",
         "JIS",
         "DIN",
         "BCI",
@@ -494,7 +494,7 @@
     },
     {
       "url": "/applications/mining-off-highway/",
-      "title": "Mining & Off-Highway Truck Batteries — DINWEY",
+      "title": "Mining & Off-Highway Truck Batteries — DINWEYS",
       "content_type": "application",
       "primary_keyword": "mining truck battery",
       "secondary_keywords": [
@@ -530,7 +530,7 @@
     },
     {
       "url": "/applications/cold-chain-refrigerated/",
-      "title": "Cold-Chain & Refrigerated Truck Batteries — DINWEY",
+      "title": "Cold-Chain & Refrigerated Truck Batteries — DINWEYS",
       "content_type": "application",
       "primary_keyword": "refrigerated truck battery",
       "secondary_keywords": [
@@ -565,7 +565,7 @@
     },
     {
       "url": "/applications/bus-coach/",
-      "title": "Bus & Coach Starting Batteries — DINWEY",
+      "title": "Bus & Coach Starting Batteries — DINWEYS",
       "content_type": "application",
       "primary_keyword": "bus battery",
       "secondary_keywords": [
@@ -601,7 +601,7 @@
     },
     {
       "url": "/applications/diesel-generator/",
-      "title": "Diesel Generator Starting Batteries — DINWEY",
+      "title": "Diesel Generator Starting Batteries — DINWEYS",
       "content_type": "application",
       "primary_keyword": "diesel generator battery",
       "secondary_keywords": [
@@ -635,7 +635,7 @@
     },
     {
       "url": "/markets/middle-east/",
-      "title": "Truck Batteries for the Middle East — DINWEY",
+      "title": "Truck Batteries for the Middle East — DINWEYS",
       "content_type": "market",
       "primary_keyword": "truck battery Middle East",
       "secondary_keywords": [
@@ -671,7 +671,7 @@
     },
     {
       "url": "/markets/africa/",
-      "title": "Truck Batteries for Africa — DINWEY",
+      "title": "Truck Batteries for Africa — DINWEYS",
       "content_type": "market",
       "primary_keyword": "truck battery Africa",
       "secondary_keywords": [
@@ -708,7 +708,7 @@
     },
     {
       "url": "/markets/latin-america/",
-      "title": "Truck Batteries for Latin America — DINWEY",
+      "title": "Truck Batteries for Latin America — DINWEYS",
       "content_type": "market",
       "primary_keyword": "truck battery Latin America",
       "secondary_keywords": [
@@ -827,7 +827,7 @@
     },
     {
       "url": "/markets/southeast-asia/",
-      "title": "Truck Batteries for Southeast Asia — DINWEY",
+      "title": "Truck Batteries for Southeast Asia — DINWEYS",
       "content_type": "market",
       "primary_keyword": "truck battery Southeast Asia",
       "secondary_keywords": [
@@ -861,16 +861,16 @@
     },
     {
       "url": "/about/",
-      "title": "About DINWEY — Chengguang Power Tech Co., Ltd.",
+      "title": "About DINWEYS — Chengguang Power Tech Co., Ltd.",
       "content_type": "corporate",
-      "primary_keyword": "DINWEY about",
+      "primary_keyword": "DINWEYS about",
       "secondary_keywords": [
         "Chengguang Power Tech",
-        "DINWEY battery factory",
+        "DINWEYS battery factory",
         "truck battery factory China"
       ],
       "entities": [
-        "DINWEY",
+        "DINWEYS",
         "Chengguang Power Tech Co., Ltd.",
         "IATF 16949",
         "ISO 9001",
@@ -894,16 +894,16 @@
     },
     {
       "url": "/contact/",
-      "title": "Contact DINWEY — Request OEM Quote",
+      "title": "Contact DINWEYS — Request OEM Quote",
       "content_type": "contact",
       "primary_keyword": "truck battery OEM quote",
       "secondary_keywords": [
-        "contact DINWEY",
+        "contact DINWEYS",
         "truck battery RFQ",
         "battery OEM inquiry"
       ],
       "entities": [
-        "DINWEY",
+        "DINWEYS",
         "Chengguang Power Tech Co., Ltd.",
         "RFQ"
       ],
@@ -925,12 +925,12 @@
     },
     {
       "url": "/privacy-policy/",
-      "title": "Privacy Policy — DINWEY",
+      "title": "Privacy Policy — DINWEYS",
       "content_type": "legal",
       "primary_keyword": null,
       "secondary_keywords": [],
       "entities": [
-        "DINWEY"
+        "DINWEYS"
       ],
       "search_intent": "navigational",
       "language": "en",
@@ -947,12 +947,12 @@
     },
     {
       "url": "/terms-and-conditions/",
-      "title": "Terms and Conditions — DINWEY",
+      "title": "Terms and Conditions — DINWEYS",
       "content_type": "legal",
       "primary_keyword": null,
       "secondary_keywords": [],
       "entities": [
-        "DINWEY"
+        "DINWEYS"
       ],
       "search_intent": "navigational",
       "language": "en",
@@ -969,7 +969,7 @@
     },
     {
       "url": "/batteries/jis/n70/",
-      "title": "65D31R (N70) Light/Medium Truck Battery — DINWEY (Reference)",
+      "title": "65D31R (N70) Light/Medium Truck Battery — DINWEYS (Reference)",
       "content_type": "battery_model",
       "primary_keyword": "N70 battery",
       "secondary_keywords": [
@@ -1005,7 +1005,7 @@
     },
     {
       "url": "/batteries/jis/n100/",
-      "title": "95E41R (N100) Light/Medium Truck Battery — DINWEY (Reference)",
+      "title": "95E41R (N100) Light/Medium Truck Battery — DINWEYS (Reference)",
       "content_type": "battery_model",
       "primary_keyword": "N100 battery",
       "secondary_keywords": [
@@ -1040,7 +1040,7 @@
     },
     {
       "url": "/batteries/jis/n120/",
-      "title": "N120 Medium-Duty Truck Battery — DINWEY (Reference)",
+      "title": "N120 Medium-Duty Truck Battery — DINWEYS (Reference)",
       "content_type": "battery_model",
       "primary_keyword": "N120 battery",
       "secondary_keywords": [
@@ -1074,7 +1074,7 @@
     },
     {
       "url": "/batteries/jis/n220/",
-      "title": "245H52 (N220) Largest JIS Heavy-Duty Battery — DINWEY (Reference)",
+      "title": "245H52 (N220) Largest JIS Heavy-Duty Battery — DINWEYS (Reference)",
       "content_type": "battery_model",
       "primary_keyword": "N220 battery",
       "secondary_keywords": [
@@ -1109,7 +1109,7 @@
     },
     {
       "url": "/batteries/din/din66/",
-      "title": "56638 (DIN66) European Light Commercial Battery — DINWEY (Reference)",
+      "title": "56638 (DIN66) European Light Commercial Battery — DINWEYS (Reference)",
       "content_type": "battery_model",
       "primary_keyword": "DIN66 battery",
       "secondary_keywords": [
@@ -1144,7 +1144,7 @@
     },
     {
       "url": "/batteries/din/din74/",
-      "title": "57412 (DIN74) European Light Commercial Battery — DINWEY (Reference)",
+      "title": "57412 (DIN74) European Light Commercial Battery — DINWEYS (Reference)",
       "content_type": "battery_model",
       "primary_keyword": "DIN74 battery",
       "secondary_keywords": [

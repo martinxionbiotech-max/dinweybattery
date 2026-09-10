@@ -24,7 +24,7 @@ interface Props {
   complianceNote: string; // fitment 合规措辞
   siblingModels: { href: string; label: string }[];
   parentCategory: { href: string; label: string };
-  isReference?: boolean; // true = 第三方参考型号，非 DINWEY 一手发布规格
+  isReference?: boolean; // true = 第三方参考型号，非 DINWEYS 一手发布规格
 }
 
 const {
@@ -64,7 +64,7 @@ const definedTermJsonLd = {
   "name": model,
   "inDefinedTermSet": {
     "@type": "DefinedTermSet",
-    "name": "DINWEY Truck Battery Model Reference",
+    "name": "DINWEYS Truck Battery Model Reference",
     "url": "https://dinweysbattery.com/batteries/"
   },
   "termCode": model
@@ -77,7 +77,7 @@ const productJsonLd = {
   "description": description,
   "image": ogImage,
   "model": model,
-  "brand": { "@type": "Brand", "name": "DINWEY" },
+  "brand": { "@type": "Brand", "name": "DINWEYS" },
   "manufacturer": { "@id": "https://dinweysbattery.com/#manufacturer" },
   "author": {
     "@type": "Person",
@@ -143,7 +143,7 @@ const faqJsonLd = {
         <tr><th>Specification</th><th>Value</th></tr>
       </thead>
       <tbody>
-        <tr><td>DINWEY Model</td><td>{model}</td></tr>
+        <tr><td>DINWEYS Model</td><td>{model}</td></tr>
         <tr><td>Group</td><td>{groupLabel}</td></tr>
         <tr><td>Standard</td><td>{standard}</td></tr>
         <tr><td>Voltage</td><td>{voltage}</td></tr>
@@ -158,7 +158,7 @@ const faqJsonLd = {
     </table>
     <p class="data-note">
       {isReference
-        ? 'Third-party reference specification — NOT a DINWEY published stock rating. Values are compiled from independent catalogs and vary by manufacturer; confirm exact CCA, capacity and dimensions before replacement.'
+        ? 'Third-party reference specification — NOT a DINWEYS published stock rating. Values are compiled from independent catalogs and vary by manufacturer; confirm exact CCA, capacity and dimensions before replacement.'
         : 'Specifications are representative for this model. Exact CCA, capacity and dimensions are confirmed per batch on the certificate of analysis — contact us for a full datasheet.'}
     </p>
 
@@ -215,7 +215,7 @@ const faqJsonLd = {
             <li><a href={d.url} target="_blank" rel="noopener" style="color:#1e5aa8;">{d.title}</a></li>
           ))}
         </ul>
-        <p class="data-note" style="margin-top:12px;">From the <a href="https://docs.dinweysbattery.com/" target="_blank" rel="noopener">DINWEY Knowledge Hub</a>.</p>
+        <p class="data-note" style="margin-top:12px;">From the <a href="https://docs.dinweysbattery.com/" target="_blank" rel="noopener">DINWEYS Knowledge Hub</a>.</p>
       </div>
     )}
   </div>

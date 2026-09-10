@@ -1,6 +1,6 @@
 # Research Notes — DIN88 vs DIN100 (DIN Heavy-Duty Comparison)
 
-**Project**: DINWEY Battery V2.0 Content Engineering
+**Project**: DINWEYS Battery V2.0 Content Engineering
 **Mode**: B — Content Creation (Comparison Engine, Type B)
 **Date**: 2026-09-09
 **Skill**: deep-research-human-writer V3.0
@@ -14,7 +14,7 @@
 
 | ID | Source | Tier | Claim supported |
 |----|--------|------|-----------------|
-| S01 | DINWEY battery-master-data.json (first-party) | 1 | 58827: 88Ah/800A EN/150RC/353×175×190mm; 60038: 100Ah/870A EN/170RC/393×175×190mm |
+| S01 | DINWEYS battery-master-data.json (first-party) | 1 | 58827: 88Ah/800A EN/150RC/353×175×190mm; 60038: 100Ah/870A EN/170RC/393×175×190mm |
 | S02 | The Battery Centre DIN88 page | 3 | DIN88 = 353×175×190mm, 850 CCA, alias LN5/H8, Standard Euro terminal |
 | S03 | Geekzone forum (battery fitters) | 4 | DIN88 ≈ 352×174×174mm (height variance by brand) |
 | S04 | Suzuki Battery SG battery codes guide | 2 | EN 50342-1 CCA definition (30s @ −18°C, ≥7.2V for 12V); DIN code digits: 5xx = <100Ah, 6xx = 100–199Ah |
@@ -27,13 +27,13 @@
 - In the DIN code (58827 / 60038), the leading digits encode 12V and the Ah class (5xx = <100Ah, 6xx = 100–199Ah). [S04]
 
 ## Conflicting / Variable Data
-| Field | DINWEY (S01) | The Battery Centre (S02) | Geekzone (S03) |
+| Field | DINWEYS (S01) | The Battery Centre (S02) | Geekzone (S03) |
 |-------|--------------|--------------------------|----------------|
 | DIN88 height | 190 mm | 190 mm | 174 mm |
 | DIN88 CCA | 800 A EN | 850 A EN | — |
 | DIN88 L×W×H | 353×175×190 | 353×175×190 | 352×174×174 |
 
-**Resolution**: The Battery Centre independently confirms DINWEY's 353×175×190mm footprint, giving the DIN88 case high confidence. The 174mm-height variant (Geekzone) is an older/low-profile build — height is the field most likely to differ by brand. CCA also varies (800–850A EN). This variance is the buyer insight: confirm the specific datasheet and measure the actual tray height.
+**Resolution**: The Battery Centre independently confirms DINWEYS's 353×175×190mm footprint, giving the DIN88 case high confidence. The 174mm-height variant (Geekzone) is an older/low-profile build — height is the field most likely to differ by brand. CCA also varies (800–850A EN). This variance is the buyer insight: confirm the specific datasheet and measure the actual tray height.
 
 ## Competitor Gap Analysis
 Competitors (Bosch, Yuasa, Century, SSB, Powsea, The Battery Centre) publish DIN spec tables but:

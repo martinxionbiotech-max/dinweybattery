@@ -3,9 +3,9 @@
 - **Date & Timestamp:** 2026-09-10 02:58 UTC
 - **Target URL / Asset Path:** 主站全站 + docs 子站
 - **Change Classification:** P0 Integrity Repair（实体架构）
-- **State Before Modification:** DINWEY 被系统性描述为 "OEM Factory / Manufacturer"（brand = factory 混同）
-- **State After Modification:** DINWEY 统一为 "Heavy-Duty Truck & Starting Battery Brand"，制造商归 Chengguang Power Tech Co., Ltd.
-- **Primary Technical Rationale:** spec §1.2 规则1 —— 禁止将品牌（DINWEY）误描述为制造主体；实体关系须为 DINWEY=品牌、Chengguang=制造商、Factory=Chengguang 设施
+- **State Before Modification:** DINWEYS 被系统性描述为 "OEM Factory / Manufacturer"（brand = factory 混同）
+- **State After Modification:** DINWEYS 统一为 "Heavy-Duty Truck & Starting Battery Brand"，制造商归 Chengguang Power Tech Co., Ltd.
+- **Primary Technical Rationale:** spec §1.2 规则1 —— 禁止将品牌（DINWEYS）误描述为制造主体；实体关系须为 DINWEYS=品牌、Chengguang=制造商、Factory=Chengguang 设施
 - **Supporting Evidence Citation:** V2.0 spec §1.1/§1.2
 - **Risk Assessment & Mitigation:** 标题/描述变更可能短期影响 title 关键词信号，但 "OEM Factory" 实体误导是 E-E-A-T 硬伤，优先级更高；保留 "Truck & Heavy-Duty Starting Batteries" 核心词不变
 
@@ -13,8 +13,8 @@
 - **Date & Timestamp:** 2026-09-10 02:58 UTC
 - **Target URL / Asset Path:** src/layouts/BaseLayout.astro（orgJsonLd）
 - **Change Classification:** Schema Refactor（实体拆分）
-- **State Before Modification:** 单一 Organization 同时 name=DINWEY + legalName=Chengguang + parentOrganization=Chengguang，hasCredential 挂 DINWEY 名下
-- **State After Modification:** 拆为 DINWEY Organization（品牌，manufacturer 引用）+ Chengguang Organization（制造商，持有 hasCredential IATF/ISO）
+- **State Before Modification:** 单一 Organization 同时 name=DINWEYS + legalName=Chengguang + parentOrganization=Chengguang，hasCredential 挂 DINWEYS 名下
+- **State After Modification:** 拆为 DINWEYS Organization（品牌，manufacturer 引用）+ Chengguang Organization（制造商，持有 hasCredential IATF/ISO）
 - **Primary Technical Rationale:** spec §1.1 实体边界 —— 认证须归属真实制造主体
 - **Supporting Evidence Citation:** V2.0 spec §1.1/§1.2
 - **Risk Assessment & Mitigation:** JSON-LD 结构变更，Google 需重新抓取解析；新结构语义更正确，长期利好实体识别
@@ -33,9 +33,9 @@
 - **Date & Timestamp:** 2026-09-10 03:05 UTC
 - **Target URL / Asset Path:** src/layouts/BatteryModelLayout.astro + src/layouts/ProductLayout.astro
 - **Change Classification:** Schema Refactor（Product schema manufacturer 映射）
-- **State Before Modification:** Product schema `manufacturer` 和 `author.worksFor` 指向 `#organization`（= DINWEY 品牌）
+- **State Before Modification:** Product schema `manufacturer` 和 `author.worksFor` 指向 `#organization`（= DINWEYS 品牌）
 - **State After Modification:** 改为指向 `#manufacturer`（= Chengguang 制造商）
-- **Primary Technical Rationale:** spec §1.1 — Product schema 必须 brand=DINWEY、manufacturer=Chengguang，实体拆分后映射需同步
+- **Primary Technical Rationale:** spec §1.1 — Product schema 必须 brand=DINWEYS、manufacturer=Chengguang，实体拆分后映射需同步
 - **Supporting Evidence Citation:** V2.0 spec §1.1/§7.2
 - **Risk Assessment & Mitigation:** 纯 schema 语义修正，无可见内容变更
 
