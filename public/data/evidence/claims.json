@@ -1,0 +1,92 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "DINWEY Claim Ledger",
+  "description": "Ledger of technical and commercial claims with source, evidence level and verification status.",
+  "dateModified": "2026-09-10",
+  "claims": [
+    {
+      "id": "C-001",
+      "claim": "DINWEY is the brand; Chengguang Power Tech Co., Ltd. is the manufacturer",
+      "source": [
+        "S-CG-DATASHEET"
+      ],
+      "evidence_level": 2,
+      "verification": "VERIFIED"
+    },
+    {
+      "id": "C-002",
+      "claim": "145G51 (N150) = 12V 135Ah 900A CCA 220min RC 508×222×212mm",
+      "source": [
+        "S-CG-DATASHEET"
+      ],
+      "evidence_level": 2,
+      "verification": "VERIFIED (first-party)"
+    },
+    {
+      "id": "C-003",
+      "claim": "190H52 (N200) = 12V 200Ah 1100A CCA 320min RC 520×278×220mm",
+      "source": [
+        "S-CG-DATASHEET"
+      ],
+      "evidence_level": 2,
+      "verification": "VERIFIED (first-party)"
+    },
+    {
+      "id": "C-004",
+      "claim": "58827 (DIN88) = 12V 88Ah 800A EN CCA 353×175×190mm",
+      "source": [
+        "S-CG-DATASHEET"
+      ],
+      "evidence_level": 2,
+      "verification": "VERIFIED (first-party)"
+    },
+    {
+      "id": "C-005",
+      "claim": "60038 (DIN100) = 12V 100Ah 870A EN CCA 393×175×190mm",
+      "source": [
+        "S-CG-DATASHEET"
+      ],
+      "evidence_level": 2,
+      "verification": "VERIFIED (first-party)"
+    },
+    {
+      "id": "C-006",
+      "claim": "IATF 16949 / ISO 9001:2015 / ISO 45001:2018 certification",
+      "source": [],
+      "evidence_level": 2,
+      "verification": "NEEDS_VERIFICATION — no certificate number/issuer/scope published"
+    },
+    {
+      "id": "C-007",
+      "claim": "200,000 m² facility, 18 automated lines, 40,000 batteries/day",
+      "source": [],
+      "evidence_level": 3,
+      "verification": "NEEDS_VERIFICATION — first-party claim without third-party confirmation"
+    },
+    {
+      "id": "C-008",
+      "claim": "N70/N100/N120/N220/DIN66/DIN74 are third-party reference (NOT DINWEY published stock)",
+      "source": [
+        "S-BRAVA-N70",
+        "S-SEBANG-JIS",
+        "S-UPLUS-N220",
+        "S-LANDPORT-DIN74",
+        "S-KINGPOWER-DIN66"
+      ],
+      "evidence_level": 3,
+      "verification": "VERIFIED (reference)"
+    },
+    {
+      "id": "C-009",
+      "claim": "CCA values across SAE/EN/JIS/DIN/IEC are not directly comparable",
+      "source": [
+        "S-JIS-D5301",
+        "S-EN-50342-1",
+        "S-SAE-J537"
+      ],
+      "evidence_level": 1,
+      "verification": "VERIFIED"
+    }
+  ]
+}

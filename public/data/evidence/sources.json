@@ -1,0 +1,79 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "DINWEY Evidence Source Registry",
+  "description": "Registry of technical datasheets, standards and catalogs used to verify DINWEY battery specifications. Level 1 = independent global standards; Level 2 = manufacturer documentation; Level 3 = third-party catalogs.",
+  "dateModified": "2026-09-10",
+  "sources": [
+    {
+      "id": "S-JIS-D5301",
+      "name": "JIS D 5301 — Lead-acid starter batteries",
+      "level": 1,
+      "type": "standard",
+      "url": "https://www.jisc.go.jp/"
+    },
+    {
+      "id": "S-EN-50342-1",
+      "name": "EN 50342-1 — Lead-acid starter batteries (general requirements)",
+      "level": 1,
+      "type": "standard",
+      "url": "https://standards.cencenelec.eu/"
+    },
+    {
+      "id": "S-SAE-J537",
+      "name": "SAE J537 — Storage Batteries",
+      "level": 1,
+      "type": "standard",
+      "url": "https://www.sae.org/"
+    },
+    {
+      "id": "S-BCI-GROUP",
+      "name": "BCI Group Size standard (Battery Council International)",
+      "level": 1,
+      "type": "standard",
+      "url": "https://batterycouncil.org/"
+    },
+    {
+      "id": "S-CG-DATASHEET",
+      "name": "Chengguang Power Tech Co., Ltd. engineering datasheets",
+      "level": 2,
+      "type": "manufacturer_doc",
+      "verification": "NEEDS_VERIFICATION — PDF not published on site"
+    },
+    {
+      "id": "S-BRAVA-N70",
+      "name": "BRAVA N70 (65D31R) datasheet",
+      "level": 3,
+      "type": "third_party_catalog",
+      "url": "https://www.bravabatteries.com/product/n70-65d31r-12v70ah-smf-car-battery"
+    },
+    {
+      "id": "S-SEBANG-JIS",
+      "name": "Sebang JIS catalog",
+      "level": 3,
+      "type": "third_party_catalog",
+      "url": "https://sebangbattery.com/applications-product/jis"
+    },
+    {
+      "id": "S-UPLUS-N220",
+      "name": "UPLUS JIS catalog (245H52)",
+      "level": 3,
+      "type": "third_party_catalog",
+      "url": "https://www.uplusbattery.com/Product/150.html"
+    },
+    {
+      "id": "S-LANDPORT-DIN74",
+      "name": "Landport 57412 datasheet",
+      "level": 3,
+      "type": "third_party_catalog",
+      "url": "https://www.landportbv.com/en/products/accu-57412"
+    },
+    {
+      "id": "S-KINGPOWER-DIN66",
+      "name": "King Power DIN66 (56638) datasheet",
+      "level": 3,
+      "type": "third_party_catalog",
+      "url": "https://westernbattery.en.made-in-china.com/product/qwDTvZFHfAUt/China-DIN66-56638-Maintenance-Free-Calcium-Plus-Mf-Car-Battery-12V-66ah.html"
+    }
+  ]
+}

@@ -28,3 +28,43 @@
 - **Primary Technical Rationale:** 消除自相矛盾；与姊妹站（drychillis/dingwei）地址口径一致
 - **Supporting Evidence Citation:** 姊妹站地址字段比对
 - **Risk Assessment & Mitigation:** 地址字段更精确，利于本地搜索实体一致性
+
+### Change Record: CR-20260910-004
+- **Date & Timestamp:** 2026-09-10 03:05 UTC
+- **Target URL / Asset Path:** src/layouts/BatteryModelLayout.astro + src/layouts/ProductLayout.astro
+- **Change Classification:** Schema Refactor（Product schema manufacturer 映射）
+- **State Before Modification:** Product schema `manufacturer` 和 `author.worksFor` 指向 `#organization`（= DINWEY 品牌）
+- **State After Modification:** 改为指向 `#manufacturer`（= Chengguang 制造商）
+- **Primary Technical Rationale:** spec §1.1 — Product schema 必须 brand=DINWEY、manufacturer=Chengguang，实体拆分后映射需同步
+- **Supporting Evidence Citation:** V2.0 spec §1.1/§7.2
+- **Risk Assessment & Mitigation:** 纯 schema 语义修正，无可见内容变更
+
+### Change Record: CR-20260910-005
+- **Date & Timestamp:** 2026-09-10 03:05 UTC
+- **Target URL / Asset Path:** src/pages/selection-tool/index.astro
+- **Change Classification:** Schema Refactor（移除虚假 Offer）
+- **State Before Modification:** WebApplication schema 含 `offers: { price: "0" }`（虚假定价）
+- **State After Modification:** 移除 offers 字段
+- **Primary Technical Rationale:** spec §7.2 — 禁止虚构 price/availability/offer
+- **Supporting Evidence Citation:** V2.0 spec §7.2
+- **Risk Assessment & Mitigation:** 免费工具不应有 Offer schema，移除后更准确
+
+### Change Record: CR-20260910-006
+- **Date & Timestamp:** 2026-09-10 03:05 UTC
+- **Target URL / Asset Path:** public/data/battery-models.json（删除）+ public/data/evidence/（新增）
+- **Change Classification:** Data Normalization（数据源统一）
+- **State Before Modification:** 双数据源：battery-models.json（旧 4 型号）+ battery-master-data.json（14 型号）
+- **State After Modification:** 删除孤儿 battery-models.json（无任何引用）；保留 battery-master-data.json 为唯一 SSOT；新增 evidence/sources.json（10 来源）+ evidence/claims.json（9 声明）
+- **Primary Technical Rationale:** spec §2 — ONE FACT → ONE SSOT ENTRY → MANY RENDERED PAGES；禁止第二套数字
+- **Supporting Evidence Citation:** V2.0 spec §2/§3
+- **Risk Assessment & Mitigation:** 孤儿文件无引用，删除零影响；evidence 文件为新增
+
+### Change Record: CR-20260910-007
+- **Date & Timestamp:** 2026-09-10 03:05 UTC
+- **Target URL / Asset Path:** src/pages/about/index.astro
+- **Change Classification:** E-E-A-T（认证表述诚实化）
+- **State Before Modification:** 认证表 "✅ Certified"（无证书编号/发证机构佐证）
+- **State After Modification:** 改为 "Held by manufacturer" + 明确 "Certificate numbers, issuing bodies and validity are provided with quotations"
+- **Primary Technical Rationale:** spec §1.2 规则2 — 无验证文档不得写 Certified
+- **Supporting Evidence Citation:** V2.0 spec §1.2
+- **Risk Assessment & Mitigation:** 弱化绝对化表述，避免被判定虚假认证，长期利好 E-E-A-T
