@@ -78,6 +78,115 @@ const faqJsonLd = {
       </div>
     </div>
 
+    <h2 style="color:#0f1f3d;margin-top:32px;">How We Qualify Your Inquiry</h2>
+    <p>
+      To route you to the right answer quickly, we read every inquiry by intent:
+    </p>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr><th>Intent</th><th>What you want</th><th>Fastest path</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Research</td><td>Understand standards / sizing</td><td><a href="https://docs.dinweysbattery.com/" style="color:#1e5aa8;">Knowledge Hub</a></td></tr>
+          <tr><td>Product interest</td><td>Browse a model family</td><td><a href="/batteries/" style="color:#1e5aa8;">Battery reference</a></td></tr>
+          <tr><td>Specification request</td><td>Datasheet for one model</td><td><a href="/contact/" style="color:#1e5aa8;">Get Datasheet</a></td></tr>
+          <tr><td>OEM / private label</td><td>Branded or custom batteries</td><td><a href="/products/fleet/" style="color:#1e5aa8;">OEM program</a></td></tr>
+          <tr><td>RFQ</td><td>Bulk quote on a known spec</td><td>Form below</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="color:#0f1f3d;margin-top:32px;">Request a Quote (RFQ)</h2>
+    <p class="data-note">
+      Fill in what you know — leave unknown fields blank. A structured inquiry gets a faster,
+      more accurate quotation. No pricing is published; quotes are provided on request.
+    </p>
+    <form id="rfq-form" style="margin-top:16px;">
+      <div class="grid grid-2" style="gap:12px;">
+        <div>
+          <label for="rfq-type" style="display:block;font-weight:600;margin-bottom:4px;">Battery standard</label>
+          <select id="rfq-type" style="width:100%;padding:10px;border:1px solid #d0d5dd;border-radius:6px;">
+            <option value="">Not sure</option>
+            <option>JIS (N-series)</option>
+            <option>DIN / EN</option>
+            <option>BCI (Group 31 / 8D)</option>
+            <option>Other / mixed</option>
+          </select>
+        </div>
+        <div>
+          <label for="rfq-model" style="display:block;font-weight:600;margin-bottom:4px;">Model / group size</label>
+          <input id="rfq-model" type="text" placeholder="e.g. N150, DIN88, Group 31" style="width:100%;padding:10px;border:1px solid #d0d5dd;border-radius:6px;" />
+        </div>
+        <div>
+          <label for="rfq-voltage" style="display:block;font-weight:600;margin-bottom:4px;">System voltage</label>
+          <select id="rfq-voltage" style="width:100%;padding:10px;border:1px solid #d0d5dd;border-radius:6px;">
+            <option value="">Not sure</option>
+            <option>12V</option>
+            <option>24V</option>
+          </select>
+        </div>
+        <div>
+          <label for="rfq-application" style="display:block;font-weight:600;margin-bottom:4px;">Application</label>
+          <select id="rfq-application" style="width:100%;padding:10px;border:1px solid #d0d5dd;border-radius:6px;">
+            <option value="">Select…</option>
+            <option>Heavy truck / semi trailer</option>
+            <option>Bus / coach</option>
+            <option>Mining / off-highway</option>
+            <option>Diesel generator</option>
+            <option>Cold chain / refrigerated</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="rfq-qty" style="display:block;font-weight:600;margin-bottom:4px;">Target quantity</label>
+          <input id="rfq-qty" type="text" placeholder="e.g. 1 × 20ft container (~600–800 units)" style="width:100%;padding:10px;border:1px solid #d0d5dd;border-radius:6px;" />
+        </div>
+        <div>
+          <label for="rfq-port" style="display:block;font-weight:600;margin-bottom:4px;">Country / destination port</label>
+          <input id="rfq-port" type="text" placeholder="e.g. Jeddah, Saudi Arabia" style="width:100%;padding:10px;border:1px solid #d0d5dd;border-radius:6px;" />
+        </div>
+        <div>
+          <label for="rfq-oem" style="display:block;font-weight:600;margin-bottom:4px;">OEM / private label</label>
+          <select id="rfq-oem" style="width:100%;padding:10px;border:1px solid #d0d5dd;border-radius:6px;">
+            <option value="">Not sure</option>
+            <option>Yes — branded / private label</option>
+            <option>No — standard DINWEY product</option>
+          </select>
+        </div>
+        <div>
+          <label for="rfq-notes" style="display:block;font-weight:600;margin-bottom:4px;">Additional requirements (Ah / CCA / dimensions)</label>
+          <input id="rfq-notes" type="text" placeholder="e.g. 135Ah, 900A CCA, 508×222×212mm" style="width:100%;padding:10px;border:1px solid #d0d5dd;border-radius:6px;" />
+        </div>
+      </div>
+      <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+        <button type="submit" class="cta" style="background:#f5a623;color:#000;font-weight:700;padding:13px 28px;border:none;border-radius:6px;cursor:pointer;">Generate Inquiry Email</button>
+        <a class="cta" href="https://wa.me/8613323237275" target="_blank" rel="noopener" style="display:inline-block;background:#25D366;color:#fff;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;">WhatsApp Instead</a>
+      </div>
+      <p id="rfq-status" class="data-note" style="margin-top:12px;"></p>
+    </form>
+    <script>
+      const rfqForm = document.getElementById('rfq-form');
+      rfqForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const g = (id) => document.getElementById(id)?.value?.trim() || '';
+        const lines = [
+          'Battery standard: ' + (g('rfq-type') || 'Not specified'),
+          'Model / group size: ' + (g('rfq-model') || 'Not specified'),
+          'System voltage: ' + (g('rfq-voltage') || 'Not specified'),
+          'Application: ' + (g('rfq-application') || 'Not specified'),
+          'Target quantity: ' + (g('rfq-qty') || 'Not specified'),
+          'Country / port: ' + (g('rfq-port') || 'Not specified'),
+          'OEM / private label: ' + (g('rfq-oem') || 'Not specified'),
+          'Additional requirements: ' + (g('rfq-notes') || 'None'),
+        ];
+        const subject = encodeURIComponent('RFQ — ' + (g('rfq-model') || 'Truck battery inquiry'));
+        const body = encodeURIComponent(lines.join('\n'));
+        window.location.href = 'mailto:martin@dinweys.com?subject=' + subject + '&body=' + body;
+        document.getElementById('rfq-status').textContent = 'Inquiry email prepared — your email client should open. If not, email martin@dinweys.com directly.';
+      });
+    </script>
+
     <h2 style="color:#0f1f3d;margin-top:32px;">What to Include in Your Inquiry</h2>
     <ul>
       <li>Vehicle type (light / medium / heavy truck, or European commercial vehicle)</li>

@@ -78,3 +78,13 @@
 - **Primary Technical Rationale:** spec §4 语义链 Knowledge→Product→Selection→OEM→RFQ
 - **Supporting Evidence Citation:** V2.0 spec §4
 - **Risk Assessment & Mitigation:** 纯内链补充，无内容变更
+
+### Change Record: CR-20260910-009
+- **Date & Timestamp:** 2026-09-10 03:19 UTC
+- **Target URL / Asset Path:** src/pages/contact/index.astro
+- **Change Classification:** Commercial Conversion（RFQ 表单 + Lead Qualification）
+- **State Before Modification:** contact 页仅有 FAQ + 邮箱/WhatsApp，无结构化 RFQ 收集
+- **State After Modification:** 新增 Lead Intent 分级表（Research→Product→Spec→OEM→RFQ）+ 结构化 RFQ 表单（Battery standard/Model/Voltage/Application/Quantity/Port/OEM/Additional 8 字段，mailto 提交）
+- **Primary Technical Rationale:** spec §1/§2 — 结构化询盘提高 Lead 质量，Intent 分级路由
+- **Supporting Evidence Citation:** V2.0 spec §1/§2
+- **Risk Assessment & Mitigation:** 纯前端 mailto 表单，无后端，可回滚；不收集/存储任何 PII
