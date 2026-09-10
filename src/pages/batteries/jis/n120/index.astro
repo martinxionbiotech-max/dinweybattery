@@ -1,0 +1,55 @@
+---
+import BatteryModelLayout from "../../../../layouts/BatteryModelLayout.astro";
+---
+
+<BatteryModelLayout
+  model="N120"
+  groupLabel="N120"
+  standard="JIS"
+  productName="DINWEY N120 — Medium-Duty Truck Battery (Reference)"
+  description="Reference specification for the N120 (N120) starting battery. Third-party catalogs list N120 at 120 Ah, 820 CCA, 505×183×240 mm. Confirm availability and exact rating before ordering."
+  voltage="12V"
+  ah="120 Ah"
+  cca="820"
+  testStandard="JIS D5301"
+  rc="230"
+  dimensions="505×183×240 mm"
+  terminal="JIS type A (standard taper post)"
+  technology="Flooded (maintenance-free and serviceable variants available)"
+  takeaways={[
+    "The N120 is a 120Ah JIS heavy-duty class — a step up from the N100 for medium trucks and construction equipment.",
+    "Reference sources list 120Ah, 820A CCA (JIS) and 505×183×240mm.",
+    "Third-party CCA ranges ~800–900A and height varies 208–257mm across makers — confirm before ordering.",
+    "This is a reference specification, not a DINWEY published stock rating."
+  ]}
+  intro={[
+    "The N120 is a 120Ah JIS heavy-duty starting battery for medium trucks, buses and construction equipment — a reference model compiled from third-party catalogs.",
+    "The N120 class has a longer 505mm case than the N100's 410mm, giving more plate area and higher capacity (120Ah) and cold-cranking (~820A CCA). Sebang lists 120Ah at 820A CCA.",
+    "As a reference specification, exact values vary by manufacturer — confirm your tray and rating before replacement."
+  ]}
+  applications={[
+    "Medium-duty trucks",
+    "Buses and coaches",
+    "Diesel generators",
+    "Construction equipment"
+  ]}
+  specNotes={[
+    "CCA is measured to JIS D5301. Sebang lists 820A; Continental lists 880A at 505×181×257mm — third-party CCA ranges ~800–900A.",
+    "Reserve Capacity of 230 minutes (SAE J537) is the engine-off buffer for higher electrical loads.",
+    "The 505×183×240mm figure is representative; height varies 208–257mm across manufacturers. Confirm the actual tray before ordering."
+  ]}
+  faq={[
+    { q: "What is the N120 battery?", a: "The N120 is a JIS-class 12V, 120Ah starting battery for medium-duty trucks, buses and construction equipment." },
+    { q: "Is the N120 a DINWEY stock battery?", a: "This is a reference specification from third-party catalogs (Sebang, Continental), not a DINWEY published stock rating — confirm availability on inquiry." },
+    { q: "How many CCA does the N120 have?", a: "Reference sources list about 820A CCA (JIS D5301), with third-party variation ~800–900A. Confirm the specific datasheet." },
+    { q: "What are the N120 dimensions?", a: "Representative dimensions are 505×183×240mm, but height varies 208–257mm across manufacturers — measure your tray." },
+    { q: "N120 vs N150 — what's the difference?", a: "The N150 (145G51) is larger (135Ah, 900A CCA) than the N120 (120Ah, ~820A CCA). The N150 is DINWEY's confirmed first-party model; the N120 is a reference model." }
+  ]}
+  complianceNote="This is a third-party reference specification for the N120 (N120) — NOT a DINWEY published stock rating. Whether it fits a specific vehicle depends on the vehicle's battery standard, group size, terminal type, polarity and tray dimensions, which vary by model and generation. Always confirm the exact configuration in your vehicle manual before replacement."
+  isReference={true}
+  parentCategory={{ href: "/products/jis-heavy-duty/", label: "JIS Heavy-Duty Batteries" }}
+  siblingModels={[
+    { href: "/batteries/jis/n100/", label: "95E41R (N100) — smaller" },
+    { href: "/batteries/jis/n150/", label: "145G51 (N150) — DINWEY stock" }
+  ]}
+/>

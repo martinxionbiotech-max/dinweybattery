@@ -24,6 +24,7 @@ interface Props {
   complianceNote: string; // fitment 合规措辞
   siblingModels: { href: string; label: string }[];
   parentCategory: { href: string; label: string };
+  isReference?: boolean; // true = 第三方参考型号，非 DINWEY 一手发布规格
 }
 
 const {
@@ -48,7 +49,8 @@ const {
   relatedDocs = [],
   complianceNote,
   siblingModels,
-  parentCategory
+  parentCategory,
+  isReference = false
 } = Astro.props;
 
 const pageTitle = `${model} (${groupLabel}) — ${standard} Heavy-Duty Truck Battery`;
@@ -155,8 +157,9 @@ const faqJsonLd = {
       </tbody>
     </table>
     <p class="data-note">
-      Specifications are representative for this model. Exact CCA, capacity and dimensions
-      are confirmed per batch on the certificate of analysis — contact us for a full datasheet.
+      {isReference
+        ? 'Third-party reference specification — NOT a DINWEY published stock rating. Values are compiled from independent catalogs and vary by manufacturer; confirm exact CCA, capacity and dimensions before replacement.'
+        : 'Specifications are representative for this model. Exact CCA, capacity and dimensions are confirmed per batch on the certificate of analysis — contact us for a full datasheet.'}
     </p>
 
     {specNotes.length > 0 && (
@@ -189,7 +192,7 @@ const faqJsonLd = {
     ))}
 
     <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
-      <a class="cta" href="/contact/" style="display:inline-block;background:#f5a623;color:#000;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;">Request {model} Datasheet &amp; Quote</a>
+      <a class="cta" href="/contact/" style="display:inline-block;background:#f5a623;color:#000;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;">{isReference ? 'Confirm ' + model + ' Specification & Availability' : 'Request ' + model + ' Datasheet & Quote'}</a>
       <a class="cta" href="https://wa.me/8613323237275" target="_blank" rel="noopener" style="display:inline-block;background:#25D366;color:#fff;font-weight:700;padding:13px 28px;border-radius:6px;text-decoration:none;">WhatsApp — Contact Now</a>
     </div>
 
