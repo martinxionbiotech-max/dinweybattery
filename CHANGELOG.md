@@ -68,3 +68,13 @@
 - **Primary Technical Rationale:** spec §1.2 规则2 — 无验证文档不得写 Certified
 - **Supporting Evidence Citation:** V2.0 spec §1.2
 - **Risk Assessment & Mitigation:** 弱化绝对化表述，避免被判定虚假认证，长期利好 E-E-A-T
+
+### Change Record: CR-20260910-008
+- **Date & Timestamp:** 2026-09-10 03:10 UTC
+- **Target URL / Asset Path:** selection-tool / contact / about 页
+- **Change Classification:** Internal Linking（语义链补链）
+- **State Before Modification:** 3 个页面出链为 0（孤儿化）
+- **State After Modification:** 补语义内链（Selection Tool→产品族/型号/OEM；Contact→工具/型号/OEM；About→产品族/工具/OEM）
+- **Primary Technical Rationale:** spec §4 语义链 Knowledge→Product→Selection→OEM→RFQ
+- **Supporting Evidence Citation:** V2.0 spec §4
+- **Risk Assessment & Mitigation:** 纯内链补充，无内容变更
