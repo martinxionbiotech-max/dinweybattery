@@ -71,7 +71,7 @@ const productJsonLd = {
   "name": title,
   "description": description,
   "image": ogImage,
-  "brand": { "@type": "Brand", "name": "DINWEYS" },
+  "brand": { "@type": "Brand", "name": "DINWEY" },
   "manufacturer": { "@id": "https://dinweysbattery.com/#manufacturer" },
   "author": {
     "@type": "Person",
@@ -233,7 +233,7 @@ const siblingLinks = productLines.filter((p) => p.href.replace(/\/$/, "") !== cu
 
     {siblingLinks.length > 0 && (
       <div style="margin-top:32px;">
-        <h2 style="color:#0f1f3d;">Explore Other DINWEYS Product Lines</h2>
+        <h2 style="color:#0f1f3d;">Explore Other DINWEY Product Lines</h2>
         <ul>
           {siblingLinks.map((s) => (
             <li><a href={s.href} style="color:#1e5aa8;">{s.label}</a></li>
@@ -250,7 +250,7 @@ const siblingLinks = productLines.filter((p) => p.href.replace(/\/$/, "") !== cu
             <li><a href={d.url} target="_blank" rel="noopener" style="color:#1e5aa8;">{d.title}</a></li>
           ))}
         </ul>
-        <p class="data-note" style="margin-top:12px;">From the <a href="https://docs.dinweysbattery.com/" target="_blank" rel="noopener">DINWEYS Knowledge Hub</a>.</p>
+        <p class="data-note" style="margin-top:12px;">From the <a href="https://docs.dinweysbattery.com/" target="_blank" rel="noopener">DINWEY Knowledge Hub</a>.</p>
       </div>
     )}
   </div>
