@@ -1,0 +1,169 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const SITE = "https://dinweysbattery.com";
+
+const comparisonJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "12V vs 24V Truck Battery Systems: How Series Wiring Actually Works",
+  "description": "12V vs 24V truck electrical systems — why 24V uses two 12V batteries in series, and why series wiring adds voltage but not Ah and not simply CCA. A buyer's guide.",
+  "image": SITE + "/images/products/145G51-N150.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Martin Wong",
+    "jobTitle": "Sales Director",
+    "worksFor": { "@id": SITE + "/#organization" }
+  },
+  "publisher": { "@id": SITE + "/#organization" },
+  "datePublished": "2026-09-13",
+  "dateModified": "2026-09-13",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": SITE + "/compare/12v-vs-24v/" }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do two 12V batteries in series double the Ah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. In series the voltage doubles to 24V but the amp-hour (Ah) capacity stays the same — two 12V 200Ah batteries in series make a 24V 200Ah bank. Only the stored energy (Wh) doubles, because voltage doubled."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does series wiring double the CCA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not simply. Series wiring keeps the current path shared, so the bank's CCA is not 2× a single battery. The bank is limited by the weaker of the two units, which is why the two batteries should be identical and replaced together."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do trucks use 24V instead of 12V?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At double the voltage, a 24V system delivers the same cranking power at half the current, so cables can be thinner and lighter and starting losses are lower — which suits large diesel engines."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="12V vs 24V Truck Battery Systems — How Series Wiring Works | DINWEY"
+  description="12V vs 24V truck electrical systems — why 24V uses two 12V batteries in series, and why series wiring adds voltage but not Ah and not simply CCA."
+  canonical={`${SITE}/compare/12v-vs-24v/`}
+  jsonLd={[comparisonJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/compare/">Compare</a> &rsaquo; 12V vs 24V
+    </nav>
+
+    <h1>12V vs 24V Truck Battery Systems: How Series Wiring Actually Works</h1>
+    <p class="lead">
+      A 24V truck does not use one 24V battery — it uses two 12V batteries wired in series. What
+      changes is the voltage, not the capacity, and the distinction matters when you specify or
+      replace a bank.
+    </p>
+
+    <div class="takeaways">
+      <strong>Direct answer:</strong> Two 12V batteries in series produce 24V. Series wiring <strong>adds voltage</strong> (12V + 12V = 24V), but the <strong>amp-hour capacity stays the same</strong> and the <strong>CCA does not simply double</strong> — the current path is shared, so the bank is limited by the weaker unit. Only the stored energy (Wh) doubles, because voltage doubled.
+    </div>
+
+    <h2 style="margin-top:32px;">What series wiring actually does</h2>
+    <table style="width:100%;border-collapse:collapse;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Quantity</th>
+          <th style="padding:8px;">Series (2 × 12V → 24V)</th>
+          <th style="padding:8px;">Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Voltage</strong></td>
+          <td style="padding:8px;">Doubles (24V)</td>
+          <td style="padding:8px;">Voltages add in series</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>Ah (capacity)</strong></td>
+          <td style="padding:8px;">Stays the same</td>
+          <td style="padding:8px;">The same current flows through both</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>CCA</strong></td>
+          <td style="padding:8px;">Not simply doubled</td>
+          <td style="padding:8px;">Shared current path; limited by the weaker unit</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;"><strong>Stored energy (Wh)</strong></td>
+          <td style="padding:8px;">Doubles</td>
+          <td style="padding:8px;">Wh = V × Ah, and V doubled</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Why trucks use 24V</h2>
+    <p>
+      At double the voltage, a 24V system delivers the same cranking power at <strong>half the
+      current</strong>. That lets the starter, alternator and cabling run lighter and cooler — which
+      matters for a large diesel engine's high cranking demand. It is an efficiency choice, not a
+      capacity choice.
+    </p>
+
+    <h2 style="margin-top:32px;">The mismatched-battery rule, stated correctly</h2>
+    <p>
+      Because series wiring keeps a single shared current path, a bank is only as strong as its weaker
+      battery. If the two units have different CCA, capacity or age, the weaker one limits the bank and
+      the stronger one is dragged down over time. The correct practice is not just "never mix" — it is
+      to <strong>use two identical batteries, replace both together, and keep both at the same state of
+      charge</strong> so the series bank charges and discharges evenly.
+    </p>
+
+    <h2 style="margin-top:32px;">How to choose</h2>
+    <ul>
+      <li><strong>12V</strong> — lighter trucks and equipment where a single battery meets the starting demand.</li>
+      <li><strong>24V</strong> — heavy trucks, buses and diesel equipment with high cranking demand; specify two identical 12V units of the same group size, CCA and age.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">The Author&rsquo;s Take</h2>
+    <p>
+      <strong>Position:</strong> In my view, the most common 24V mistake is treating two series batteries
+      as one bigger battery and expecting the Ah or CCA to double — when in fact only the voltage does.
+    </p>
+    <p>
+      <strong>Reasoning:</strong> Series wiring adds voltage, not capacity or cranking power, and it makes
+      the bank only as good as the weaker unit. The buyer who understands that specifies two identical
+      batteries and replaces both together; the buyer who does not, quietly wears out the stronger
+      battery and shortens the bank's life.
+    </p>
+    <p>
+      <strong>Disclosure:</strong> This is my editorial view as a battery manufacturer&rsquo;s technical
+      team, not a laboratory claim. Confirm the correct voltage, group size and pairing for your vehicle.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Do two 12V batteries in series double the Ah?</h3>
+      <p>No. Series doubles the voltage to 24V but the amp-hour capacity stays the same — two 12V 200Ah batteries in series make a 24V 200Ah bank. Only the stored energy (Wh) doubles.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does series wiring double the CCA?</h3>
+      <p>Not simply. The current path is shared, so the bank's CCA is not 2× a single battery — it is limited by the weaker of the two units, which is why the two should be identical and replaced together.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why do trucks use 24V instead of 12V?</h3>
+      <p>At double the voltage, a 24V system delivers the same cranking power at half the current, so cables can be thinner and starting losses lower — which suits large diesel engines.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/">Browse Heavy-Duty Batteries</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>
