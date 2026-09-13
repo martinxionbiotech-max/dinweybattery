@@ -1,0 +1,190 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const SITE = "https://dinweysbattery.com";
+
+const comparisonJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "JIS vs DIN vs BCI Battery Standards: Why CCA Cannot Be Compared Directly",
+  "description": "JIS D5301, EN 50342, SAE J537 and DIN 43539 test CCA at different temperatures and cut-off voltages — so a 900A JIS rating and a 900A EN rating are not the same. How to compare correctly.",
+  "image": SITE + "/images/products/145G51-N150.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Martin Wong",
+    "jobTitle": "Sales Director",
+    "worksFor": { "@id": SITE + "/#organization" }
+  },
+  "publisher": { "@id": SITE + "/#organization" },
+  "datePublished": "2026-09-13",
+  "dateModified": "2026-09-13",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": SITE + "/compare/jis-vs-din-vs-bci/" }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I compare a JIS CCA with an EN or SAE CCA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — JIS D5301 tests at −15°C while EN 50342 and SAE J537 test at −18°C, and the cut-off voltages and durations differ. The same battery carries a different number under each standard, so compare only within one standard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does JIS CCA look higher than EN CCA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because JIS tests at a warmer −15°C versus EN/SAE's −18°C. A warmer test makes the battery deliver more current, so the JIS number is higher for the same physical battery — the difference is the test, not the battery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I specify when buying a truck battery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Specify the standard (JIS, DIN/EN or BCI/SAE), the CCA value, whether it is nominal or batch-tested, and the group size and terminal orientation. A CCA number without its standard is meaningless."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="JIS vs DIN vs BCI Battery Standards — Why CCA Cannot Be Compared Directly | DINWEY"
+  description="JIS D5301, EN 50342, SAE J537 and DIN 43539 test CCA at different temperatures and cut-off voltages — so a 900A JIS rating and a 900A EN rating are not the same. How to compare correctly."
+  canonical={`${SITE}/compare/jis-vs-din-vs-bci/`}
+  jsonLd={[comparisonJsonLd, faqJsonLd]}
+>
+  <div class="container section">
+    <nav aria-label="Breadcrumb" style="font-size:0.9rem;color:#6b5a54;margin-bottom:16px;">
+      <a href="/">Home</a> &rsaquo; <a href="/compare/">Compare</a> &rsaquo; JIS vs DIN vs BCI
+    </nav>
+
+    <h1>JIS vs DIN vs BCI: Why CCA Cannot Be Compared Directly</h1>
+    <p class="lead">
+      A 900A CCA battery under JIS and a 900A CCA battery under EN are not the same battery. Each
+      standard tests at a different temperature, duration and cut-off voltage, so the printed number
+      moves — and the ratings are not interchangeable.
+    </p>
+
+    <div class="takeaways">
+      <strong>Direct answer:</strong> Cold cranking amps (CCA) is not one universal test. JIS D 5301 tests at &minus;15&deg;C, while EN 50342 and SAE J537 test at &minus;18&deg;C, and each uses a different cut-off voltage and duration. Because the test conditions differ, the same physical battery prints a different CCA under each standard — so you can only compare CCA within a single standard.
+    </div>
+
+    <h2 style="margin-top:32px;">The four standards, and how each moves the number</h2>
+    <table style="width:100%;border-collapse:collapse;">
+      <thead>
+        <tr style="border-bottom:1px solid #d8c9c0;text-align:left;">
+          <th style="padding:8px;">Standard</th>
+          <th style="padding:8px;">Test temperature</th>
+          <th style="padding:8px;">Duration</th>
+          <th style="padding:8px;">Cut-off voltage</th>
+          <th style="padding:8px;">Effect on CCA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>JIS D 5301</strong></td>
+          <td style="padding:8px;">&minus;15&deg;C</td>
+          <td style="padding:8px;">30 s</td>
+          <td style="padding:8px;">reference</td>
+          <td style="padding:8px;">Warmer test &rarr; higher number</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>SAE J537</strong></td>
+          <td style="padding:8px;">&minus;18&deg;C</td>
+          <td style="padding:8px;">30 s</td>
+          <td style="padding:8px;">7.2 V</td>
+          <td style="padding:8px;">Baseline</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee0d8;">
+          <td style="padding:8px;"><strong>EN 50342</strong></td>
+          <td style="padding:8px;">&minus;18&deg;C</td>
+          <td style="padding:8px;">10 s</td>
+          <td style="padding:8px;">7.5 V</td>
+          <td style="padding:8px;">Shorter, higher cut-off &rarr; higher number</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;"><strong>DIN 43539</strong></td>
+          <td style="padding:8px;">&minus;18&deg;C</td>
+          <td style="padding:8px;">30 s</td>
+          <td style="padding:8px;">9.0 V</td>
+          <td style="padding:8px;">Higher cut-off &rarr; lower number</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:32px;">Why the numbers diverge</h2>
+    <p>
+      Three test variables move the printed CCA, and each standard sets them differently. A
+      <strong>warmer test</strong> lets the battery deliver more current, so JIS (&minus;15&deg;C)
+      reads higher than EN/SAE (&minus;18&deg;C) for the same battery. A <strong>lower cut-off
+      voltage</strong> lets the battery sag further before the test stops, also raising the number.
+      A <strong>shorter duration</strong> is easier to sustain, so a 10-second EN test reads higher
+      than a 30-second SAE test.
+    </p>
+    <p>
+      These are not battery differences — they are test-method differences. There is no universal
+      percentage conversion between standards, which is why any conversion chart is an approximation,
+      not a measurement.
+    </p>
+
+    <h2 style="margin-top:32px;">How to compare correctly</h2>
+    <ol>
+      <li><strong>Confirm the standard first</strong> — ask whether the number is JIS, EN, SAE or DIN.</li>
+      <li><strong>Compare within one standard</strong> — only JIS with JIS, EN with EN.</li>
+      <li><strong>Check nominal vs batch-tested</strong> — a catalogue value is a design target; the batch you receive varies within tolerance.</li>
+    </ol>
+
+    <h2 style="margin-top:32px;">What to put in the specification</h2>
+    <p>
+      A CCA number without its standard is meaningless. A complete spec states the
+      <strong>standard</strong> (for example JIS D 5301), the <strong>CCA value</strong>, the
+      <strong>group size and terminal orientation</strong>, and whether the value is
+      <strong>nominal or batch-tested</strong>. See the
+      <a href="/compare/n150-vs-n200/">N150 vs N200</a> comparison for how this applies to DINWEY's
+      JIS range, and the <a href="/selection-tool/">selection tool</a> to match a vehicle.
+    </p>
+
+    <h2 style="margin-top:32px;">The Author&rsquo;s Take</h2>
+    <p>
+      <strong>Position:</strong> In my view, most CCA confusion is not about the battery — it is about
+      comparing numbers that were measured under different rules, and the fix is simply to state the
+      standard next to every number.
+    </p>
+    <p>
+      <strong>Reasoning:</strong> A JIS CCA of 900 and an EN CCA of 900 can describe the same battery.
+      The buyer who compares raw numbers across standards is comparing test methods, not products. A
+      supplier who states the standard beside every rating removes the ambiguity; a buyer who asks for
+      it removes the risk.
+    </p>
+    <p>
+      <strong>Disclosure:</strong> This is my editorial view as a battery manufacturer&rsquo;s technical
+      team, not a laboratory claim. Confirm the final CCA, its test basis and whether it is nominal or
+      batch-tested with the manufacturer.
+    </p>
+
+    <h2 style="margin-top:32px;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Can I compare a JIS CCA with an EN or SAE CCA?</h3>
+      <p>No — JIS tests at &minus;15&deg;C while EN/SAE test at &minus;18&deg;C, with different cut-off voltages and durations. The same battery carries a different number under each standard, so compare only within one standard.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why does JIS CCA look higher than EN CCA?</h3>
+      <p>Because JIS tests at a warmer &minus;15&deg;C versus EN/SAE's &minus;18&deg;C. A warmer test lets the battery deliver more current, so the JIS number is higher for the same battery — the difference is the test, not the battery.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What should I specify when buying a truck battery?</h3>
+      <p>Specify the standard (JIS, DIN/EN or BCI/SAE), the CCA value, whether it is nominal or batch-tested, and the group size and terminal orientation.</p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a class="cta" href="/products/">Browse Heavy-Duty Batteries</a>
+      <a class="cta cta-outline" href="/contact/" style="margin-left:8px;">Request a Quote</a>
+    </div>
+  </div>
+</BaseLayout>
